@@ -1,0 +1,721 @@
+
+<!DOCTYPE html>
+
+<html data-content_root="./" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Welcome — Λc → p K π polarimetry</title>
+<script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+<!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+<noscript>
+<style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+</noscript>
+<!-- Loaded before other Sphinx assets -->
+<link href="_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet"/>
+<link href="_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet"/>
+<link href="_static/pygments.css?v=03e43079" rel="stylesheet" type="text/css"/>
+<link href="_static/styles/sphinx-book-theme.css?v=4418a689" rel="stylesheet" type="text/css"/>
+<link href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" rel="stylesheet" type="text/css"/>
+<link href="_static/sphinx-codeautolink.css?v=b2176991" rel="stylesheet" type="text/css"/>
+<link href="_static/copybutton.css?v=76b2166b" rel="stylesheet" type="text/css"/>
+<link href="_static/togglebutton.css?v=9c3e77be" rel="stylesheet" type="text/css"/>
+<link href="_static/sphinx-design.min.css?v=95c83b7e" rel="stylesheet" type="text/css"/>
+<link href="_static/custom.css?v=4f87f664" rel="stylesheet" type="text/css"/>
+<!-- So that users can add custom icons -->
+<script defer="" src="_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+<!-- Pre-loaded scripts that we'll load fully later -->
+<link as="script" href="_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" rel="preload"/>
+<link as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" rel="preload"/>
+<script src="_static/documentation_options.js?v=9eb32ce0"></script>
+<script src="_static/doctools.js?v=fd6eb6e6"></script>
+<script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+<script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+<script src="_static/clipboard.min.js?v=a7894cd8"></script>
+<script src="_static/copybutton.js?v=f281be69"></script>
+<script>let toggleHintShow = 'Click to show';</script>
+<script>let toggleHintHide = 'Click to hide';</script>
+<script>let toggleOpenOnPrint = 'true';</script>
+<script src="_static/togglebutton.js?v=b8b12719"></script>
+<script src="_static/design-tabs.js?v=f930bc37"></script>
+<script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+<script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+<script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+<script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+<script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+<link href="_static/favicon.ico" rel="icon"/>
+<link href="genindex.html" rel="index" title="Index"/>
+<link href="search.html" rel="search" title="Search"/>
+<link href="amplitude-model.html" rel="next" title="1. Default amplitude model"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="en" name="docsearch:language"/>
+<meta content="0.1.dev1+gdc2e20dc5" name="docsearch:version"/>
+<meta content="9 September 2026" name="docbuild:last-update"/>
+<script src="_static/searchtools.js"></script>
+<script src="_static/language_data.js"></script>
+<script src="searchindex.js"></script>
+</head>
+<body data-default-mode="">
+<div class="skip-link d-print-none" id="pst-skip-link"><a href="#main-content">Skip to main content</a></div>
+<div id="pst-scroll-pixel-helper"></div>
+<button class="btn rounded-pill" id="pst-back-to-top" type="button">
+<i class="fa-solid fa-arrow-up"></i>Back to top</button>
+<dialog id="pst-search-dialog">
+<form action="search.html" class="bd-search d-flex align-items-center" method="get">
+<i class="fa-solid fa-magnifying-glass"></i>
+<input aria-label="Search..." autocapitalize="off" autocomplete="off" autocorrect="off" class="form-control" name="q" placeholder="Search..." spellcheck="false" type="search"/>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+</dialog>
+<div class="pst-async-banner-revealer d-none">
+<aside aria-label="Version warning" class="d-none d-print-none" id="bd-header-version-warning"></aside>
+</div>
+<header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none" id="pst-header">
+<div class="bd-header__inner bd-page-width">
+<button aria-label="Site navigation" class="pst-navbar-icon sidebar-toggle primary-toggle">
+<span class="fa-solid fa-bars"></span>
+</button>
+<div class="col-lg-9 navbar-header-items">
+<div class="navbar-header-items__end">
+<div class="navbar-item navbar-persistent--container">
+<button aria-label="Search" class="btn search-button-field search-button__button pst-js-only" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Search">
+<i class="fa-solid fa-magnifying-glass"></i>
+<span class="search-button__default-text">Search</span>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+</div>
+</div>
+</div>
+<div class="navbar-persistent--mobile">
+<button aria-label="Search" class="btn search-button-field search-button__button pst-js-only" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Search">
+<i class="fa-solid fa-magnifying-glass"></i>
+<span class="search-button__default-text">Search</span>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+</div>
+<button aria-label="On this page" class="pst-navbar-icon sidebar-toggle secondary-toggle">
+<span class="fa-solid fa-outdent"></span>
+</button>
+</div>
+</header>
+<div class="bd-container">
+<div class="bd-container__inner bd-page-width">
+<dialog id="pst-primary-sidebar-modal"></dialog>
+<div class="bd-sidebar-primary bd-sidebar" id="pst-primary-sidebar">
+<div class="sidebar-header-items sidebar-primary__section">
+</div>
+<div class="sidebar-primary-items__start sidebar-primary__section">
+<div class="sidebar-primary-item">
+<a class="navbar-brand logo" href="#">
+<img alt="" class="logo__image only-light" src="_static/lhcb-logo.svg"/>
+<img alt="" class="logo__image only-dark pst-js-only" src="_static/lhcb-logo.svg"/>
+<p class="title logo__title">Λ<sub>c</sub>⁺ → p K⁻ π⁺</p>
+</a></div>
+<div class="sidebar-primary-item"><ul aria-label="Icon Links" class="navbar-icon-links">
+<li class="nav-item">
+<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://compwa.github.io" rel="noopener" target="_blank" title="Common Partial Wave Analysis"><img alt="Common Partial Wave Analysis" class="icon-link-image" src="/favicon.ico"/></a>
+</li>
+<li class="nav-item">
+<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/ComPWA/polarimetry" rel="noopener" target="_blank" title="GitHub"><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i><span class="visually-hidden">GitHub</span></a>
+</li>
+<li class="nav-item">
+<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://pypi.org/project/polarimetry-lc2pkpi" rel="noopener" target="_blank" title="PyPI"><i aria-hidden="true" class="fa-brands fa-python fa-lg"></i><span class="visually-hidden">PyPI</span></a>
+</li>
+<li class="nav-item">
+<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://mybinder.org/v2/gh/ComPWA/polarimetry/main?urlpath=lab" rel="noopener" target="_blank" title="Launch on Binder"><img alt="Launch on Binder" class="icon-link-image" src="https://mybinder.readthedocs.io/en/latest/_static/favicon.png"/></a>
+</li>
+<li class="nav-item">
+<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://colab.research.google.com/github/ComPWA/polarimetry/blob/main" rel="noopener" target="_blank" title="Launch on Colaboratory"><img alt="Launch on Colaboratory" class="icon-link-image" src="https://avatars.githubusercontent.com/u/33467679?s=100"/></a>
+</li>
+</ul></div>
+<div class="sidebar-primary-item">
+<button aria-label="Search" class="btn search-button-field search-button__button pst-js-only" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Search">
+<i class="fa-solid fa-magnifying-glass"></i>
+<span class="search-button__default-text">Search</span>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+<div class="sidebar-primary-item"><nav aria-label="Main" class="bd-links bd-docs-nav">
+<div class="bd-toc-item navbar-nav active">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of contents</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="amplitude-model.html">1. Default amplitude model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cross-check.html">2. Cross-check with LHCb data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intensity.html">3. Intensity distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polarimetry.html">4. Polarimeter vector field</a></li>
+<li class="toctree-l1"><a class="reference internal" href="uncertainties.html">5. Uncertainties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resonance-polarimetry.html">6. Average polarimeter per resonance</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="appendix.html">7. Appendix</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="appendix/dynamics.html">7.1. Dynamics lineshapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/angles.html">7.2. DPD angles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/phase-space.html">7.3. Phase space sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/alignment.html">7.4. Alignment consistency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/benchmark.html">7.5. Benchmarking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/serialization.html">7.6. Polarimeter field serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/model-serialization.html">7.7. Model serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/ls-model.html">7.8. Amplitude model with LS-couplings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/pc-pv-currents.html">7.9. PC and PV currents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/homomorphism.html">7.10. SU(2) → SO(3) homomorphism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zz.polarization-fit.html">7.11. Determination of polarization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/widget.html">7.12. Interactive visualization</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">8. Bibliography</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="api/polarimetry.html">9. API</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="api/polarimetry.lhcb.html">9.1. lhcb</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/polarimetry.lhcb.dynamics.html">9.1.1. dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/polarimetry.lhcb.particle.html">9.1.2. particle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/polarimetry.lhcb.symbol.html">9.1.3. symbol</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="api/polarimetry.data.html">9.2. data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/polarimetry.function.html">9.3. function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/polarimetry.io.html">9.4. io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/polarimetry.plot.html">9.5. plot</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">External links</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://doi.org/10.1007/JHEP07(2023)228">JHEP</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://arxiv.org/abs/2301.07010">arXiv:2301.07010</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://compwa.github.io">ComPWA Project</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/ComPWA/polarimetry">GitHub repository</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://gitlab.cern.ch/polarimetry/Lc2pKpi">CERN GitLab (archived)</a></li>
+</ul>
+</div>
+</nav></div>
+</div>
+<div class="sidebar-primary-items__end sidebar-primary__section">
+<div class="sidebar-primary-item">
+<div class="flat" data-ea-manual="true" data-ea-publisher="readthedocs" data-ea-type="readthedocs-sidebar" id="ethical-ad-placement">
+</div></div>
+</div>
+</div>
+<main class="bd-main" id="main-content" role="main">
+<div class="sbt-scroll-pixel-helper"></div>
+<div class="bd-content">
+<div class="bd-article-container">
+<div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+<div class="header-article-items__start">
+<div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Toggle primary sidebar">
+<span class="fa-solid fa-bars"></span>
+</button></div>
+</div>
+<div class="header-article-items__end">
+<div class="header-article-item">
+<div class="article-header-buttons">
+<div class="dropdown dropdown-launch-buttons">
+<button aria-expanded="false" aria-label="Launch interactive content" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="fas fa-rocket"></i>
+</button>
+<ul class="dropdown-menu">
+<li><a class="btn btn-sm dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://mybinder.org/v2/gh/ComPWA/polarimetry/main?urlpath=lab/tree/docs/index.ipynb" target="_blank" title="Launch on Binder">
+<span class="btn__icon-container">
+<img alt="Binder logo" src="_static/images/logo_binder.svg"/>
+</span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+<li><a class="btn btn-sm dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://colab.research.google.com/github/ComPWA/polarimetry/blob/main/docs/index.ipynb" target="_blank" title="Launch on Colab">
+<span class="btn__icon-container">
+<img alt="Colab logo" src="_static/images/logo_colab.png"/>
+</span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+<li><a class="btn btn-sm dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FComPWA%2Fpolarimetry%2Fblob%2Fmain%2Fdocs/index.ipynb" target="_blank" title="Launch on Deepnote">
+<span class="btn__icon-container">
+<img alt="Deepnote logo" src="_static/images/logo_deepnote.svg"/>
+</span>
+<span class="btn__text-container">Deepnote</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="dropdown dropdown-source-buttons">
+<button aria-expanded="false" aria-label="Source repositories" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="fab fa-github"></i>
+</button>
+<ul class="dropdown-menu">
+<li><a class="btn btn-sm btn-source-repository-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/ComPWA/polarimetry" target="_blank" title="Source repository">
+<span class="btn__icon-container">
+<i class="fab fa-github"></i>
+</span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+<li><a class="btn btn-sm btn-source-file-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/ComPWA/polarimetry/blob/main/docs/index.ipynb?plain=1" target="_blank" title="Show source">
+<span class="btn__icon-container">
+<i class="fas fa-code"></i>
+</span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+<li><a class="btn btn-sm btn-source-edit-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/ComPWA/polarimetry/edit/main/docs/index.ipynb" target="_blank" title="Suggest edit">
+<span class="btn__icon-container">
+<i class="fas fa-pencil-alt"></i>
+</span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+<li><a class="btn btn-sm btn-source-issues-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/ComPWA/polarimetry/issues/new?title=Issue%20on%20page%20%2Findex.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Open an issue">
+<span class="btn__icon-container">
+<i class="fas fa-lightbulb"></i>
+</span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="theme-switch-container dropdown pst-js-only" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Color mode">
+<button aria-label="Color mode" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" data-bs-toggle="dropdown">
+<i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+<i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+<i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+</button>
+<ul class="dropdown-menu dropdown-menu-end">
+<li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+<li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+<li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+</ul>
+</div>
+<button aria-label="Search" class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Search">
+<i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Toggle secondary sidebar">
+<span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+</div>
+</div>
+</div>
+<div class="onlyprint" id="jb-print-docs-body">
+<h1>Polarimetry in Λ<sub>c</sub>⁺ → p K⁻ π⁺</h1>
+<!-- Table of contents -->
+<div id="print-main-content">
+<div id="jb-print-toc">
+<div>
+<h2> Contents </h2>
+</div>
+<nav aria-label="Page">
+<ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-package">Python package</a><ul class="pst-show_toc_level nav section-nav flex-column">
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div id="searchbox"></div>
+<article class="bd-article">
+<section class="tex2jax_ignore mathjax_ignore" id="polarimetry-in-c-p-k">
+<h1>Polarimetry in Λ<sub>c</sub>⁺ → p K⁻ π⁺<a class="headerlink" href="#polarimetry-in-c-p-k" title="Link to this heading">#</a></h1>
+<p><a class="reference external" href="https://doi.org/10.1007/JHEP07(2023)228"><img alt="10.1007/JHEP07(2023)228" src="https://zenodo.org/badge/doi/10.1007/JHEP07(2023)228.svg"/></a>
+<a class="reference external" href="https://doi.org/10.48550/arXiv.2301.07010"><img alt="10.48550/arXiv.2301.07010" src="https://zenodo.org/badge/doi/10.48550/arXiv.2301.07010.svg"/></a>
+<a class="reference external" href="https://doi.org/10.5281/zenodo.7544989"><img alt="10.5281/zenodo.7544989" src="https://zenodo.org/badge/doi/10.5281/zenodo.7544989.svg"/></a></p>
+<!-- cspell:disable -->
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<span class="math notranslate nohighlight">\(\Lambda^+_\mathrm{c}\)</span> polarimetry using the dominant hadronic mode</div>
+<p class="sd-card-text">The polarimeter vector field for multibody decays of a spin-half baryon is introduced as a generalisation of the baryon asymmetry parameters. Using a recent amplitude analysis of the <span class="math notranslate nohighlight">\(\Lambda^+_\mathrm{c} \to p K^- \pi^+\)</span> decay performed at the LHCb experiment, we compute the distribution of the kinematic-dependent polarimeter vector for this process in the space of Mandelstam variables to express the polarised decay rate in a model-agnostic form. The obtained representation can facilitate polarisation measurements of the <span class="math notranslate nohighlight">\(\Lambda^+_\mathrm{c}\)</span> baryon and eases inclusion of the <span class="math notranslate nohighlight">\(\Lambda^+_\mathrm{c} \to p K^- \pi^+\)</span> decay mode in hadronic amplitude analyses.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="https://doi.org/10.1007/JHEP07(2023)228"><span>https://doi.org/10.1007/JHEP07(2023)228</span></a></div>
+<!-- cspell:enable --><div class="sd-container-fluid sd-sphinx-override sd-mt-4 sd-mb-4 sd-ml-0 sd-mr-0 docutils">
+<div class="sd-row sd-row-cols-1 sd-row-cols-xs-1 sd-row-cols-sm-2 sd-row-cols-md-2 sd-row-cols-lg-2 sd-g-1 sd-g-xs-1 sd-g-sm-1 sd-g-md-1 sd-g-lg-1 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<svg aria-hidden="true" class="sd-material-icon sd-material-icon-functions" height="1.0em" version="4.0.0.63c5cb3" viewbox="0 0 24 24" width="1.0em"><path d="M0 0h24v24H0z" fill="none"></path><path d="M18 4H6v2l6.5 6L6 18v2h12v-3h-7l5-5-5-5h7z"></path></svg> Symbolic expressions</div>
+<p class="sd-card-text">Compute the amplitude model over large data samples with symbolic expressions.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="amplitude-model.html"><span class="doc">Default amplitude model</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<svg aria-hidden="true" class="sd-octicon sd-octicon-file-code" height="1.0em" version="1.1" viewbox="0 0 16 16" width="1.0em"><path d="M4 1.75C4 .784 4.784 0 5.75 0h5.586c.464 0 .909.184 1.237.513l2.914 2.914c.329.328.513.773.513 1.237v8.586A1.75 1.75 0 0 1 14.25 15h-9a.75.75 0 0 1 0-1.5h9a.25.25 0 0 0 .25-.25V6h-2.75A1.75 1.75 0 0 1 10 4.25V1.5H5.75a.25.25 0 0 0-.25.25v2.5a.75.75 0 0 1-1.5 0Zm1.72 4.97a.75.75 0 0 1 1.06 0l2 2a.75.75 0 0 1 0 1.06l-2 2a.749.749 0 0 1-1.275-.326.749.749 0 0 1 .215-.734l1.47-1.47-1.47-1.47a.75.75 0 0 1 0-1.06ZM3.28 7.78 1.81 9.25l1.47 1.47a.751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018l-2-2a.75.75 0 0 1 0-1.06l2-2a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042Zm8.22-6.218V4.25c0 .138.112.25.25.25h2.688l-.011-.013-2.914-2.914-.013-.011Z"></path></svg> JSON grids</div>
+<p class="sd-card-text">Reuse the computed polarimeter field in any amplitude analysis involving <span class="math notranslate nohighlight">\(\Lambda_\mathrm{c}^+\)</span>.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="uncertainties.html#exported-distributions"><span class="std std-ref">Exported distributions</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<svg aria-hidden="true" class="sd-material-icon sd-material-icon-ads_click" height="1.0em" version="4.0.0.63c5cb3" viewbox="0 0 20 20" width="1.0em"><rect fill="none" height="20" width="20"></rect><path d="M17.09,18.5l-3.47-3.47L12.5,18L10,10l8,2.5l-2.97,1.11l3.47,3.47L17.09,18.5z M10,3.5c-3.58,0-6.5,2.92-6.5,6.5 s2.92,6.5,6.5,6.5c0.15,0,0.3-0.01,0.45-0.02l0.46,1.46C10.61,17.98,10.31,18,10,18c-4.42,0-8-3.58-8-8s3.58-8,8-8l0,0 c4.42,0,8,3.58,8,8c0,0.31-0.02,0.61-0.05,0.91l-1.46-0.46c0.01-0.15,0.02-0.3,0.02-0.45C16.5,6.42,13.58,3.5,10,3.5 M10,6.5 c-1.93,0-3.5,1.57-3.5,3.5c0,1.76,1.31,3.23,3.01,3.47L10,15c0,0-0.01,0-0.01,0C7.23,15,5,12.76,5,10c0-2.76,2.24-5,5-5l0,0 c2.76,0,5,2.23,5,4.99c0,0,0,0.01,0,0.01l-1.53-0.49C13.23,7.81,11.76,6.5,10,6.5"></path></svg> Inspect interactively</div>
+<p class="sd-card-text">Investigate how parameters in the amplitude model affect the polarimeter field.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="appendix/widget.html"><span class="doc">Interactive visualization</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<svg aria-hidden="true" class="sd-octicon sd-octicon-book" height="1.0em" version="1.1" viewbox="0 0 16 16" width="1.0em"><path d="M0 1.75A.75.75 0 0 1 .75 1h4.253c1.227 0 2.317.59 3 1.501A3.743 3.743 0 0 1 11.006 1h4.245a.75.75 0 0 1 .75.75v10.5a.75.75 0 0 1-.75.75h-4.507a2.25 2.25 0 0 0-1.591.659l-.622.621a.75.75 0 0 1-1.06 0l-.622-.621A2.25 2.25 0 0 0 5.258 13H.75a.75.75 0 0 1-.75-.75Zm7.251 10.324.004-5.073-.002-2.253A2.25 2.25 0 0 0 5.003 2.5H1.5v9h3.757a3.75 3.75 0 0 1 1.994.574ZM8.755 4.75l-.004 7.322a3.752 3.752 0 0 1 1.992-.572H14.5v-9h-3.495a2.25 2.25 0 0 0-2.25 2.25Z"></path></svg> Compute polarization</div>
+<p class="sd-card-text">Learn how to determine the polarization vector using the polarimeter field.</p>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference internal" href="zz.polarization-fit.html"><span class="doc">Determination of polarization</span></a></div>
+</div>
+<div class="sd-col sd-d-flex-row sd-col-12 sd-col-xs-12 sd-col-sm-12 sd-col-md-12 sd-col-lg-12 docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm sd-card-hover docutils">
+<div class="sd-card-body docutils">
+<div class="sd-card-title sd-font-weight-bold docutils">
+<svg aria-hidden="true" class="sd-octicon sd-octicon-download" height="1.0em" version="1.1" viewbox="0 0 16 16" width="1.0em"><path d="M2.75 14A1.75 1.75 0 0 1 1 12.25v-2.5a.75.75 0 0 1 1.5 0v2.5c0 .138.112.25.25.25h10.5a.25.25 0 0 0 .25-.25v-2.5a.75.75 0 0 1 1.5 0v2.5A1.75 1.75 0 0 1 13.25 14Z"></path><path d="M7.25 7.689V2a.75.75 0 0 1 1.5 0v5.689l1.97-1.969a.749.749 0 1 1 1.06 1.06l-3.25 3.25a.749.749 0 0 1-1.06 0L4.22 6.78a.749.749 0 1 1 1.06-1.06l1.97 1.969Z"></path></svg> Download this website as a single PDF file</div>
+</div>
+<a class="sd-stretched-link sd-hide-link-text reference external" href="_static/polarimetry.pdf"><span>_static/polarimetry.pdf</span></a></div>
+</div>
+</div>
+</div>
+<p>This website shows all analysis results that led to the publication of <a class="reference external" href="https://cds.cern.ch/record/2838694">LHCb-PAPER-2022-044</a>. More information on this publication can be found on the following pages:</p>
+<ul>
+<li><p>Publication on JHEP: <a class="reference external" href="https://doi.org/10.1007/JHEP07(2023)228">J. High Energ. Phys. 2023, 228 (2023)</a></p>
+<!-- cspell:ignore Energ -->
+</li>
+<li><p>Publication on arXiv: <a class="reference external" href="https://arxiv.org/abs/2301.07010">arXiv:2301.07010</a></p></li>
+<li><p>Record on CDS: <a class="reference external" href="https://cds.cern.ch/record/2838694">cds.cern.ch/record/2838694</a></p></li>
+<li><p>Record for the source code on Zenodo: <a class="reference external" href="https://doi.org/10.5281/zenodo.7544989">10.5281/zenodo.7544989</a></p></li>
+<li><p>Archived documentation on GitLab Pages: <a class="reference external" href="https://lc2pkpi-polarimetry.docs.cern.ch">lc2pkpi-polarimetry.docs.cern.ch</a></p></li>
+<li><p>Archived repository on CERN GitLab: <a class="reference external" href="https://gitlab.cern.ch/polarimetry/Lc2pKpi">gitlab.cern.ch/polarimetry/Lc2pKpi</a></p></li>
+<li><p>Active repository on GitHub containing discussions: <a class="reference external" href="https://github.com/ComPWA/polarimetry">github.com/ComPWA/polarimetry</a></p></li>
+</ul>
+<div class="toggle admonition">
+<p class="admonition-title">Behind SSO login (LHCb members only)</p>
+<ul class="simple">
+<li><p>LHCb TWiki page: <a class="reference external" href="https://twiki.cern.ch/twiki/bin/viewauth/LHCbPhysics/PolarimetryLc2pKpi">twiki.cern.ch/twiki/bin/viewauth/LHCbPhysics/PolarimetryLc2pKpi</a></p></li>
+<li><p>Charm WG meeting: <a class="reference external" href="https://indico.cern.ch/event/1187317">indico.cern.ch/event/1187317</a></p></li>
+<li><p>RC approval presentation: <a class="reference external" href="https://indico.cern.ch/event/1213570">indico.cern.ch/event/1213570</a></p></li>
+<li><p>Silent approval to submit: <a class="reference external" href="https://indico.cern.ch/event/1242323">indico.cern.ch/event/1242323</a></p></li>
+</ul>
+<!-- cspell:ignore lc2pkpi -->
+</div>
+<section id="python-package">
+<h2>Python package<a class="headerlink" href="#python-package" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://pypi.org/project/polarimetry-lc2pkpi"><img alt="PyPI package" src="https://badge.fury.io/py/polarimetry-lc2pkpi.svg"/></a>
+<a class="reference external" href="https://pypi.org/project/polarimetry-lc2pkpi"><img alt="Supported Python versions" src="https://img.shields.io/pypi/pyversions/polarimetry-lc2pkpi"/></a></p>
+<p>Each of the pages contain code examples for how to reproduce the results with the Python package hosted at <a class="reference external" href="https://github.com/ComPWA/polarimetry">github.com/ComPWA/polarimetry</a>. However, to quickly get import the model in another package, it is possible to install the package from PyPI:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>polarimetry-lc2pkpi
+</pre></div>
+</div>
+<p>Each of the models can then simply be imported as</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_full-width docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="api/polarimetry.html#module-polarimetry"><span class="nn">polarimetry</span></a>
+
+<a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.AmplitudeModel" title="ampform_dpd.AmplitudeModel"><span class="n">model</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="api/polarimetry.html#polarimetry.published_model"><span class="n">polarimetry</span><span class="o">.</span><span class="n">published_model</span></a><span class="p">(</span><span class="s2">"Default amplitude model"</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">intensity</span><span class="o">.</span><span class="n">cleanup</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \sum_{\lambda_{0}=-1/2}^{1/2} \sum_{\lambda_{1}=-1/2}^{1/2}{\left|{\sum_{\lambda_0^{\prime}=-1/2}^{1/2} \sum_{\lambda_1^{\prime}=-1/2}^{1/2}{A^{1}_{\lambda_0^{\prime}, \lambda_1^{\prime}, 0, 0} d^{\frac{1}{2}}_{\lambda_1^{\prime},\lambda_{1}}\left(\zeta^1_{1(1)}\right) d^{\frac{1}{2}}_{\lambda_{0},\lambda_0^{\prime}}\left(\zeta^0_{1(1)}\right) + A^{2}_{\lambda_0^{\prime}, \lambda_1^{\prime}, 0, 0} d^{\frac{1}{2}}_{\lambda_1^{\prime},\lambda_{1}}\left(\zeta^1_{2(1)}\right) d^{\frac{1}{2}}_{\lambda_{0},\lambda_0^{\prime}}\left(\zeta^0_{2(1)}\right) + A^{3}_{\lambda_0^{\prime}, \lambda_1^{\prime}, 0, 0} d^{\frac{1}{2}}_{\lambda_1^{\prime},\lambda_{1}}\left(\zeta^1_{3(1)}\right) d^{\frac{1}{2}}_{\lambda_{0},\lambda_0^{\prime}}\left(\zeta^0_{3(1)}\right)}}\right|^{2}}\]</div>
+</div>
+</div>
+<p>For more examples of how to use the codebase, see the following pages.</p>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="amplitude-model.html">1. Default amplitude model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="amplitude-model.html#resonances-and-ls-scheme">1.1. Resonances and LS-scheme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amplitude-model.html#amplitude">1.2. Amplitude</a></li>
+<li class="toctree-l2"><a class="reference internal" href="amplitude-model.html#parameter-definitions">1.3. Parameter definitions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="cross-check.html">2. Cross-check with LHCb data</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="cross-check.html#lineshape-comparison">2.1. Lineshape comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cross-check.html#amplitude-comparison">2.2. Amplitude comparison</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="intensity.html">3. Intensity distribution</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intensity.html#definition-of-free-parameters">3.1. Definition of free parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intensity.html#distribution">3.2. Distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intensity.html#decay-rates">3.3. Decay rates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intensity.html#dominant-decays">3.4. Dominant decays</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="polarimetry.html">4. Polarimeter vector field</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="polarimetry.html#dominant-contributions">4.1. Dominant contributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="polarimetry.html#total-polarimetry-vector-field">4.2. Total polarimetry vector field</a></li>
+<li class="toctree-l2"><a class="reference internal" href="polarimetry.html#aligned-vector-fields-per-chain">4.3. Aligned vector fields per chain</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="uncertainties.html">5. Uncertainties</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="uncertainties.html#model-loading">5.1. Model loading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uncertainties.html#statistical-uncertainties">5.2. Statistical uncertainties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uncertainties.html#systematic-uncertainties">5.3. Systematic uncertainties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uncertainties.html#uncertainty-on-polarimetry">5.4. Uncertainty on polarimetry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uncertainties.html#decay-rates">5.5. Decay rates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uncertainties.html#average-polarimetry-values">5.6. Average polarimetry values</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uncertainties.html#exported-distributions">5.7. Exported distributions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resonance-polarimetry.html">6. Average polarimeter per resonance</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resonance-polarimetry.html#computations">6.1. Computations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resonance-polarimetry.html#result-and-comparison">6.2. Result and comparison</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resonance-polarimetry.html#distribution-analysis">6.3. Distribution analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="appendix.html">7. Appendix</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="appendix/dynamics.html">7.1. Dynamics lineshapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/angles.html">7.2. DPD angles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/phase-space.html">7.3. Phase space sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/alignment.html">7.4. Alignment consistency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/benchmark.html">7.5. Benchmarking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/serialization.html">7.6. Polarimeter field serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/model-serialization.html">7.7. Model serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/ls-model.html">7.8. Amplitude model with LS-couplings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/pc-pv-currents.html">7.9. PC and PV currents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/homomorphism.html">7.10. SU(2) → SO(3) homomorphism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zz.polarization-fit.html">7.11. Determination of polarization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/widget.html">7.12. Interactive visualization</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">8. Bibliography</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api/polarimetry.html">9. API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/polarimetry.html#polarimetry.formulate_polarimetry"><code class="docutils literal notranslate"><span class="pre">formulate_polarimetry()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/polarimetry.html#polarimetry.published_model"><code class="docutils literal notranslate"><span class="pre">published_model()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/polarimetry.html#polarimetry.expose_model_description"><code class="docutils literal notranslate"><span class="pre">expose_model_description()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/polarimetry.lhcb.html">9.1. lhcb</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/polarimetry.data.html">9.2. data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/polarimetry.function.html">9.3. function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/polarimetry.io.html">9.4. io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/polarimetry.plot.html">9.5. plot</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Several cross-checks with Julia can be found <a class="reference external" href="./julia/index.html">here</a>.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Figures for the paper can be downloaded here:</p>
+<dl class="myst field-list simple">
+<dt class="field-odd">Figure 2<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="_static/images/total-polarimetry-field-watermark.svg"><code class="docutils literal notranslate"><span class="pre">total-polarimetry-field-watermark.svg</span></code></a></p>
+</dd>
+<dt class="field-even">Figure 3a<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="_static/images/polarimetry-field-L1520-unaligned-watermark.svg"><code class="docutils literal notranslate"><span class="pre">polarimetry-field-L1520-unaligned-watermark.svg</span></code></a></p>
+</dd>
+<dt class="field-odd">Figure 3b<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="_static/images/polarimetry-field-L1520-aligned-watermark.svg"><code class="docutils literal notranslate"><span class="pre">polarimetry-field-L1520-aligned-watermark.svg</span></code></a></p>
+</dd>
+<dt class="field-even">Figure 4<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="_static/images/polarimetry-field-norm-uncertainties-watermark.svg"><code class="docutils literal notranslate"><span class="pre">polarimetry-field-norm-uncertainties-watermark.svg</span></code></a></p>
+</dd>
+</dl>
+<p>All other exported figures can be found <a class="reference external" href="./_static/images/">here</a>.</p>
+</div>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text">Notebook execution times</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg aria-hidden="true" class="sd-octicon sd-octicon-chevron-right" height="1.5em" version="1.1" viewbox="0 0 24 24" width="1.5em"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p class="sd-card-text">Document</p></th>
+<th class="head"><p class="sd-card-text">Modified</p></th>
+<th class="head"><p class="sd-card-text">Method</p></th>
+<th class="head"><p class="sd-card-text">Run Time (s)</p></th>
+<th class="head"><p class="sd-card-text">Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="sd-card-text"><a class="xref doc reference internal" href="amplitude-model.html"><span class="doc">amplitude-model</span></a></p></td>
+<td><p class="sd-card-text">2026-09-02 09:15</p></td>
+<td><p class="sd-card-text">cache</p></td>
+<td><p class="sd-card-text">9.81</p></td>
+<td><p class="sd-card-text">✅</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><a class="xref doc reference internal" href="appendix/alignment.html"><span class="doc">appendix/alignment</span></a></p></td>
+<td><p class="sd-card-text">2026-09-02 09:16</p></td>
+<td><p class="sd-card-text">cache</p></td>
+<td><p class="sd-card-text">53.79</p></td>
+<td><p class="sd-card-text">✅</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><a class="xref doc reference internal" href="appendix/angles.html"><span class="doc">appendix/angles</span></a></p></td>
+<td><p class="sd-card-text">2026-09-02 09:17</p></td>
+<td><p class="sd-card-text">cache</p></td>
+<td><p class="sd-card-text">1.76</p></td>
+<td><p class="sd-card-text">✅</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><a class="xref doc reference internal" href="appendix/benchmark.html"><span class="doc">appendix/benchmark</span></a></p></td>
+<td><p class="sd-card-text">2026-09-02 09:20</p></td>
+<td><p class="sd-card-text">cache</p></td>
+<td><p class="sd-card-text">202.29</p></td>
+<td><p class="sd-card-text">✅</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><a class="xref doc reference internal" href="appendix/dynamics.html"><span class="doc">appendix/dynamics</span></a></p></td>
+<td><p class="sd-card-text">2026-09-02 09:20</p></td>
+<td><p class="sd-card-text">cache</p></td>
+<td><p class="sd-card-text">17.32</p></td>
+<td><p class="sd-card-text">✅</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><a class="xref doc reference internal" href="appendix/homomorphism.html"><span class="doc">appendix/homomorphism</span></a></p></td>
+<td><p class="sd-card-text">2026-09-02 09:20</p></td>
+<td><p class="sd-card-text">cache</p></td>
+<td><p class="sd-card-text">1.96</p></td>
+<td><p class="sd-card-text">✅</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><a class="xref doc reference internal" href="appendix/ls-model.html"><span class="doc">appendix/ls-model</span></a></p></td>
+<td><p class="sd-card-text">2026-09-02 09:22</p></td>
+<td><p class="sd-card-text">cache</p></td>
+<td><p class="sd-card-text">81.25</p></td>
+<td><p class="sd-card-text">✅</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><a class="xref doc reference internal" href="appendix/model-serialization.html"><span class="doc">appendix/model-serialization</span></a></p></td>
+<td><p class="sd-card-text">2026-09-02 09:22</p></td>
+<td><p class="sd-card-text">cache</p></td>
+<td><p class="sd-card-text">47.29</p></td>
+<td><p class="sd-card-text">✅</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><a class="xref doc reference internal" href="appendix/pc-pv-currents.html"><span class="doc">appendix/pc-pv-currents</span></a></p></td>
+<td><p class="sd-card-text">2026-09-02 09:41</p></td>
+<td><p class="sd-card-text">cache</p></td>
+<td><p class="sd-card-text">1102.33</p></td>
+<td><p class="sd-card-text">✅</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><a class="xref doc reference internal" href="appendix/phase-space.html"><span class="doc">appendix/phase-space</span></a></p></td>
+<td><p class="sd-card-text">2026-09-02 09:41</p></td>
+<td><p class="sd-card-text">cache</p></td>
+<td><p class="sd-card-text">18.3</p></td>
+<td><p class="sd-card-text">✅</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><a class="xref doc reference internal" href="appendix/serialization.html"><span class="doc">appendix/serialization</span></a></p></td>
+<td><p class="sd-card-text">2026-09-02 09:42</p></td>
+<td><p class="sd-card-text">cache</p></td>
+<td><p class="sd-card-text">48.35</p></td>
+<td><p class="sd-card-text">✅</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><a class="xref doc reference internal" href="appendix/widget.html"><span class="doc">appendix/widget</span></a></p></td>
+<td><p class="sd-card-text">2026-09-02 09:48</p></td>
+<td><p class="sd-card-text">cache</p></td>
+<td><p class="sd-card-text">393.88</p></td>
+<td><p class="sd-card-text">✅</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><a class="xref doc reference internal" href="cross-check.html"><span class="doc">cross-check</span></a></p></td>
+<td><p class="sd-card-text">2026-09-02 09:49</p></td>
+<td><p class="sd-card-text">cache</p></td>
+<td><p class="sd-card-text">8.12</p></td>
+<td><p class="sd-card-text">✅</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><a class="xref doc reference internal" href="#"><span class="doc">index</span></a></p></td>
+<td><p class="sd-card-text">2026-09-02 09:49</p></td>
+<td><p class="sd-card-text">cache</p></td>
+<td><p class="sd-card-text">1.53</p></td>
+<td><p class="sd-card-text">✅</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><a class="xref doc reference internal" href="intensity.html"><span class="doc">intensity</span></a></p></td>
+<td><p class="sd-card-text">2026-09-02 10:00</p></td>
+<td><p class="sd-card-text">cache</p></td>
+<td><p class="sd-card-text">710.97</p></td>
+<td><p class="sd-card-text">✅</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><a class="xref doc reference internal" href="polarimetry.html"><span class="doc">polarimetry</span></a></p></td>
+<td><p class="sd-card-text">2026-09-02 10:09</p></td>
+<td><p class="sd-card-text">cache</p></td>
+<td><p class="sd-card-text">494.52</p></td>
+<td><p class="sd-card-text">✅</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><a class="xref doc reference internal" href="resonance-polarimetry.html"><span class="doc">resonance-polarimetry</span></a></p></td>
+<td><p class="sd-card-text">2026-09-02 11:15</p></td>
+<td><p class="sd-card-text">cache</p></td>
+<td><p class="sd-card-text">3968.68</p></td>
+<td><p class="sd-card-text">✅</p></td>
+</tr>
+<tr class="row-odd"><td><p class="sd-card-text"><a class="xref doc reference internal" href="uncertainties.html"><span class="doc">uncertainties</span></a></p></td>
+<td><p class="sd-card-text">2026-09-02 11:29</p></td>
+<td><p class="sd-card-text">cache</p></td>
+<td><p class="sd-card-text">843.94</p></td>
+<td><p class="sd-card-text">✅</p></td>
+</tr>
+<tr class="row-even"><td><p class="sd-card-text"><a class="xref doc reference internal" href="zz.polarization-fit.html"><span class="doc">zz.polarization-fit</span></a></p></td>
+<td><p class="sd-card-text">2026-09-02 11:30</p></td>
+<td><p class="sd-card-text">cache</p></td>
+<td><p class="sd-card-text">90.41</p></td>
+<td><p class="sd-card-text">✅</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</details></section>
+</section>
+</article>
+<footer class="prev-next-footer d-print-none">
+<div class="prev-next-area">
+<a class="right-next" href="amplitude-model.html" title="next page">
+<div class="prev-next-info">
+<p class="prev-next-subtitle">next</p>
+<p class="prev-next-title"><span class="section-number">1. </span>Default amplitude model</p>
+</div>
+<i class="fa-solid fa-angle-right"></i>
+</a>
+</div>
+</footer>
+</div>
+<dialog id="pst-secondary-sidebar-modal"></dialog>
+<div class="bd-sidebar-secondary bd-toc" id="pst-secondary-sidebar"><div class="sidebar-secondary-items sidebar-secondary__inner">
+<div class="sidebar-secondary-item"><div class="page-toc tocsection onthispage" id="pst-page-navigation-heading-2">
+<i class="fa-solid fa-list"></i> Contents
+  </div>
+<nav aria-labelledby="pst-page-navigation-heading-2" class="page-toc" id="pst-page-toc-nav">
+<ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-package">Python package</a><ul class="pst-show_toc_level nav section-nav flex-column">
+</ul>
+</li>
+</ul>
+</nav></div>
+</div></div>
+</div>
+<footer class="bd-footer-content">
+<div class="bd-footer-content__inner container">
+<div class="footer-item">
+<p class="component-author">
+By Mikhail Mikhasenko, Remco de Boer, Miriam Fritsch
+</p>
+</div>
+<div class="footer-item">
+<p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+</p>
+</div>
+<div class="footer-item">
+<p class="last-updated">
+  Last updated on 9 September 2026.
+  <br/>
+</p>
+</div>
+<div class="footer-item">
+</div>
+</div>
+</footer>
+</main>
+</div>
+</div>
+<!-- Scripts loaded after <body> so the DOM is not blocked -->
+<script defer="" src="_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
+<script defer="" src="_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+<footer class="bd-footer">
+</footer>
+</body>
+</html>

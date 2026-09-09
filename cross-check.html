@@ -1,0 +1,2193 @@
+
+<!DOCTYPE html>
+
+<html data-content_root="./" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>2. Cross-check with LHCb data — Λc → p K π polarimetry</title>
+<script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+<!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+<noscript>
+<style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+</noscript>
+<!-- Loaded before other Sphinx assets -->
+<link href="_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet"/>
+<link href="_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet"/>
+<link href="_static/pygments.css?v=03e43079" rel="stylesheet" type="text/css"/>
+<link href="_static/styles/sphinx-book-theme.css?v=4418a689" rel="stylesheet" type="text/css"/>
+<link href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" rel="stylesheet" type="text/css"/>
+<link href="_static/sphinx-codeautolink.css?v=b2176991" rel="stylesheet" type="text/css"/>
+<link href="_static/copybutton.css?v=76b2166b" rel="stylesheet" type="text/css"/>
+<link href="_static/togglebutton.css?v=9c3e77be" rel="stylesheet" type="text/css"/>
+<link href="_static/sphinx-design.min.css?v=95c83b7e" rel="stylesheet" type="text/css"/>
+<link href="_static/custom.css?v=4f87f664" rel="stylesheet" type="text/css"/>
+<!-- So that users can add custom icons -->
+<script defer="" src="_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+<!-- Pre-loaded scripts that we'll load fully later -->
+<link as="script" href="_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" rel="preload"/>
+<link as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" rel="preload"/>
+<script src="_static/documentation_options.js?v=9eb32ce0"></script>
+<script src="_static/doctools.js?v=fd6eb6e6"></script>
+<script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+<script src="_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+<script src="_static/clipboard.min.js?v=a7894cd8"></script>
+<script src="_static/copybutton.js?v=f281be69"></script>
+<script>let toggleHintShow = 'Click to show';</script>
+<script>let toggleHintHide = 'Click to hide';</script>
+<script>let toggleOpenOnPrint = 'true';</script>
+<script src="_static/togglebutton.js?v=b8b12719"></script>
+<script src="_static/design-tabs.js?v=f930bc37"></script>
+<script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+<script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+<script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+<script>DOCUMENTATION_OPTIONS.pagename = 'cross-check';</script>
+<script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+<link href="_static/favicon.ico" rel="icon"/>
+<link href="genindex.html" rel="index" title="Index"/>
+<link href="search.html" rel="search" title="Search"/>
+<link href="intensity.html" rel="next" title="3. Intensity distribution"/>
+<link href="amplitude-model.html" rel="prev" title="1. Default amplitude model"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="en" name="docsearch:language"/>
+<meta content="0.1.dev1+gdc2e20dc5" name="docsearch:version"/>
+<meta content="9 September 2026" name="docbuild:last-update"/>
+<script src="_static/searchtools.js"></script>
+<script src="_static/language_data.js"></script>
+<script src="searchindex.js"></script>
+</head>
+<body data-default-mode="">
+<div class="skip-link d-print-none" id="pst-skip-link"><a href="#main-content">Skip to main content</a></div>
+<div id="pst-scroll-pixel-helper"></div>
+<button class="btn rounded-pill" id="pst-back-to-top" type="button">
+<i class="fa-solid fa-arrow-up"></i>Back to top</button>
+<dialog id="pst-search-dialog">
+<form action="search.html" class="bd-search d-flex align-items-center" method="get">
+<i class="fa-solid fa-magnifying-glass"></i>
+<input aria-label="Search..." autocapitalize="off" autocomplete="off" autocorrect="off" class="form-control" name="q" placeholder="Search..." spellcheck="false" type="search"/>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+</dialog>
+<div class="pst-async-banner-revealer d-none">
+<aside aria-label="Version warning" class="d-none d-print-none" id="bd-header-version-warning"></aside>
+</div>
+<header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none" id="pst-header">
+<div class="bd-header__inner bd-page-width">
+<button aria-label="Site navigation" class="pst-navbar-icon sidebar-toggle primary-toggle">
+<span class="fa-solid fa-bars"></span>
+</button>
+<div class="col-lg-9 navbar-header-items">
+<div class="navbar-header-items__end">
+<div class="navbar-item navbar-persistent--container">
+<button aria-label="Search" class="btn search-button-field search-button__button pst-js-only" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Search">
+<i class="fa-solid fa-magnifying-glass"></i>
+<span class="search-button__default-text">Search</span>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+</div>
+</div>
+</div>
+<div class="navbar-persistent--mobile">
+<button aria-label="Search" class="btn search-button-field search-button__button pst-js-only" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Search">
+<i class="fa-solid fa-magnifying-glass"></i>
+<span class="search-button__default-text">Search</span>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+</div>
+<button aria-label="On this page" class="pst-navbar-icon sidebar-toggle secondary-toggle">
+<span class="fa-solid fa-outdent"></span>
+</button>
+</div>
+</header>
+<div class="bd-container">
+<div class="bd-container__inner bd-page-width">
+<dialog id="pst-primary-sidebar-modal"></dialog>
+<div class="bd-sidebar-primary bd-sidebar" id="pst-primary-sidebar">
+<div class="sidebar-header-items sidebar-primary__section">
+</div>
+<div class="sidebar-primary-items__start sidebar-primary__section">
+<div class="sidebar-primary-item">
+<a class="navbar-brand logo" href="index.html">
+<img alt="" class="logo__image only-light" src="_static/lhcb-logo.svg"/>
+<img alt="" class="logo__image only-dark pst-js-only" src="_static/lhcb-logo.svg"/>
+<p class="title logo__title">Λ<sub>c</sub>⁺ → p K⁻ π⁺</p>
+</a></div>
+<div class="sidebar-primary-item"><ul aria-label="Icon Links" class="navbar-icon-links">
+<li class="nav-item">
+<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://compwa.github.io" rel="noopener" target="_blank" title="Common Partial Wave Analysis"><img alt="Common Partial Wave Analysis" class="icon-link-image" src="/favicon.ico"/></a>
+</li>
+<li class="nav-item">
+<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/ComPWA/polarimetry" rel="noopener" target="_blank" title="GitHub"><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i><span class="visually-hidden">GitHub</span></a>
+</li>
+<li class="nav-item">
+<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://pypi.org/project/polarimetry-lc2pkpi" rel="noopener" target="_blank" title="PyPI"><i aria-hidden="true" class="fa-brands fa-python fa-lg"></i><span class="visually-hidden">PyPI</span></a>
+</li>
+<li class="nav-item">
+<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://mybinder.org/v2/gh/ComPWA/polarimetry/main?urlpath=lab" rel="noopener" target="_blank" title="Launch on Binder"><img alt="Launch on Binder" class="icon-link-image" src="https://mybinder.readthedocs.io/en/latest/_static/favicon.png"/></a>
+</li>
+<li class="nav-item">
+<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://colab.research.google.com/github/ComPWA/polarimetry/blob/main" rel="noopener" target="_blank" title="Launch on Colaboratory"><img alt="Launch on Colaboratory" class="icon-link-image" src="https://avatars.githubusercontent.com/u/33467679?s=100"/></a>
+</li>
+</ul></div>
+<div class="sidebar-primary-item">
+<button aria-label="Search" class="btn search-button-field search-button__button pst-js-only" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Search">
+<i class="fa-solid fa-magnifying-glass"></i>
+<span class="search-button__default-text">Search</span>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+<div class="sidebar-primary-item"><nav aria-label="Main" class="bd-links bd-docs-nav">
+<div class="bd-toc-item navbar-nav active">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of contents</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="amplitude-model.html">1. Default amplitude model</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Cross-check with LHCb data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intensity.html">3. Intensity distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="polarimetry.html">4. Polarimeter vector field</a></li>
+<li class="toctree-l1"><a class="reference internal" href="uncertainties.html">5. Uncertainties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resonance-polarimetry.html">6. Average polarimeter per resonance</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="appendix.html">7. Appendix</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="appendix/dynamics.html">7.1. Dynamics lineshapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/angles.html">7.2. DPD angles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/phase-space.html">7.3. Phase space sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/alignment.html">7.4. Alignment consistency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/benchmark.html">7.5. Benchmarking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/serialization.html">7.6. Polarimeter field serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/model-serialization.html">7.7. Model serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/ls-model.html">7.8. Amplitude model with LS-couplings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/pc-pv-currents.html">7.9. PC and PV currents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/homomorphism.html">7.10. SU(2) → SO(3) homomorphism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="zz.polarization-fit.html">7.11. Determination of polarization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendix/widget.html">7.12. Interactive visualization</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="references.html">8. Bibliography</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="api/polarimetry.html">9. API</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="api/polarimetry.lhcb.html">9.1. lhcb</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/polarimetry.lhcb.dynamics.html">9.1.1. dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/polarimetry.lhcb.particle.html">9.1.2. particle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/polarimetry.lhcb.symbol.html">9.1.3. symbol</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="api/polarimetry.data.html">9.2. data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/polarimetry.function.html">9.3. function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/polarimetry.io.html">9.4. io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="api/polarimetry.plot.html">9.5. plot</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">External links</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://doi.org/10.1007/JHEP07(2023)228">JHEP</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://arxiv.org/abs/2301.07010">arXiv:2301.07010</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://compwa.github.io">ComPWA Project</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/ComPWA/polarimetry">GitHub repository</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://gitlab.cern.ch/polarimetry/Lc2pKpi">CERN GitLab (archived)</a></li>
+</ul>
+</div>
+</nav></div>
+</div>
+<div class="sidebar-primary-items__end sidebar-primary__section">
+<div class="sidebar-primary-item">
+<div class="flat" data-ea-manual="true" data-ea-publisher="readthedocs" data-ea-type="readthedocs-sidebar" id="ethical-ad-placement">
+</div></div>
+</div>
+</div>
+<main class="bd-main" id="main-content" role="main">
+<div class="sbt-scroll-pixel-helper"></div>
+<div class="bd-content">
+<div class="bd-article-container">
+<div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+<div class="header-article-items__start">
+<div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Toggle primary sidebar">
+<span class="fa-solid fa-bars"></span>
+</button></div>
+</div>
+<div class="header-article-items__end">
+<div class="header-article-item">
+<div class="article-header-buttons">
+<div class="dropdown dropdown-launch-buttons">
+<button aria-expanded="false" aria-label="Launch interactive content" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="fas fa-rocket"></i>
+</button>
+<ul class="dropdown-menu">
+<li><a class="btn btn-sm dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://mybinder.org/v2/gh/ComPWA/polarimetry/main?urlpath=lab/tree/docs/cross-check.ipynb" target="_blank" title="Launch on Binder">
+<span class="btn__icon-container">
+<img alt="Binder logo" src="_static/images/logo_binder.svg"/>
+</span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+<li><a class="btn btn-sm dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://colab.research.google.com/github/ComPWA/polarimetry/blob/main/docs/cross-check.ipynb" target="_blank" title="Launch on Colab">
+<span class="btn__icon-container">
+<img alt="Colab logo" src="_static/images/logo_colab.png"/>
+</span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+<li><a class="btn btn-sm dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FComPWA%2Fpolarimetry%2Fblob%2Fmain%2Fdocs/cross-check.ipynb" target="_blank" title="Launch on Deepnote">
+<span class="btn__icon-container">
+<img alt="Deepnote logo" src="_static/images/logo_deepnote.svg"/>
+</span>
+<span class="btn__text-container">Deepnote</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="dropdown dropdown-source-buttons">
+<button aria-expanded="false" aria-label="Source repositories" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="fab fa-github"></i>
+</button>
+<ul class="dropdown-menu">
+<li><a class="btn btn-sm btn-source-repository-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/ComPWA/polarimetry" target="_blank" title="Source repository">
+<span class="btn__icon-container">
+<i class="fab fa-github"></i>
+</span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+<li><a class="btn btn-sm btn-source-file-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/ComPWA/polarimetry/blob/main/docs/cross-check.ipynb?plain=1" target="_blank" title="Show source">
+<span class="btn__icon-container">
+<i class="fas fa-code"></i>
+</span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+<li><a class="btn btn-sm btn-source-edit-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/ComPWA/polarimetry/edit/main/docs/cross-check.ipynb" target="_blank" title="Suggest edit">
+<span class="btn__icon-container">
+<i class="fas fa-pencil-alt"></i>
+</span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+<li><a class="btn btn-sm btn-source-issues-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/ComPWA/polarimetry/issues/new?title=Issue%20on%20page%20%2Fcross-check.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Open an issue">
+<span class="btn__icon-container">
+<i class="fas fa-lightbulb"></i>
+</span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="theme-switch-container dropdown pst-js-only" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Color mode">
+<button aria-label="Color mode" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" data-bs-toggle="dropdown">
+<i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+<i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+<i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+</button>
+<ul class="dropdown-menu dropdown-menu-end">
+<li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+<li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+<li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+</ul>
+</div>
+<button aria-label="Search" class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Search">
+<i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Toggle secondary sidebar">
+<span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+</div>
+</div>
+</div>
+<div class="onlyprint" id="jb-print-docs-body">
+<h1>Cross-check with LHCb data</h1>
+<!-- Table of contents -->
+<div id="print-main-content">
+<div id="jb-print-toc">
+<div>
+<h2> Contents </h2>
+</div>
+<nav aria-label="Page">
+<ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lineshape-comparison">2.1. Lineshape comparison</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#amplitude-comparison">2.2. Amplitude comparison</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#default-model">2.2.1. Default model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ls-model">2.2.2. LS-model</a></li>
+</ul>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div id="searchbox"></div>
+<article class="bd-article">
+<section class="tex2jax_ignore mathjax_ignore" id="cross-check-with-lhcb-data">
+<h1><span class="section-number">2. </span>Cross-check with LHCb data<a class="headerlink" href="#cross-check-with-lhcb-data" title="Link to this heading">#</a></h1>
+<div class="cell tag_hide-cell tag_scroll-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Import Python libraries</p>
+<p class="expanded admonition-title">Hide code cell content</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/json.html#module-json"><span class="nn">json</span></a>
+<span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/logging.html#module-logging"><span class="nn">logging</span></a>
+<span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/os.html#module-os"><span class="nn">os</span></a>
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functools.html#module-functools"><span class="nn">functools</span></a><span class="w"> </span><span class="kn">import</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functools.html#functools.cache" title="functools.cache"><span class="n">cache</span></a>
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/textwrap.html#module-textwrap"><span class="nn">textwrap</span></a><span class="w"> </span><span class="kn">import</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/textwrap.html#textwrap.dedent" title="textwrap.dedent"><span class="n">dedent</span></a>
+
+<span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://numpy.org/doc/2.5/reference/index.html#module-numpy"><span class="nn">numpy</span></a><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/index.html#module-sympy"><span class="nn">sympy</span></a><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#module-ampform_dpd"><span class="nn">ampform_dpd</span></a><span class="w"> </span><span class="kn">import</span> <a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.AmplitudeModel" title="ampform_dpd.AmplitudeModel"><span class="n">AmplitudeModel</span></a>
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.io.html#module-ampform_dpd.io"><span class="nn">ampform_dpd.io</span></a><span class="w"> </span><span class="kn">import</span> <a class="sphinx-codeautolink-a" href="https://ampform.readthedocs.io/0.16.1/api/ampform.io.html#ampform.io.aslatex" title="ampform.io.aslatex"><span class="n">aslatex</span></a><span class="p">,</span> <a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.io.cached.html#module-ampform_dpd.io.cached" title="ampform_dpd.io.cached"><span class="n">cached</span></a><span class="p">,</span> <a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.io.html#ampform_dpd.io.simplify_latex_rendering" title="ampform_dpd.io.simplify_latex_rendering"><span class="n">simplify_latex_rendering</span></a>
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://ipython.readthedocs.io/en/9.17.1/api/generated/IPython.display.html#module-IPython.display"><span class="nn">IPython.display</span></a><span class="w"> </span><span class="kn">import</span> <a class="sphinx-codeautolink-a" href="https://ipython.readthedocs.io/en/9.17.1/api/generated/IPython.display.html#IPython.display.Markdown" title="IPython.core.display.Markdown"><span class="n">Markdown</span></a><span class="p">,</span> <a class="sphinx-codeautolink-a" href="https://ipython.readthedocs.io/en/9.17.1/api/generated/IPython.display.html#IPython.display.Math" title="IPython.core.display.Math"><span class="n">Math</span></a>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tqdm.auto</span><span class="w"> </span><span class="kn">import</span> <span class="n">tqdm</span>
+
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="api/polarimetry.data.html#module-polarimetry.data"><span class="nn">polarimetry.data</span></a><span class="w"> </span><span class="kn">import</span> <a class="sphinx-codeautolink-a" href="api/polarimetry.data.html#polarimetry.data.create_data_transformer" title="polarimetry.data.create_data_transformer"><span class="n">create_data_transformer</span></a>
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="api/polarimetry.io.html#module-polarimetry.io"><span class="nn">polarimetry.io</span></a><span class="w"> </span><span class="kn">import</span> <a class="sphinx-codeautolink-a" href="api/polarimetry.io.html#polarimetry.io.display_latex" title="polarimetry.io.display_latex"><span class="n">display_latex</span></a><span class="p">,</span> <a class="sphinx-codeautolink-a" href="api/polarimetry.io.html#polarimetry.io.mute_jax_warnings" title="polarimetry.io.mute_jax_warnings"><span class="n">mute_jax_warnings</span></a>
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="api/polarimetry.lhcb.html#module-polarimetry.lhcb"><span class="nn">polarimetry.lhcb</span></a><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <a class="sphinx-codeautolink-a" href="api/polarimetry.lhcb.html#polarimetry.lhcb.ModelName" title="polarimetry.lhcb.ModelName"><span class="n">ModelName</span></a><span class="p">,</span>
+    <a class="sphinx-codeautolink-a" href="api/polarimetry.lhcb.html#polarimetry.lhcb.get_conversion_factor" title="polarimetry.lhcb.get_conversion_factor"><span class="n">get_conversion_factor</span></a><span class="p">,</span>
+    <a class="sphinx-codeautolink-a" href="api/polarimetry.lhcb.html#polarimetry.lhcb.get_conversion_factor_ls" title="polarimetry.lhcb.get_conversion_factor_ls"><span class="n">get_conversion_factor_ls</span></a><span class="p">,</span>
+    <a class="sphinx-codeautolink-a" href="api/polarimetry.lhcb.html#polarimetry.lhcb.load_model" title="polarimetry.lhcb.load_model"><span class="n">load_model</span></a><span class="p">,</span>
+    <a class="sphinx-codeautolink-a" href="api/polarimetry.lhcb.html#polarimetry.lhcb.load_model_builder" title="polarimetry.lhcb.load_model_builder"><span class="n">load_model_builder</span></a><span class="p">,</span>
+    <a class="sphinx-codeautolink-a" href="api/polarimetry.lhcb.html#polarimetry.lhcb.parameter_key_to_symbol" title="polarimetry.lhcb.parameter_key_to_symbol"><span class="n">parameter_key_to_symbol</span></a><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="api/polarimetry.lhcb.particle.html#module-polarimetry.lhcb.particle"><span class="nn">polarimetry.lhcb.particle</span></a><span class="w"> </span><span class="kn">import</span> <a class="sphinx-codeautolink-a" href="api/polarimetry.lhcb.particle.html#polarimetry.lhcb.particle.load_particles" title="polarimetry.lhcb.particle.load_particles"><span class="n">load_particles</span></a>
+
+
+<a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functools.html#functools.cache" title="functools.cache"><span class="nd">@cache</span></a>
+<span class="k">def</span><span class="w"> </span><span class="nf">load_model_cached</span><span class="p">(</span><span class="n">model_id</span><span class="p">:</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#int"><span class="nb">int</span></a> <span class="o">|</span> <a class="sphinx-codeautolink-a" href="api/polarimetry.lhcb.html#polarimetry.lhcb.ModelName" title="polarimetry.lhcb.ModelName"><span class="n">ModelName</span></a><span class="p">)</span> <span class="o">-&gt;</span> <a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.AmplitudeModel" title="ampform_dpd.AmplitudeModel"><span class="n">AmplitudeModel</span></a><span class="p">:</span>
+    <span class="k">return</span> <a class="sphinx-codeautolink-a" href="api/polarimetry.lhcb.html#polarimetry.lhcb.load_model" title="polarimetry.lhcb.load_model"><span class="n">load_model</span></a><span class="p">(</span><span class="n">MODEL_FILE</span><span class="p">,</span> <span class="n">PARTICLES</span><span class="p">,</span> <span class="n">model_id</span><span class="p">)</span>
+
+
+<a class="sphinx-codeautolink-a" href="api/polarimetry.io.html#polarimetry.io.mute_jax_warnings" title="polarimetry.io.mute_jax_warnings"><span class="n">mute_jax_warnings</span></a><span class="p">()</span>
+<a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.io.html#ampform_dpd.io.simplify_latex_rendering" title="ampform_dpd.io.simplify_latex_rendering"><span class="n">simplify_latex_rendering</span></a><span class="p">()</span>
+<span class="n">NO_LOG</span> <span class="o">=</span> <span class="s2">"EXECUTE_NB"</span> <span class="ow">in</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/os.html#os.environ"><span class="n">os</span><span class="o">.</span><span class="n">environ</span></a>
+<span class="k">if</span> <span class="n">NO_LOG</span><span class="p">:</span>
+    <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/logging.html#logging.disable"><span class="n">logging</span><span class="o">.</span><span class="n">disable</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/logging.html#logging.CRITICAL"><span class="n">logging</span><span class="o">.</span><span class="n">CRITICAL</span></a><span class="p">)</span>
+
+<span class="n">MODEL_FILE</span> <span class="o">=</span> <span class="s2">"../data/model-definitions.yaml"</span>
+<span class="n">PARTICLES</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="api/polarimetry.lhcb.particle.html#polarimetry.lhcb.particle.load_particles" title="polarimetry.lhcb.particle.load_particles"><span class="n">load_particles</span></a><span class="p">(</span><span class="s2">"../data/particle-definitions.yaml"</span><span class="p">)</span>
+<span class="n">DEFAULT_MODEL</span> <span class="o">=</span> <span class="n">load_model_cached</span><span class="p">(</span><span class="n">model_id</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#open"><span class="nb">open</span></a><span class="p">(</span><span class="s2">"../data/crosscheck.json"</span><span class="p">)</span> <span class="k">as</span> <span class="n">stream</span><span class="p">:</span>
+    <span class="n">crosscheck_data</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/json.html#json.load"><span class="n">json</span><span class="o">.</span><span class="n">load</span></a><span class="p">(</span><span class="n">stream</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="lineshape-comparison">
+<h2><span class="section-number">2.1. </span>Lineshape comparison<a class="headerlink" href="#lineshape-comparison" title="Link to this heading">#</a></h2>
+<p>We compute a few lineshapes for the following point in phase space and compare it with the values from <span class="bibtex-citation" id="id1">[<a class="reference internal" href="references.html#id4" title="LHCb Collaboration et al. Amplitude analysis of \varLambda _c^+ \to p K^- \pi ^+ decays from semileptonic production. Phys. Rev. D, August 2022. doi:10.48550/arXiv.2208.03262.">1</a>]</span>:</p>
+<div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Load phase space point</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">σ1</span><span class="p">,</span> <span class="n">σ2</span><span class="p">,</span> <span class="n">σ3</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.symbol.symbols" title="sympy.core.symbol.symbols"><span class="n">sp</span><span class="o">.</span><span class="n">symbols</span></a><span class="p">(</span><span class="s2">"sigma1:4"</span><span class="p">,</span> <span class="n">nonnegative</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">lineshape_vars</span> <span class="o">=</span> <span class="n">crosscheck_data</span><span class="p">[</span><span class="s2">"mainvars"</span><span class="p">]</span>
+<span class="n">lineshape_subs</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">σ1</span><span class="p">:</span> <span class="n">lineshape_vars</span><span class="p">[</span><span class="s2">"m2kpi"</span><span class="p">],</span>
+    <span class="n">σ2</span><span class="p">:</span> <span class="n">lineshape_vars</span><span class="p">[</span><span class="s2">"m2pk"</span><span class="p">],</span>
+    <span class="o">**</span><span class="n">DEFAULT_MODEL</span><span class="o">.</span><span class="n">parameter_defaults</span><span class="p">,</span>
+<span class="p">}</span>
+<span class="n">lineshape_vars</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{'costhetap': -0.9949949110827053,
+ 'm2kpi': 0.7980703453578917,
+ 'm2pk': 3.6486261122281745,
+ 'phikpi': -0.4,
+ 'phip': -0.3}
+</pre></div>
+</div>
+</div>
+</div>
+<p>The lineshapes are computed for the following decay chains:</p>
+<div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Load selected decay chains</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">K892_chain</span> <span class="o">=</span> <span class="n">DEFAULT_MODEL</span><span class="o">.</span><span class="n">decay</span><span class="o">.</span><span class="n">find_chain</span><span class="p">(</span><span class="s2">"K(892)"</span><span class="p">)</span>
+<span class="n">L1405_chain</span> <span class="o">=</span> <span class="n">DEFAULT_MODEL</span><span class="o">.</span><span class="n">decay</span><span class="o">.</span><span class="n">find_chain</span><span class="p">(</span><span class="s2">"L(1405)"</span><span class="p">)</span>
+<span class="n">L1690_chain</span> <span class="o">=</span> <span class="n">DEFAULT_MODEL</span><span class="o">.</span><span class="n">decay</span><span class="o">.</span><span class="n">find_chain</span><span class="p">(</span><span class="s2">"L(1690)"</span><span class="p">)</span>
+<a class="sphinx-codeautolink-a" href="https://ipython.readthedocs.io/en/9.17.1/api/generated/IPython.display.html#IPython.display.Math" title="IPython.core.display.Math"><span class="n">Math</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://ampform.readthedocs.io/0.16.1/api/ampform.io.html#ampform.io.aslatex" title="ampform.io.aslatex"><span class="n">aslatex</span></a><span class="p">([</span><span class="n">K892_chain</span><span class="p">,</span> <span class="n">L1405_chain</span><span class="p">,</span> <span class="n">L1690_chain</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \begin{array}{c}
+  \Lambda_c^+ \xrightarrow[S=1/2]{L=0} \left(K(892) \xrightarrow[S=0]{L=1} \pi^+ K^-\right) p \\
+  \Lambda_c^+ \xrightarrow[S=1/2]{L=0} \left(\Lambda(1405) \xrightarrow[S=1/2]{L=0} K^- p\right) \pi^+ \\
+  \Lambda_c^+ \xrightarrow[S=3/2]{L=1} \left(\Lambda(1690) \xrightarrow[S=1/2]{L=2} K^- p\right) \pi^+ \\
+\end{array}\end{split}\]</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Values for LHCb-PAPER-2022-002</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">crosscheck_data</span><span class="p">[</span><span class="s2">"lineshapes"</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{'BW_K(892)_p^1_q^0': '(2.1687201455088894+23.58225917009096j)',
+ 'BW_L(1405)_p^0_q^0': '(-0.5636481410171861+0.13763637759224928j)',
+ 'BW_L(1690)_p^2_q^1': '(-1.5078327158518026+0.9775036395061584j)'}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Values as computed by this framework</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">build_dynamics</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">-&gt;</span> <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.expr.Expr" title="sympy.core.expr.Expr"><span class="n">sp</span><span class="o">.</span><span class="n">Expr</span></a><span class="p">:</span>
+    <span class="k">return</span> <span class="n">builder</span><span class="o">.</span><span class="n">dynamics_choices</span><span class="o">.</span><span class="n">get_builder</span><span class="p">(</span><span class="n">c</span><span class="p">)(</span><span class="n">c</span><span class="p">)</span><span class="o">.</span><span class="n">expression</span><span class="o">.</span><span class="n">doit</span><span class="p">()</span>
+
+
+<a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.DalitzPlotDecompositionBuilder" title="ampform_dpd.DalitzPlotDecompositionBuilder"><span class="n">builder</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="api/polarimetry.lhcb.html#polarimetry.lhcb.load_model_builder" title="polarimetry.lhcb.load_model_builder"><span class="n">load_model_builder</span></a><span class="p">(</span><span class="n">MODEL_FILE</span><span class="p">,</span> <span class="n">PARTICLES</span><span class="p">,</span> <span class="n">model_id</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">K892_bw_val</span> <span class="o">=</span> <span class="n">build_dynamics</span><span class="p">(</span><span class="n">K892_chain</span><span class="p">)</span><span class="o">.</span><span class="n">xreplace</span><span class="p">(</span><span class="n">lineshape_subs</span><span class="p">)</span><span class="o">.</span><span class="n">n</span><span class="p">()</span>
+<span class="n">L1405_bw_val</span> <span class="o">=</span> <span class="n">build_dynamics</span><span class="p">(</span><span class="n">L1405_chain</span><span class="p">)</span><span class="o">.</span><span class="n">xreplace</span><span class="p">(</span><span class="n">lineshape_subs</span><span class="p">)</span><span class="o">.</span><span class="n">n</span><span class="p">()</span>
+<span class="n">L1690_bw_val</span> <span class="o">=</span> <span class="n">build_dynamics</span><span class="p">(</span><span class="n">L1690_chain</span><span class="p">)</span><span class="o">.</span><span class="n">xreplace</span><span class="p">(</span><span class="n">lineshape_subs</span><span class="p">)</span><span class="o">.</span><span class="n">n</span><span class="p">()</span>
+<a class="sphinx-codeautolink-a" href="api/polarimetry.io.html#polarimetry.io.display_latex" title="polarimetry.io.display_latex"><span class="n">display_latex</span></a><span class="p">([</span><span class="n">K892_bw_val</span><span class="p">,</span> <span class="n">L1405_bw_val</span><span class="p">,</span> <span class="n">L1690_bw_val</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \begin{array}{c}
+  2.16872014550901 + 23.5822591700909 i \\
+  -0.563648141017186 + 0.137636377592249 i \\
+  -1.5078327158518 + 0.977503639506159 i \\
+\end{array}\end{split}\]</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Assert that these values are equal</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lineshape_decimals</span> <span class="o">=</span> <span class="mi">13</span>
+<a class="sphinx-codeautolink-a" href="https://numpy.org/doc/2.5/reference/generated/numpy.testing.assert_array_almost_equal.html#numpy.testing.assert_array_almost_equal" title="numpy.testing.assert_array_almost_equal"><span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_almost_equal</span></a><span class="p">(</span>
+    <a class="sphinx-codeautolink-a" href="https://numpy.org/doc/2.5/reference/generated/numpy.array.html#numpy.array" title="numpy.array"><span class="n">np</span><span class="o">.</span><span class="n">array</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#list"><span class="nb">list</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#map"><span class="nb">map</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#complex"><span class="nb">complex</span></a><span class="p">,</span> <span class="n">crosscheck_data</span><span class="p">[</span><span class="s2">"lineshapes"</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">()))),</span>
+    <a class="sphinx-codeautolink-a" href="https://numpy.org/doc/2.5/reference/generated/numpy.array.html#numpy.array" title="numpy.array"><span class="n">np</span><span class="o">.</span><span class="n">array</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#list"><span class="nb">list</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#map"><span class="nb">map</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#complex"><span class="nb">complex</span></a><span class="p">,</span> <span class="p">[</span><span class="n">K892_bw_val</span><span class="p">,</span> <span class="n">L1405_bw_val</span><span class="p">,</span> <span class="n">L1690_bw_val</span><span class="p">]))),</span>
+    <span class="n">decimal</span><span class="o">=</span><span class="n">lineshape_decimals</span><span class="p">,</span>
+<span class="p">)</span>
+<span class="n">src</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""</span>
+<span class="s2">:::</span><span class="se">{{</span><span class="s2">tip</span><span class="se">}}</span>
+<span class="s2">These values are **equal up to </span><span class="si">{</span><span class="n">lineshape_decimals</span><span class="si">}</span><span class="s2"> decimals**.</span>
+<span class="s2">:::</span>
+<span class="s2">"""</span>
+<a class="sphinx-codeautolink-a" href="https://ipython.readthedocs.io/en/9.17.1/api/generated/IPython.display.html#IPython.display.Markdown" title="IPython.core.display.Markdown"><span class="n">Markdown</span></a><span class="p">(</span><span class="n">src</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>These values are <strong>equal up to 13 decimals</strong>.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="amplitude-comparison">
+<h2><span class="section-number">2.2. </span>Amplitude comparison<a class="headerlink" href="#amplitude-comparison" title="Link to this heading">#</a></h2>
+<p>The amplitude for each decay chain and each outer state helicity combination are evaluated on the following point in phase space:</p>
+<div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Load phase space point as in DPD coordinates</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">amplitude_vars</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#dict"><span class="nb">dict</span></a><span class="p">(</span><span class="n">crosscheck_data</span><span class="p">[</span><span class="s2">"chainvars"</span><span class="p">])</span>
+<a class="sphinx-codeautolink-a" href="https://tensorwaves.readthedocs.io/0.4.17/api/tensorwaves.data.transform.html#tensorwaves.data.transform.SympyDataTransformer" title="tensorwaves.data.transform.SympyDataTransformer"><span class="n">transformer</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="api/polarimetry.data.html#polarimetry.data.create_data_transformer" title="polarimetry.data.create_data_transformer"><span class="n">create_data_transformer</span></a><span class="p">(</span><span class="n">DEFAULT_MODEL</span><span class="p">)</span>
+<span class="n">input_data</span> <span class="o">=</span> <span class="p">{</span>
+    <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#str"><span class="nb">str</span></a><span class="p">(</span><span class="n">σ1</span><span class="p">):</span> <span class="n">amplitude_vars</span><span class="p">[</span><span class="s2">"m2kpi"</span><span class="p">],</span>
+    <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#str"><span class="nb">str</span></a><span class="p">(</span><span class="n">σ2</span><span class="p">):</span> <span class="n">amplitude_vars</span><span class="p">[</span><span class="s2">"m2pk"</span><span class="p">],</span>
+    <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#str"><span class="nb">str</span></a><span class="p">(</span><span class="n">σ3</span><span class="p">):</span> <span class="n">amplitude_vars</span><span class="p">[</span><span class="s2">"m2ppi"</span><span class="p">],</span>
+<span class="p">}</span>
+<span class="n">input_data</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#float"><span class="nb">float</span></a><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <a class="sphinx-codeautolink-a" href="https://tensorwaves.readthedocs.io/0.4.17/api/tensorwaves.data.transform.html#tensorwaves.data.transform.SympyDataTransformer" title="tensorwaves.data.transform.SympyDataTransformer"><span class="n">transformer</span></a><span class="p">(</span><span class="n">input_data</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()}</span>
+<a class="sphinx-codeautolink-a" href="api/polarimetry.io.html#polarimetry.io.display_latex" title="polarimetry.io.display_latex"><span class="n">display_latex</span></a><span class="p">({</span><a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.symbol.Symbol" title="sympy.core.symbol.Symbol"><span class="n">sp</span><span class="o">.</span><span class="n">Symbol</span></a><span class="p">(</span><span class="n">k</span><span class="p">):</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">input_data</span><span class="o">.</span><span class="n">items</span><span class="p">()})</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \begin{aligned}
+  \theta_{23} \;&amp;=\; 1.8213411665201502 \\
+  \theta_{31} \;&amp;=\; 1.803835148371573 \\
+  \theta_{12} \;&amp;=\; 1.1139045236042195 \\
+  \zeta^0_{1(1)} \;&amp;=\; 0.0 \\
+  \zeta^1_{1(1)} \;&amp;=\; 0.0 \\
+  \zeta^0_{2(1)} \;&amp;=\; -2.077768707671287 \\
+  \zeta^1_{2(1)} \;&amp;=\; 0.22583331080384336 \\
+  \zeta^0_{3(1)} \;&amp;=\; 2.6540796539955913 \\
+  \zeta^1_{3(1)} \;&amp;=\; -0.5594175047790458 \\
+  \sigma_{1} \;&amp;=\; 0.7980703453578917 \\
+  \sigma_{2} \;&amp;=\; 3.6486261122281745 \\
+  \sigma_{3} \;&amp;=\; 1.9247541217931925 \\
+\end{aligned}\end{split}\]</div>
+</div>
+</div>
+<div class="cell tag_scroll-input tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Code for creating functions for each sub-amplitude</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functools.html#functools.cache" title="functools.cache"><span class="nd">@cache</span></a>
+<span class="k">def</span><span class="w"> </span><span class="nf">create_amplitude_functions</span><span class="p">(</span>
+    <span class="n">model_id</span><span class="p">:</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#int"><span class="nb">int</span></a> <span class="o">|</span> <a class="sphinx-codeautolink-a" href="api/polarimetry.lhcb.html#polarimetry.lhcb.ModelName" title="polarimetry.lhcb.ModelName"><span class="n">ModelName</span></a><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#dict"><span class="nb">dict</span></a><span class="p">[</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#tuple"><span class="nb">tuple</span></a><span class="p">[</span><a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.numbers.Rational" title="sympy.core.numbers.Rational"><span class="n">sp</span><span class="o">.</span><span class="n">Rational</span></a><span class="p">,</span> <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.numbers.Rational" title="sympy.core.numbers.Rational"><span class="n">sp</span><span class="o">.</span><span class="n">Rational</span></a><span class="p">],</span> <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.expr.Expr" title="sympy.core.expr.Expr"><span class="n">sp</span><span class="o">.</span><span class="n">Expr</span></a><span class="p">]:</span>
+    <a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.AmplitudeModel" title="ampform_dpd.AmplitudeModel"><span class="n">model</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="api/polarimetry.lhcb.html#polarimetry.lhcb.load_model" title="polarimetry.lhcb.load_model"><span class="n">load_model</span></a><span class="p">(</span><span class="n">MODEL_FILE</span><span class="p">,</span> <span class="n">PARTICLES</span><span class="p">,</span> <span class="n">model_id</span><span class="p">)</span>
+    <span class="n">production_couplings</span> <span class="o">=</span> <span class="n">get_production_couplings</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span>
+    <span class="n">fixed_parameters</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">s</span><span class="p">:</span> <span class="n">v</span>
+        <span class="k">for</span> <span class="n">s</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">parameter_defaults</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">s</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">production_couplings</span>
+    <span class="p">}</span>
+    <span class="n">exprs</span> <span class="o">=</span> <span class="n">formulate_amplitude_expressions</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="n">k</span><span class="p">:</span> <a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.io.cached.html#ampform_dpd.io.cached.lambdify" title="ampform_dpd.io.cached.lambdify"><span class="n">cached</span><span class="o">.</span><span class="n">lambdify</span></a><span class="p">(</span>
+            <a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.io.cached.html#ampform_dpd.io.cached.xreplace" title="ampform_dpd.io.cached.xreplace"><span class="n">cached</span><span class="o">.</span><span class="n">xreplace</span></a><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">fixed_parameters</span><span class="p">),</span>
+            <span class="n">parameters</span><span class="o">=</span><span class="n">production_couplings</span><span class="p">,</span>
+            <span class="n">backend</span><span class="o">=</span><span class="s2">"numpy"</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">expr</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">exprs</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">desc</span><span class="o">=</span><span class="s2">"Performing doit"</span><span class="p">,</span> <span class="n">disable</span><span class="o">=</span><span class="n">NO_LOG</span><span class="p">)</span>
+    <span class="p">}</span>
+
+
+<a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functools.html#functools.cache" title="functools.cache"><span class="nd">@cache</span></a>
+<span class="k">def</span><span class="w"> </span><span class="nf">formulate_amplitude_expressions</span><span class="p">(</span>
+    <span class="n">model_id</span><span class="p">:</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#int"><span class="nb">int</span></a> <span class="o">|</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#str"><span class="nb">str</span></a><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#dict"><span class="nb">dict</span></a><span class="p">[</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#tuple"><span class="nb">tuple</span></a><span class="p">[</span><a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.numbers.Rational" title="sympy.core.numbers.Rational"><span class="n">sp</span><span class="o">.</span><span class="n">Rational</span></a><span class="p">,</span> <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.numbers.Rational" title="sympy.core.numbers.Rational"><span class="n">sp</span><span class="o">.</span><span class="n">Rational</span></a><span class="p">],</span> <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.expr.Expr" title="sympy.core.expr.Expr"><span class="n">sp</span><span class="o">.</span><span class="n">Expr</span></a><span class="p">]:</span>
+    <a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.DalitzPlotDecompositionBuilder" title="ampform_dpd.DalitzPlotDecompositionBuilder"><span class="n">builder</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="api/polarimetry.lhcb.html#polarimetry.lhcb.load_model_builder" title="polarimetry.lhcb.load_model_builder"><span class="n">load_model_builder</span></a><span class="p">(</span><span class="n">MODEL_FILE</span><span class="p">,</span> <span class="n">PARTICLES</span><span class="p">,</span> <span class="n">model_id</span><span class="p">)</span>
+    <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.numbers.Rational" title="sympy.core.numbers.Rational"><span class="n">half</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.numbers.Rational" title="sympy.core.numbers.Rational"><span class="n">sp</span><span class="o">.</span><span class="n">Rational</span></a><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">exprs</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="p">(</span><span class="n">λ_Λc</span><span class="p">,</span> <span class="n">λ_p</span><span class="p">):</span> <a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.DalitzPlotDecompositionBuilder.formulate_aligned_amplitude" title="ampform_dpd.DalitzPlotDecompositionBuilder.formulate_aligned_amplitude"><span class="n">builder</span><span class="o">.</span><span class="n">formulate_aligned_amplitude</span></a><span class="p">(</span>
+            <span class="n">λ_Λc</span><span class="p">,</span> <span class="n">λ_p</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">reference_subsystem</span><span class="o">=</span><span class="mi">1</span>
+        <span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">λ_Λc</span> <span class="ow">in</span> <span class="p">[</span><span class="o">-</span><a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.numbers.Rational" title="sympy.core.numbers.Rational"><span class="n">half</span></a><span class="p">,</span> <span class="o">+</span><a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.numbers.Rational" title="sympy.core.numbers.Rational"><span class="n">half</span></a><span class="p">]</span>
+        <span class="k">for</span> <span class="n">λ_p</span> <span class="ow">in</span> <span class="p">[</span><span class="o">-</span><a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.numbers.Rational" title="sympy.core.numbers.Rational"><span class="n">half</span></a><span class="p">,</span> <span class="o">+</span><a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.numbers.Rational" title="sympy.core.numbers.Rational"><span class="n">half</span></a><span class="p">]</span>
+    <span class="p">}</span>
+    <a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.AmplitudeModel" title="ampform_dpd.AmplitudeModel"><span class="n">model</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="api/polarimetry.lhcb.html#polarimetry.lhcb.load_model" title="polarimetry.lhcb.load_model"><span class="n">load_model</span></a><span class="p">(</span><span class="n">MODEL_FILE</span><span class="p">,</span> <span class="n">PARTICLES</span><span class="p">,</span> <span class="n">model_id</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="n">k</span><span class="p">:</span> <a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.io.cached.html#ampform_dpd.io.cached.unfold" title="ampform_dpd.io.cached.unfold"><span class="n">cached</span><span class="o">.</span><span class="n">unfold</span></a><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.AmplitudeModel.amplitudes" title="ampform_dpd.AmplitudeModel.amplitudes"><span class="n">model</span><span class="o">.</span><span class="n">amplitudes</span></a><span class="p">)</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">expr</span> <span class="ow">in</span> <span class="n">tqdm</span><span class="p">(</span><span class="n">exprs</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">desc</span><span class="o">=</span><span class="s2">"Unfolding expressions"</span><span class="p">,</span> <span class="n">disable</span><span class="o">=</span><span class="n">NO_LOG</span><span class="p">)</span>
+    <span class="p">}</span>
+
+
+<a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functools.html#functools.cache" title="functools.cache"><span class="nd">@cache</span></a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_production_couplings</span><span class="p">(</span><span class="n">model_id</span><span class="p">:</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#int"><span class="nb">int</span></a> <span class="o">|</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#str"><span class="nb">str</span></a><span class="p">)</span> <span class="o">-&gt;</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#dict"><span class="nb">dict</span></a><span class="p">[</span><a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/tensor/indexed.html#sympy.tensor.indexed.Indexed" title="sympy.tensor.indexed.Indexed"><span class="n">sp</span><span class="o">.</span><span class="n">Indexed</span></a><span class="p">,</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#complex"><span class="nb">complex</span></a><span class="p">]:</span>
+    <a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.AmplitudeModel" title="ampform_dpd.AmplitudeModel"><span class="n">model</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="api/polarimetry.lhcb.html#polarimetry.lhcb.load_model" title="polarimetry.lhcb.load_model"><span class="n">load_model</span></a><span class="p">(</span><span class="n">MODEL_FILE</span><span class="p">,</span> <span class="n">PARTICLES</span><span class="p">,</span> <span class="n">model_id</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="n">symbol</span><span class="p">:</span> <span class="n">value</span>
+        <span class="k">for</span> <span class="n">symbol</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">parameter_defaults</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+        <span class="k">if</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#isinstance"><span class="nb">isinstance</span></a><span class="p">(</span><span class="n">symbol</span><span class="p">,</span> <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/tensor/indexed.html#sympy.tensor.indexed.Indexed" title="sympy.tensor.indexed.Indexed"><span class="n">sp</span><span class="o">.</span><span class="n">Indexed</span></a><span class="p">)</span>
+        <span class="k">if</span> <span class="s2">"production"</span> <span class="ow">in</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#str"><span class="nb">str</span></a><span class="p">(</span><span class="n">symbol</span><span class="p">)</span>
+    <span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="cell tag_hide-input tag_scroll-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Code for creating a comparison table</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">plusminus_to_helicity</span><span class="p">(</span><span class="n">plusminus</span><span class="p">:</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#str"><span class="nb">str</span></a><span class="p">)</span> <span class="o">-&gt;</span> <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.expr.Expr" title="sympy.core.expr.Expr"><span class="n">sp</span><span class="o">.</span><span class="n">Expr</span></a><span class="p">:</span>
+    <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.numbers.Rational" title="sympy.core.numbers.Rational"><span class="n">half</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.numbers.Rational" title="sympy.core.numbers.Rational"><span class="n">sp</span><span class="o">.</span><span class="n">Rational</span></a><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">plusminus</span> <span class="o">==</span> <span class="s2">"+"</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">+</span><a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.numbers.Rational" title="sympy.core.numbers.Rational"><span class="n">half</span></a>
+    <span class="k">if</span> <span class="n">plusminus</span> <span class="o">==</span> <span class="s2">"-"</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">-</span><a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.numbers.Rational" title="sympy.core.numbers.Rational"><span class="n">half</span></a>
+    <span class="k">raise</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/exceptions.html#NotImplementedError"><span class="ne">NotImplementedError</span></a><span class="p">(</span><span class="n">plusminus</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">create_comparison_table</span><span class="p">(</span>
+    <span class="n">model_id</span><span class="p">:</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#int"><span class="nb">int</span></a> <span class="o">|</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#str"><span class="nb">str</span></a><span class="p">,</span> <span class="n">decimals</span><span class="p">:</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#int"><span class="nb">int</span></a> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <a class="sphinx-codeautolink-a" href="https://ipython.readthedocs.io/en/9.17.1/api/generated/IPython.display.html#IPython.display.Markdown" title="IPython.core.display.Markdown"><span class="n">Markdown</span></a><span class="p">:</span>
+    <span class="n">min_ls</span> <span class="o">=</span> <span class="ow">not</span> <span class="n">is_ls_model</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span>
+    <span class="n">amplitude_funcs</span> <span class="o">=</span> <span class="n">create_amplitude_functions</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span>
+    <span class="n">real_amp_crosscheck</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">k</span><span class="p">:</span> <span class="n">v</span>
+        <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">get_amplitude_crosscheck_data</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">k</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">"Ar"</span><span class="p">)</span>
+    <span class="p">}</span>
+    <span class="n">production_couplings</span> <span class="o">=</span> <span class="n">get_production_couplings</span><span class="p">(</span><span class="n">model_id</span><span class="p">)</span>
+    <span class="n">couplings_to_zero</span> <span class="o">=</span> <span class="p">{</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#str"><span class="nb">str</span></a><span class="p">(</span><span class="n">symbol</span><span class="p">):</span> <span class="mi">0</span> <span class="k">for</span> <span class="n">symbol</span> <span class="ow">in</span> <span class="n">production_couplings</span><span class="p">}</span>
+
+    <span class="n">src</span> <span class="o">=</span> <span class="s2">""</span>
+    <span class="k">if</span> <span class="n">decimals</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">src</span> <span class="o">+=</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/textwrap.html#textwrap.dedent" title="textwrap.dedent"><span class="n">dedent</span></a><span class="p">(</span>
+            <span class="sa">f</span><span class="s2">"""</span>
+<span class="s2">            :::</span><span class="se">{{</span><span class="s2">tip</span><span class="se">}}</span>
+<span class="s2">            Computed amplitudes are equal to LHCb amplitudes up to **</span><span class="si">{</span><span class="n">decimals</span><span class="si">}</span><span class="s2"> decimals**.</span>
+<span class="s2">            :::</span>
+<span class="s2">            """</span>
+        <span class="p">)</span>
+    <span class="n">src</span> <span class="o">+=</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/textwrap.html#textwrap.dedent" title="textwrap.dedent"><span class="n">dedent</span></a><span class="p">(</span>
+<span class="w">        </span><span class="sd">"""</span>
+<span class="sd">        |     | Computed | Expected | Difference |</span>
+<span class="sd">        | ---:| --------:| --------:| ----------:|</span>
+<span class="sd">        """</span>
+    <span class="p">)</span>
+    <span class="k">for</span> <span class="n">amp_identifier</span><span class="p">,</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">real_amp_crosscheck</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">coupling</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="api/polarimetry.lhcb.html#polarimetry.lhcb.parameter_key_to_symbol" title="polarimetry.lhcb.parameter_key_to_symbol"><span class="n">parameter_key_to_symbol</span></a><span class="p">(</span>
+            <span class="n">amp_identifier</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">"Ar"</span><span class="p">,</span> <span class="s2">"A"</span><span class="p">),</span>
+            <span class="n">particle_definitions</span><span class="o">=</span><span class="n">PARTICLES</span><span class="p">,</span>
+            <span class="n">min_ls</span><span class="o">=</span><span class="n">min_ls</span><span class="p">,</span>
+        <span class="p">)</span>
+        <span class="n">src</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">"| **`</span><span class="si">{</span><span class="n">amp_identifier</span><span class="si">}</span><span class="s2">`** | $</span><span class="si">{</span><span class="n">sp</span><span class="o">.</span><span class="n">latex</span><span class="p">(</span><span class="n">coupling</span><span class="p">)</span><span class="si">}</span><span class="s2">$ |</span><span class="se">\n</span><span class="s2">"</span>
+        <span class="k">for</span> <span class="n">matrix_key</span><span class="p">,</span> <span class="n">expected</span> <span class="ow">in</span> <span class="n">entry</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="n">matrix_suffix</span> <span class="o">=</span> <span class="n">matrix_key</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>  <span class="c1"># ++, +-, -+, --</span>
+            <span class="n">λ_Λc</span><span class="p">,</span> <span class="n">λ_p</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#map"><span class="nb">map</span></a><span class="p">(</span><span class="n">plusminus_to_helicity</span><span class="p">,</span> <span class="n">matrix_suffix</span><span class="p">)</span>
+            <span class="n">func</span> <span class="o">=</span> <span class="n">amplitude_funcs</span><span class="p">[</span><span class="n">λ_Λc</span><span class="p">,</span> <span class="o">-</span><span class="n">λ_p</span><span class="p">]</span>
+            <span class="n">func</span><span class="o">.</span><span class="n">update_parameters</span><span class="p">(</span><span class="n">couplings_to_zero</span><span class="p">)</span>
+            <span class="n">func</span><span class="o">.</span><span class="n">update_parameters</span><span class="p">({</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#str"><span class="nb">str</span></a><span class="p">(</span><span class="n">coupling</span><span class="p">):</span> <span class="mi">1</span><span class="p">})</span>
+            <span class="n">computed</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#complex"><span class="nb">complex</span></a><span class="p">(</span><span class="n">func</span><span class="p">(</span><span class="n">input_data</span><span class="p">))</span>
+            <span class="n">computed</span> <span class="o">*=</span> <span class="n">determine_conversion_factor</span><span class="p">(</span><span class="n">coupling</span><span class="p">,</span> <span class="n">λ_p</span><span class="p">,</span> <span class="n">min_ls</span><span class="p">)</span>
+            <span class="n">expected</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#complex"><span class="nb">complex</span></a><span class="p">(</span><span class="n">expected</span><span class="p">)</span>
+            <span class="k">if</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#abs"><span class="nb">abs</span></a><span class="p">(</span><span class="n">expected</span><span class="p">)</span> <span class="o">!=</span> <span class="mf">0.0</span><span class="p">:</span>
+                <span class="n">diff</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#abs"><span class="nb">abs</span></a><span class="p">(</span><span class="n">computed</span> <span class="o">-</span> <span class="n">expected</span><span class="p">)</span> <span class="o">/</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#abs"><span class="nb">abs</span></a><span class="p">(</span><span class="n">expected</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">diff</span> <span class="o">&lt;</span> <span class="mf">1e-6</span><span class="p">:</span>
+                    <span class="n">diff</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">diff</span><span class="si">:</span><span class="s2">.2e</span><span class="si">}</span><span class="s2">"</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">diff</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">'&lt;span style="color:red;"&gt;</span><span class="si">{</span><span class="n">diff</span><span class="si">:</span><span class="s1">.2e</span><span class="si">}</span><span class="s1">&lt;/span&gt;'</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">diff</span> <span class="o">=</span> <span class="s2">""</span>
+            <span class="n">src</span> <span class="o">+=</span> <span class="sa">f</span><span class="s2">"| `</span><span class="si">{</span><span class="n">matrix_key</span><span class="si">}</span><span class="s2">` | </span><span class="si">{</span><span class="n">computed</span><span class="si">:</span><span class="s2">&gt;.6f</span><span class="si">}</span><span class="s2"> | </span><span class="si">{</span><span class="n">expected</span><span class="si">:</span><span class="s2">&gt;.6f</span><span class="si">}</span><span class="s2"> | </span><span class="si">{</span><span class="n">diff</span><span class="si">}</span><span class="s2"> |</span><span class="se">\n</span><span class="s2">"</span>
+            <span class="k">if</span> <span class="n">decimals</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <a class="sphinx-codeautolink-a" href="https://numpy.org/doc/2.5/reference/generated/numpy.testing.assert_array_almost_equal.html#numpy.testing.assert_array_almost_equal" title="numpy.testing.assert_array_almost_equal"><span class="n">np</span><span class="o">.</span><span class="n">testing</span><span class="o">.</span><span class="n">assert_array_almost_equal</span></a><span class="p">(</span>
+                    <span class="n">computed</span><span class="p">,</span>
+                    <span class="n">expected</span><span class="p">,</span>
+                    <span class="n">decimal</span><span class="o">=</span><span class="n">decimals</span><span class="p">,</span>
+                    <span class="n">err_msg</span><span class="o">=</span><span class="sa">f</span><span class="s2">"  </span><span class="si">{</span><span class="n">amp_identifier</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="n">matrix_key</span><span class="si">}</span><span class="s2">"</span><span class="p">,</span>
+                <span class="p">)</span>
+    <span class="k">return</span> <a class="sphinx-codeautolink-a" href="https://ipython.readthedocs.io/en/9.17.1/api/generated/IPython.display.html#IPython.display.Markdown" title="IPython.core.display.Markdown"><span class="n">Markdown</span></a><span class="p">(</span><span class="n">src</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">determine_conversion_factor</span><span class="p">(</span>
+    <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/tensor/indexed.html#sympy.tensor.indexed.Indexed" title="sympy.tensor.indexed.Indexed"><span class="n">coupling</span></a><span class="p">:</span> <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/tensor/indexed.html#sympy.tensor.indexed.Indexed" title="sympy.tensor.indexed.Indexed"><span class="n">sp</span><span class="o">.</span><span class="n">Indexed</span></a><span class="p">,</span> <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.numbers.Rational" title="sympy.core.numbers.Rational"><span class="n">λ_p</span></a><span class="p">:</span> <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.numbers.Rational" title="sympy.core.numbers.Rational"><span class="n">sp</span><span class="o">.</span><span class="n">Rational</span></a><span class="p">,</span> <span class="n">min_ls</span><span class="p">:</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#bool"><span class="nb">bool</span></a>
+<span class="p">)</span> <span class="o">-&gt;</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#int"><span class="nb">int</span></a><span class="p">:</span>
+    <span class="n">resonance_latex</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#str"><span class="nb">str</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/tensor/indexed.html#sympy.tensor.indexed.Indexed.indices" title="sympy.tensor.indexed.Indexed.indices"><span class="n">coupling</span><span class="o">.</span><span class="n">indices</span></a><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">resonance</span><span class="p">,</span> <span class="o">*</span><span class="n">_</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span> <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">PARTICLES</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">latex</span> <span class="o">==</span> <span class="n">resonance_latex</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">min_ls</span><span class="p">:</span>
+        <span class="n">factor</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="api/polarimetry.lhcb.html#polarimetry.lhcb.get_conversion_factor" title="polarimetry.lhcb.get_conversion_factor"><span class="n">get_conversion_factor</span></a><span class="p">(</span><span class="n">resonance</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">_</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">S</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/tensor/indexed.html#sympy.tensor.indexed.Indexed.indices" title="sympy.tensor.indexed.Indexed.indices"><span class="n">coupling</span><span class="o">.</span><span class="n">indices</span></a>
+        <span class="n">factor</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="api/polarimetry.lhcb.html#polarimetry.lhcb.get_conversion_factor_ls" title="polarimetry.lhcb.get_conversion_factor_ls"><span class="n">get_conversion_factor_ls</span></a><span class="p">(</span><span class="n">resonance</span><span class="p">,</span> <span class="n">L</span><span class="p">,</span> <span class="n">S</span><span class="p">)</span>
+    <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.numbers.Rational" title="sympy.core.numbers.Rational"><span class="n">half</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.numbers.Rational" title="sympy.core.numbers.Rational"><span class="n">sp</span><span class="o">.</span><span class="n">Rational</span></a><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="n">factor</span> <span class="o">*=</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#int"><span class="nb">int</span></a><span class="p">((</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">**</span> <span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.numbers.Rational" title="sympy.core.numbers.Rational"><span class="n">half</span></a> <span class="o">+</span> <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.numbers.Rational" title="sympy.core.numbers.Rational"><span class="n">λ_p</span></a><span class="p">))</span>  <span class="c1"># # additional sign flip for amplitude</span>
+    <span class="k">return</span> <span class="n">factor</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">is_ls_model</span><span class="p">(</span><span class="n">model_id</span><span class="p">:</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#int"><span class="nb">int</span></a> <span class="o">|</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#str"><span class="nb">str</span></a><span class="p">)</span> <span class="o">-&gt;</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#bool"><span class="nb">bool</span></a><span class="p">:</span>
+    <span class="k">if</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#isinstance"><span class="nb">isinstance</span></a><span class="p">(</span><span class="n">model_id</span><span class="p">,</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#int"><span class="nb">int</span></a><span class="p">):</span>
+        <span class="k">return</span> <span class="n">model_id</span> <span class="o">==</span> <span class="mi">17</span>
+    <span class="k">return</span> <span class="s2">"LS couplings"</span> <span class="ow">in</span> <span class="n">model_id</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">get_amplitude_crosscheck_data</span><span class="p">(</span><span class="n">model_id</span><span class="p">:</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#int"><span class="nb">int</span></a> <span class="o">|</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#str"><span class="nb">str</span></a><span class="p">)</span> <span class="o">-&gt;</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#dict"><span class="nb">dict</span></a><span class="p">[</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#str"><span class="nb">str</span></a><span class="p">,</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#complex"><span class="nb">complex</span></a><span class="p">]:</span>
+    <span class="k">if</span> <span class="n">is_ls_model</span><span class="p">(</span><span class="n">model_id</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">crosscheck_data</span><span class="p">[</span><span class="s2">"chains_LS"</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">crosscheck_data</span><span class="p">[</span><span class="s2">"chains"</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<section id="default-model">
+<h3><span class="section-number">2.2.1. </span>Default model<a class="headerlink" href="#default-model" title="Link to this heading">#</a></h3>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell source</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">create_comparison_table</span><span class="p">(</span><span class="n">model_id</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">decimals</span><span class="o">=</span><span class="mi">13</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="admonition hide below-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell output</p>
+<p class="expanded admonition-title">Hide code cell output</p>
+</summary>
+<div class="cell_output docutils container">
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Computed amplitudes are equal to LHCb amplitudes up to <strong>13 decimals</strong>.</p>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p></p></th>
+<th class="head text-right"><p>Computed</p></th>
+<th class="head text-right"><p>Expected</p></th>
+<th class="head text-right"><p>Difference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArD(1232)1</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{production}_{\Delta(1232), - \frac{1}{2}, 0}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>-0.488498+0.517710j</p></td>
+<td class="text-right"><p>-0.488498+0.517710j</p></td>
+<td class="text-right"><p>2.05e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.894898-0.948412j</p></td>
+<td class="text-right"><p>0.894898-0.948412j</p></td>
+<td class="text-right"><p>4.12e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>0.121490-0.128755j</p></td>
+<td class="text-right"><p>0.121490-0.128755j</p></td>
+<td class="text-right"><p>2.36e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>-0.222563+0.235872j</p></td>
+<td class="text-right"><p>-0.222563+0.235872j</p></td>
+<td class="text-right"><p>4.63e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArD(1232)2</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{production}_{\Delta(1232), \frac{1}{2}, 0}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>-0.222563+0.235872j</p></td>
+<td class="text-right"><p>-0.222563+0.235872j</p></td>
+<td class="text-right"><p>4.63e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>-0.121490+0.128755j</p></td>
+<td class="text-right"><p>-0.121490+0.128755j</p></td>
+<td class="text-right"><p>2.37e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-0.894898+0.948412j</p></td>
+<td class="text-right"><p>-0.894898+0.948412j</p></td>
+<td class="text-right"><p>4.42e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>-0.488498+0.517710j</p></td>
+<td class="text-right"><p>-0.488498+0.517710j</p></td>
+<td class="text-right"><p>2.05e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArD(1600)1</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{production}_{\Delta(1600), - \frac{1}{2}, 0}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>0.289160+0.081910j</p></td>
+<td class="text-right"><p>0.289160+0.081910j</p></td>
+<td class="text-right"><p>2.55e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>-0.529724-0.150054j</p></td>
+<td class="text-right"><p>-0.529724-0.150054j</p></td>
+<td class="text-right"><p>4.53e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-0.071915-0.020371j</p></td>
+<td class="text-right"><p>-0.071915-0.020371j</p></td>
+<td class="text-right"><p>2.90e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>0.131743+0.037319j</p></td>
+<td class="text-right"><p>0.131743+0.037319j</p></td>
+<td class="text-right"><p>8.03e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArD(1600)2</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{production}_{\Delta(1600), \frac{1}{2}, 0}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>0.131743+0.037319j</p></td>
+<td class="text-right"><p>0.131743+0.037319j</p></td>
+<td class="text-right"><p>8.03e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.071915+0.020371j</p></td>
+<td class="text-right"><p>0.071915+0.020371j</p></td>
+<td class="text-right"><p>2.89e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>0.529724+0.150054j</p></td>
+<td class="text-right"><p>0.529724+0.150054j</p></td>
+<td class="text-right"><p>4.59e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>0.289160+0.081910j</p></td>
+<td class="text-right"><p>0.289160+0.081910j</p></td>
+<td class="text-right"><p>2.55e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArD(1700)1</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{production}_{\Delta(1700), - \frac{1}{2}, 0}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>-0.018885-0.001757j</p></td>
+<td class="text-right"><p>-0.018885-0.001757j</p></td>
+<td class="text-right"><p>1.57e-13</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.315695+0.029366j</p></td>
+<td class="text-right"><p>0.315695+0.029366j</p></td>
+<td class="text-right"><p>1.17e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>0.004697+0.000437j</p></td>
+<td class="text-right"><p>0.004697+0.000437j</p></td>
+<td class="text-right"><p>1.54e-13</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>-0.078514-0.007303j</p></td>
+<td class="text-right"><p>-0.078514-0.007303j</p></td>
+<td class="text-right"><p>1.47e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArD(1700)2</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{production}_{\Delta(1700), \frac{1}{2}, 0}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>0.078514+0.007303j</p></td>
+<td class="text-right"><p>0.078514+0.007303j</p></td>
+<td class="text-right"><p>1.47e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.004697+0.000437j</p></td>
+<td class="text-right"><p>0.004697+0.000437j</p></td>
+<td class="text-right"><p>1.54e-13</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>0.315695+0.029366j</p></td>
+<td class="text-right"><p>0.315695+0.029366j</p></td>
+<td class="text-right"><p>1.17e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>0.018885+0.001757j</p></td>
+<td class="text-right"><p>0.018885+0.001757j</p></td>
+<td class="text-right"><p>1.57e-13</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArK(892)1</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{production}_{K(892), 0, - \frac{1}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>-0.537695-5.846793j</p></td>
+<td class="text-right"><p>-0.537695-5.846793j</p></td>
+<td class="text-right"><p>3.05e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArK(892)2</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{production}_{K(892), -1, - \frac{1}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>-0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>1.485636+16.154534j</p></td>
+<td class="text-right"><p>1.485636+16.154534j</p></td>
+<td class="text-right"><p>2.58e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArK(892)3</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{production}_{K(892), 1, \frac{1}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>-0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>-1.485636-16.154534j</p></td>
+<td class="text-right"><p>-1.485636-16.154534j</p></td>
+<td class="text-right"><p>2.58e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArK(892)4</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{production}_{K(892), 0, \frac{1}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>-0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>-0.537695-5.846793j</p></td>
+<td class="text-right"><p>-0.537695-5.846793j</p></td>
+<td class="text-right"><p>3.05e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArK(1430)1</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{production}_{K(1430), 0, \frac{1}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>-0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>0.909456+0.072819j</p></td>
+<td class="text-right"><p>0.909456+0.072819j</p></td>
+<td class="text-right"><p>1.22e-16</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArK(1430)2</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{production}_{K(1430), 0, - \frac{1}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>0.909456+0.072819j</p></td>
+<td class="text-right"><p>0.909456+0.072819j</p></td>
+<td class="text-right"><p>1.22e-16</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArK(700)1</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{production}_{K(700), 0, \frac{1}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>-0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>-1.708879+3.380634j</p></td>
+<td class="text-right"><p>-1.708879+3.380634j</p></td>
+<td class="text-right"><p>4.97e-16</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArK(700)2</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{production}_{K(700), 0, - \frac{1}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>-1.708879+3.380634j</p></td>
+<td class="text-right"><p>-1.708879+3.380634j</p></td>
+<td class="text-right"><p>4.97e-16</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArL(1405)1</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{production}_{\Lambda(1405), - \frac{1}{2}, 0}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>-0.412613+0.100755j</p></td>
+<td class="text-right"><p>-0.412613+0.100755j</p></td>
+<td class="text-right"><p>5.67e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>-0.256372+0.062603j</p></td>
+<td class="text-right"><p>-0.256372+0.062603j</p></td>
+<td class="text-right"><p>1.21e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-0.242818+0.059293j</p></td>
+<td class="text-right"><p>-0.242818+0.059293j</p></td>
+<td class="text-right"><p>2.39e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>-0.150872+0.036841j</p></td>
+<td class="text-right"><p>-0.150872+0.036841j</p></td>
+<td class="text-right"><p>1.73e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArL(1405)2</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{production}_{\Lambda(1405), \frac{1}{2}, 0}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>-0.150872+0.036841j</p></td>
+<td class="text-right"><p>-0.150872+0.036841j</p></td>
+<td class="text-right"><p>1.73e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.242818-0.059293j</p></td>
+<td class="text-right"><p>0.242818-0.059293j</p></td>
+<td class="text-right"><p>2.39e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>0.256372-0.062603j</p></td>
+<td class="text-right"><p>0.256372-0.062603j</p></td>
+<td class="text-right"><p>1.21e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>-0.412613+0.100755j</p></td>
+<td class="text-right"><p>-0.412613+0.100755j</p></td>
+<td class="text-right"><p>5.67e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArL(1520)1</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{production}_{\Lambda(1520), - \frac{1}{2}, 0}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>0.257632-0.288056j</p></td>
+<td class="text-right"><p>0.257632-0.288056j</p></td>
+<td class="text-right"><p>6.95e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.731594-0.817988j</p></td>
+<td class="text-right"><p>0.731594-0.817988j</p></td>
+<td class="text-right"><p>2.37e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>0.151613-0.169517j</p></td>
+<td class="text-right"><p>0.151613-0.169517j</p></td>
+<td class="text-right"><p>9.87e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>0.430534-0.481376j</p></td>
+<td class="text-right"><p>0.430534-0.481376j</p></td>
+<td class="text-right"><p>6.59e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArL(1520)2</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{production}_{\Lambda(1520), \frac{1}{2}, 0}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>-0.430534+0.481376j</p></td>
+<td class="text-right"><p>-0.430534+0.481376j</p></td>
+<td class="text-right"><p>6.59e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.151613-0.169517j</p></td>
+<td class="text-right"><p>0.151613-0.169517j</p></td>
+<td class="text-right"><p>9.88e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>0.731594-0.817988j</p></td>
+<td class="text-right"><p>0.731594-0.817988j</p></td>
+<td class="text-right"><p>2.35e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>-0.257632+0.288056j</p></td>
+<td class="text-right"><p>-0.257632+0.288056j</p></td>
+<td class="text-right"><p>6.95e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArL(1600)1</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{production}_{\Lambda(1600), - \frac{1}{2}, 0}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>-0.385436+0.424707j</p></td>
+<td class="text-right"><p>-0.385436+0.424707j</p></td>
+<td class="text-right"><p>2.02e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.382669-0.421658j</p></td>
+<td class="text-right"><p>0.382669-0.421658j</p></td>
+<td class="text-right"><p>4.78e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-0.226825+0.249935j</p></td>
+<td class="text-right"><p>-0.226825+0.249935j</p></td>
+<td class="text-right"><p>9.38e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>0.225196-0.248141j</p></td>
+<td class="text-right"><p>0.225196-0.248141j</p></td>
+<td class="text-right"><p>3.43e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArL(1600)2</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{production}_{\Lambda(1600), \frac{1}{2}, 0}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>-0.225196+0.248141j</p></td>
+<td class="text-right"><p>-0.225196+0.248141j</p></td>
+<td class="text-right"><p>3.42e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>-0.226825+0.249935j</p></td>
+<td class="text-right"><p>-0.226825+0.249935j</p></td>
+<td class="text-right"><p>9.38e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>0.382669-0.421658j</p></td>
+<td class="text-right"><p>0.382669-0.421658j</p></td>
+<td class="text-right"><p>4.71e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>0.385436-0.424707j</p></td>
+<td class="text-right"><p>0.385436-0.424707j</p></td>
+<td class="text-right"><p>2.02e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArL(1670)1</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{production}_{\Lambda(1670), - \frac{1}{2}, 0}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>-0.846639+0.064025j</p></td>
+<td class="text-right"><p>-0.846639+0.064025j</p></td>
+<td class="text-right"><p>5.89e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>-0.526049+0.039781j</p></td>
+<td class="text-right"><p>-0.526049+0.039781j</p></td>
+<td class="text-right"><p>1.20e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-0.498237+0.037678j</p></td>
+<td class="text-right"><p>-0.498237+0.037678j</p></td>
+<td class="text-right"><p>2.36e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>-0.309574+0.023411j</p></td>
+<td class="text-right"><p>-0.309574+0.023411j</p></td>
+<td class="text-right"><p>1.72e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArL(1670)2</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{production}_{\Lambda(1670), \frac{1}{2}, 0}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>-0.309574+0.023411j</p></td>
+<td class="text-right"><p>-0.309574+0.023411j</p></td>
+<td class="text-right"><p>1.72e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.498237-0.037678j</p></td>
+<td class="text-right"><p>0.498237-0.037678j</p></td>
+<td class="text-right"><p>2.36e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>0.526049-0.039781j</p></td>
+<td class="text-right"><p>0.526049-0.039781j</p></td>
+<td class="text-right"><p>1.20e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>-0.846639+0.064025j</p></td>
+<td class="text-right"><p>-0.846639+0.064025j</p></td>
+<td class="text-right"><p>5.89e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArL(1690)1</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{production}_{\Lambda(1690), - \frac{1}{2}, 0}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>0.232446-0.150691j</p></td>
+<td class="text-right"><p>0.232446-0.150691j</p></td>
+<td class="text-right"><p>7.09e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.660073-0.427915j</p></td>
+<td class="text-right"><p>0.660073-0.427915j</p></td>
+<td class="text-right"><p>2.23e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>0.136791-0.088680j</p></td>
+<td class="text-right"><p>0.136791-0.088680j</p></td>
+<td class="text-right"><p>1.00e-13</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>0.388445-0.251823j</p></td>
+<td class="text-right"><p>0.388445-0.251823j</p></td>
+<td class="text-right"><p>7.26e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArL(1690)2</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{production}_{\Lambda(1690), \frac{1}{2}, 0}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>-0.388445+0.251823j</p></td>
+<td class="text-right"><p>-0.388445+0.251823j</p></td>
+<td class="text-right"><p>7.31e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.136791-0.088680j</p></td>
+<td class="text-right"><p>0.136791-0.088680j</p></td>
+<td class="text-right"><p>1.00e-13</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>0.660073-0.427915j</p></td>
+<td class="text-right"><p>0.660073-0.427915j</p></td>
+<td class="text-right"><p>2.21e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>-0.232446+0.150691j</p></td>
+<td class="text-right"><p>-0.232446+0.150691j</p></td>
+<td class="text-right"><p>7.09e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArL(2000)1</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{production}_{\Lambda(2000), - \frac{1}{2}, 0}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>1.072514+1.195841j</p></td>
+<td class="text-right"><p>1.072514+1.195841j</p></td>
+<td class="text-right"><p>5.50e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.666394+0.743022j</p></td>
+<td class="text-right"><p>0.666394+0.743022j</p></td>
+<td class="text-right"><p>1.19e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>0.631162+0.703738j</p></td>
+<td class="text-right"><p>0.631162+0.703738j</p></td>
+<td class="text-right"><p>2.41e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>0.392165+0.437260j</p></td>
+<td class="text-right"><p>0.392165+0.437260j</p></td>
+<td class="text-right"><p>1.77e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArL(2000)2</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{production}_{\Lambda(2000), \frac{1}{2}, 0}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>0.392165+0.437260j</p></td>
+<td class="text-right"><p>0.392165+0.437260j</p></td>
+<td class="text-right"><p>1.77e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>-0.631162-0.703738j</p></td>
+<td class="text-right"><p>-0.631162-0.703738j</p></td>
+<td class="text-right"><p>2.41e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-0.666394-0.743022j</p></td>
+<td class="text-right"><p>-0.666394-0.743022j</p></td>
+<td class="text-right"><p>1.19e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>1.072514+1.195841j</p></td>
+<td class="text-right"><p>1.072514+1.195841j</p></td>
+<td class="text-right"><p>5.50e-15</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</details>
+</div>
+</section>
+<section id="ls-model">
+<h3><span class="section-number">2.2.2. </span>LS-model<a class="headerlink" href="#ls-model" title="Link to this heading">#</a></h3>
+<div class="cell tag_hide-input tag_hide-output docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell source</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
+<div class="cell_input above-output-prompt docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">create_comparison_table</span><span class="p">(</span>
+    <span class="s2">"Alternative amplitude model obtained using LS couplings"</span><span class="p">,</span>
+    <span class="n">decimals</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<details class="admonition hide below-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell output</p>
+<p class="expanded admonition-title">Hide code cell output</p>
+</summary>
+<div class="cell_output docutils container">
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Computed amplitudes are equal to LHCb amplitudes up to <strong>13 decimals</strong>.</p>
+</div>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head text-right"><p></p></th>
+<th class="head text-right"><p>Computed</p></th>
+<th class="head text-right"><p>Expected</p></th>
+<th class="head text-right"><p>Difference</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArD(1232)1</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{LS,production}_{\Delta(1232), 1, \frac{3}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>0.502796-0.532862j</p></td>
+<td class="text-right"><p>0.502796-0.532862j</p></td>
+<td class="text-right"><p>1.13e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>-0.546882+0.579585j</p></td>
+<td class="text-right"><p>-0.546882+0.579585j</p></td>
+<td class="text-right"><p>9.81e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>0.546882-0.579585j</p></td>
+<td class="text-right"><p>0.546882-0.579585j</p></td>
+<td class="text-right"><p>9.81e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>0.502796-0.532862j</p></td>
+<td class="text-right"><p>0.502796-0.532862j</p></td>
+<td class="text-right"><p>1.11e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArD(1232)2</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{LS,production}_{\Delta(1232), 2, \frac{3}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>-0.180489+0.191282j</p></td>
+<td class="text-right"><p>-0.180489+0.191282j</p></td>
+<td class="text-right"><p>3.22e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.689818-0.731068j</p></td>
+<td class="text-right"><p>0.689818-0.731068j</p></td>
+<td class="text-right"><p>4.38e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>0.689818-0.731068j</p></td>
+<td class="text-right"><p>0.689818-0.731068j</p></td>
+<td class="text-right"><p>4.53e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>0.180489-0.191282j</p></td>
+<td class="text-right"><p>0.180489-0.191282j</p></td>
+<td class="text-right"><p>3.27e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArD(1600)1</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{LS,production}_{\Delta(1600), 1, \frac{3}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>-0.297624-0.084307j</p></td>
+<td class="text-right"><p>-0.297624-0.084307j</p></td>
+<td class="text-right"><p>1.87e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.323720+0.091699j</p></td>
+<td class="text-right"><p>0.323720+0.091699j</p></td>
+<td class="text-right"><p>1.63e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-0.323720-0.091699j</p></td>
+<td class="text-right"><p>-0.323720-0.091699j</p></td>
+<td class="text-right"><p>1.70e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>-0.297624-0.084307j</p></td>
+<td class="text-right"><p>-0.297624-0.084307j</p></td>
+<td class="text-right"><p>1.85e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArD(1600)2</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{LS,production}_{\Delta(1600), 2, \frac{3}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>0.143541+0.040660j</p></td>
+<td class="text-right"><p>0.143541+0.040660j</p></td>
+<td class="text-right"><p>3.83e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>-0.548604-0.155402j</p></td>
+<td class="text-right"><p>-0.548604-0.155402j</p></td>
+<td class="text-right"><p>5.53e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-0.548604-0.155402j</p></td>
+<td class="text-right"><p>-0.548604-0.155402j</p></td>
+<td class="text-right"><p>5.58e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>-0.143541-0.040660j</p></td>
+<td class="text-right"><p>-0.143541-0.040660j</p></td>
+<td class="text-right"><p>3.85e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArD(1700)1</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{LS,production}_{\Delta(1700), 1, \frac{3}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>-0.042164-0.003922j</p></td>
+<td class="text-right"><p>-0.042164-0.003922j</p></td>
+<td class="text-right"><p>6.88e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>-0.226551-0.021074j</p></td>
+<td class="text-right"><p>-0.226551-0.021074j</p></td>
+<td class="text-right"><p>8.83e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-0.226551-0.021074j</p></td>
+<td class="text-right"><p>-0.226551-0.021074j</p></td>
+<td class="text-right"><p>8.95e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>0.042164+0.003922j</p></td>
+<td class="text-right"><p>0.042164+0.003922j</p></td>
+<td class="text-right"><p>6.91e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArD(1700)2</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{LS,production}_{\Delta(1700), 2, \frac{3}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>-0.105349-0.009800j</p></td>
+<td class="text-right"><p>-0.105349-0.009800j</p></td>
+<td class="text-right"><p>2.01e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.336381+0.031290j</p></td>
+<td class="text-right"><p>0.336381+0.031290j</p></td>
+<td class="text-right"><p>1.23e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-0.336381-0.031290j</p></td>
+<td class="text-right"><p>-0.336381-0.031290j</p></td>
+<td class="text-right"><p>1.23e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>-0.105349-0.009800j</p></td>
+<td class="text-right"><p>-0.105349-0.009800j</p></td>
+<td class="text-right"><p>2.03e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArK(892)1</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{LS,production}_{K(892), 0, \frac{1}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>0.219513+2.386943j</p></td>
+<td class="text-right"><p>0.219513+2.386943j</p></td>
+<td class="text-right"><p>3.09e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>-0.857733-9.326825j</p></td>
+<td class="text-right"><p>-0.857733-9.326825j</p></td>
+<td class="text-right"><p>2.51e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-0.857733-9.326825j</p></td>
+<td class="text-right"><p>-0.857733-9.326825j</p></td>
+<td class="text-right"><p>2.51e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>-0.219513-2.386943j</p></td>
+<td class="text-right"><p>-0.219513-2.386943j</p></td>
+<td class="text-right"><p>3.21e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArK(892)2</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{LS,production}_{K(892), 1, \frac{1}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>0.219549+2.387337j</p></td>
+<td class="text-right"><p>0.219549+2.387337j</p></td>
+<td class="text-right"><p>5.74e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>-0.857874-9.328364j</p></td>
+<td class="text-right"><p>-0.857874-9.328364j</p></td>
+<td class="text-right"><p>4.06e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>0.857874+9.328364j</p></td>
+<td class="text-right"><p>0.857874+9.328364j</p></td>
+<td class="text-right"><p>3.91e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>0.219549+2.387337j</p></td>
+<td class="text-right"><p>0.219549+2.387337j</p></td>
+<td class="text-right"><p>5.74e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArK(892)3</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{LS,production}_{K(892), 1, \frac{3}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>0.310489+3.376204j</p></td>
+<td class="text-right"><p>0.310489+3.376204j</p></td>
+<td class="text-right"><p>4.48e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.606609+6.596150j</p></td>
+<td class="text-right"><p>0.606609+6.596150j</p></td>
+<td class="text-right"><p>3.90e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-0.606609-6.596150j</p></td>
+<td class="text-right"><p>-0.606609-6.596150j</p></td>
+<td class="text-right"><p>4.01e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>0.310489+3.376204j</p></td>
+<td class="text-right"><p>0.310489+3.376204j</p></td>
+<td class="text-right"><p>4.48e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArK(892)4</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{LS,production}_{K(892), 2, \frac{3}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>0.310629+3.377724j</p></td>
+<td class="text-right"><p>0.310629+3.377724j</p></td>
+<td class="text-right"><p>4.48e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.606882+6.599119j</p></td>
+<td class="text-right"><p>0.606882+6.599119j</p></td>
+<td class="text-right"><p>3.06e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>0.606882+6.599119j</p></td>
+<td class="text-right"><p>0.606882+6.599119j</p></td>
+<td class="text-right"><p>3.06e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>-0.310629-3.377724j</p></td>
+<td class="text-right"><p>-0.310629-3.377724j</p></td>
+<td class="text-right"><p>4.48e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArK(1430)1</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{LS,production}_{K(1430), 0, \frac{1}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>0.643091+0.051436j</p></td>
+<td class="text-right"><p>0.643091+0.051436j</p></td>
+<td class="text-right"><p>1.08e-16</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>0.643091+0.051436j</p></td>
+<td class="text-right"><p>0.643091+0.051436j</p></td>
+<td class="text-right"><p>1.08e-16</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArK(1430)2</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{LS,production}_{K(1430), 1, \frac{1}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>-0.643091-0.051436j</p></td>
+<td class="text-right"><p>-0.643091-0.051436j</p></td>
+<td class="text-right"><p>2.09e-16</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>0.643091+0.051436j</p></td>
+<td class="text-right"><p>0.643091+0.051436j</p></td>
+<td class="text-right"><p>2.09e-16</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArK(700)1</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{LS,production}_{K(700), 0, \frac{1}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>-1.070937+2.282902j</p></td>
+<td class="text-right"><p>-1.070937+2.282902j</p></td>
+<td class="text-right"><p>3.94e-16</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>-1.070937+2.282902j</p></td>
+<td class="text-right"><p>-1.070937+2.282902j</p></td>
+<td class="text-right"><p>3.94e-16</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArK(700)2</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{LS,production}_{K(700), 1, \frac{1}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>1.070937-2.282902j</p></td>
+<td class="text-right"><p>1.070937-2.282902j</p></td>
+<td class="text-right"><p>4.40e-16</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-0.000000+0.000000j</p></td>
+<td class="text-right"><p>0.000000+0.000000j</p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>-1.070937+2.282902j</p></td>
+<td class="text-right"><p>-1.070937+2.282902j</p></td>
+<td class="text-right"><p>4.40e-16</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArL(1405)1</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{LS,production}_{\Lambda(1405), 0, \frac{1}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>-0.398444+0.097295j</p></td>
+<td class="text-right"><p>-0.398444+0.097295j</p></td>
+<td class="text-right"><p>2.89e-16</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>-0.009584+0.002340j</p></td>
+<td class="text-right"><p>-0.009584+0.002340j</p></td>
+<td class="text-right"><p>6.53e-13</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>0.009584-0.002340j</p></td>
+<td class="text-right"><p>0.009584-0.002340j</p></td>
+<td class="text-right"><p>6.53e-13</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>-0.398444+0.097295j</p></td>
+<td class="text-right"><p>-0.398444+0.097295j</p></td>
+<td class="text-right"><p>2.89e-16</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArL(1405)2</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{LS,production}_{\Lambda(1405), 1, \frac{1}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>0.163270-0.039869j</p></td>
+<td class="text-right"><p>0.163270-0.039869j</p></td>
+<td class="text-right"><p>1.89e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.311387-0.076037j</p></td>
+<td class="text-right"><p>0.311387-0.076037j</p></td>
+<td class="text-right"><p>5.50e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>0.311387-0.076037j</p></td>
+<td class="text-right"><p>0.311387-0.076037j</p></td>
+<td class="text-right"><p>5.50e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>-0.163270+0.039869j</p></td>
+<td class="text-right"><p>-0.163270+0.039869j</p></td>
+<td class="text-right"><p>1.90e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArL(1520)1</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{LS,production}_{\Lambda(1520), 1, \frac{3}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>0.117387-0.135999j</p></td>
+<td class="text-right"><p>0.117387-0.135999j</p></td>
+<td class="text-right"><p>8.65e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>-0.599627+0.694701j</p></td>
+<td class="text-right"><p>-0.599627+0.694701j</p></td>
+<td class="text-right"><p>3.12e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-0.599627+0.694701j</p></td>
+<td class="text-right"><p>-0.599627+0.694701j</p></td>
+<td class="text-right"><p>3.12e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>-0.117387+0.135999j</p></td>
+<td class="text-right"><p>-0.117387+0.135999j</p></td>
+<td class="text-right"><p>8.63e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArL(1520)2</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{LS,production}_{\Lambda(1520), 2, \frac{3}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>0.330006-0.382330j</p></td>
+<td class="text-right"><p>0.330006-0.382330j</p></td>
+<td class="text-right"><p>3.13e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.278127-0.322225j</p></td>
+<td class="text-right"><p>0.278127-0.322225j</p></td>
+<td class="text-right"><p>5.42e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-0.278127+0.322225j</p></td>
+<td class="text-right"><p>-0.278127+0.322225j</p></td>
+<td class="text-right"><p>5.42e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>0.330006-0.382330j</p></td>
+<td class="text-right"><p>0.330006-0.382330j</p></td>
+<td class="text-right"><p>3.13e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArL(1600)1</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{LS,production}_{\Lambda(1600), 0, \frac{1}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>-0.431782+0.475775j</p></td>
+<td class="text-right"><p>-0.431782+0.475775j</p></td>
+<td class="text-right"><p>1.93e-16</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.110199-0.121426j</p></td>
+<td class="text-right"><p>0.110199-0.121426j</p></td>
+<td class="text-right"><p>1.86e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>0.110199-0.121426j</p></td>
+<td class="text-right"><p>0.110199-0.121426j</p></td>
+<td class="text-right"><p>1.74e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>0.431782-0.475775j</p></td>
+<td class="text-right"><p>0.431782-0.475775j</p></td>
+<td class="text-right"><p>1.93e-16</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArL(1600)2</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{LS,production}_{\Lambda(1600), 1, \frac{1}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>0.102310-0.112734j</p></td>
+<td class="text-right"><p>0.102310-0.112734j</p></td>
+<td class="text-right"><p>9.63e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>-0.389148+0.428797j</p></td>
+<td class="text-right"><p>-0.389148+0.428797j</p></td>
+<td class="text-right"><p>6.59e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>0.389148-0.428797j</p></td>
+<td class="text-right"><p>0.389148-0.428797j</p></td>
+<td class="text-right"><p>6.59e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>0.102310-0.112734j</p></td>
+<td class="text-right"><p>0.102310-0.112734j</p></td>
+<td class="text-right"><p>9.64e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArL(1670)1</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{LS,production}_{\Lambda(1670), 0, \frac{1}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>-0.817566+0.061827j</p></td>
+<td class="text-right"><p>-0.817566+0.061827j</p></td>
+<td class="text-right"><p>4.28e-16</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>-0.019666+0.001487j</p></td>
+<td class="text-right"><p>-0.019666+0.001487j</p></td>
+<td class="text-right"><p>6.52e-13</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>0.019666-0.001487j</p></td>
+<td class="text-right"><p>0.019666-0.001487j</p></td>
+<td class="text-right"><p>6.52e-13</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>-0.817566+0.061827j</p></td>
+<td class="text-right"><p>-0.817566+0.061827j</p></td>
+<td class="text-right"><p>3.03e-16</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArL(1670)2</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{LS,production}_{\Lambda(1670), 1, \frac{1}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>0.345271-0.026110j</p></td>
+<td class="text-right"><p>0.345271-0.026110j</p></td>
+<td class="text-right"><p>1.86e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.658498-0.049798j</p></td>
+<td class="text-right"><p>0.658498-0.049798j</p></td>
+<td class="text-right"><p>6.08e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>0.658498-0.049798j</p></td>
+<td class="text-right"><p>0.658498-0.049798j</p></td>
+<td class="text-right"><p>5.91e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>-0.345271+0.026110j</p></td>
+<td class="text-right"><p>-0.345271+0.026110j</p></td>
+<td class="text-right"><p>1.88e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArL(1690)1</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{LS,production}_{\Lambda(1690), 1, \frac{3}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>0.110308-0.071511j</p></td>
+<td class="text-right"><p>0.110308-0.071511j</p></td>
+<td class="text-right"><p>8.99e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>-0.563468+0.365287j</p></td>
+<td class="text-right"><p>-0.563468+0.365287j</p></td>
+<td class="text-right"><p>3.67e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-0.563468+0.365287j</p></td>
+<td class="text-right"><p>-0.563468+0.365287j</p></td>
+<td class="text-right"><p>3.67e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>-0.110308+0.071511j</p></td>
+<td class="text-right"><p>-0.110308+0.071511j</p></td>
+<td class="text-right"><p>8.99e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArL(1690)2</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{LS,production}_{\Lambda(1690), 2, \frac{3}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>0.333287-0.216064j</p></td>
+<td class="text-right"><p>0.333287-0.216064j</p></td>
+<td class="text-right"><p>3.08e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.280891-0.182097j</p></td>
+<td class="text-right"><p>0.280891-0.182097j</p></td>
+<td class="text-right"><p>5.44e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-0.280891+0.182097j</p></td>
+<td class="text-right"><p>-0.280891+0.182097j</p></td>
+<td class="text-right"><p>5.46e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>0.333287-0.216064j</p></td>
+<td class="text-right"><p>0.333287-0.216064j</p></td>
+<td class="text-right"><p>3.08e-14</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArL(2000)1</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{LS,production}_{\Lambda(2000), 0, \frac{1}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>1.036314+1.105950j</p></td>
+<td class="text-right"><p>1.036314+1.105950j</p></td>
+<td class="text-right"><p>1.17e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>0.024928+0.026603j</p></td>
+<td class="text-right"><p>0.024928+0.026603j</p></td>
+<td class="text-right"><p>6.53e-13</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-0.024928-0.026603j</p></td>
+<td class="text-right"><p>-0.024928-0.026603j</p></td>
+<td class="text-right"><p>6.54e-13</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>1.036314+1.105950j</p></td>
+<td class="text-right"><p>1.036314+1.105950j</p></td>
+<td class="text-right"><p>1.17e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><strong><code class="docutils literal notranslate"><span class="pre">ArL(2000)2</span></code></strong></p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(\mathcal{H}^\mathrm{LS,production}_{\Lambda(2000), 1, \frac{1}{2}}\)</span></p></td>
+<td class="text-right"><p></p></td>
+<td class="text-right"><p></p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A++</span></code></p></td>
+<td class="text-right"><p>-0.529297-0.564863j</p></td>
+<td class="text-right"><p>-0.529297-0.564863j</p></td>
+<td class="text-right"><p>1.85e-14</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A+-</span></code></p></td>
+<td class="text-right"><p>-1.009471-1.077303j</p></td>
+<td class="text-right"><p>-1.009471-1.077303j</p></td>
+<td class="text-right"><p>6.35e-15</p></td>
+</tr>
+<tr class="row-even"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A-+</span></code></p></td>
+<td class="text-right"><p>-1.009471-1.077303j</p></td>
+<td class="text-right"><p>-1.009471-1.077303j</p></td>
+<td class="text-right"><p>6.44e-15</p></td>
+</tr>
+<tr class="row-odd"><td class="text-right"><p><code class="docutils literal notranslate"><span class="pre">A--</span></code></p></td>
+<td class="text-right"><p>0.529297+0.564863j</p></td>
+<td class="text-right"><p>0.529297+0.564863j</p></td>
+<td class="text-right"><p>1.84e-14</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</details>
+</div>
+</section>
+</section>
+</section>
+</article>
+<footer class="prev-next-footer d-print-none">
+<div class="prev-next-area">
+<a class="left-prev" href="amplitude-model.html" title="previous page">
+<i class="fa-solid fa-angle-left"></i>
+<div class="prev-next-info">
+<p class="prev-next-subtitle">previous</p>
+<p class="prev-next-title"><span class="section-number">1. </span>Default amplitude model</p>
+</div>
+</a>
+<a class="right-next" href="intensity.html" title="next page">
+<div class="prev-next-info">
+<p class="prev-next-subtitle">next</p>
+<p class="prev-next-title"><span class="section-number">3. </span>Intensity distribution</p>
+</div>
+<i class="fa-solid fa-angle-right"></i>
+</a>
+</div>
+</footer>
+</div>
+<dialog id="pst-secondary-sidebar-modal"></dialog>
+<div class="bd-sidebar-secondary bd-toc" id="pst-secondary-sidebar"><div class="sidebar-secondary-items sidebar-secondary__inner">
+<div class="sidebar-secondary-item"><div class="page-toc tocsection onthispage" id="pst-page-navigation-heading-2">
+<i class="fa-solid fa-list"></i> Contents
+  </div>
+<nav aria-labelledby="pst-page-navigation-heading-2" class="page-toc" id="pst-page-toc-nav">
+<ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lineshape-comparison">2.1. Lineshape comparison</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#amplitude-comparison">2.2. Amplitude comparison</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#default-model">2.2.1. Default model</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ls-model">2.2.2. LS-model</a></li>
+</ul>
+</li>
+</ul>
+</nav></div>
+</div></div>
+</div>
+<footer class="bd-footer-content">
+<div class="bd-footer-content__inner container">
+<div class="footer-item">
+<p class="component-author">
+By Mikhail Mikhasenko, Remco de Boer, Miriam Fritsch
+</p>
+</div>
+<div class="footer-item">
+<p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+</p>
+</div>
+<div class="footer-item">
+<p class="last-updated">
+  Last updated on 9 September 2026.
+  <br/>
+</p>
+</div>
+<div class="footer-item">
+</div>
+</div>
+</footer>
+</main>
+</div>
+</div>
+<!-- Scripts loaded after <body> so the DOM is not blocked -->
+<script defer="" src="_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
+<script defer="" src="_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+<footer class="bd-footer">
+</footer>
+</body>
+</html>

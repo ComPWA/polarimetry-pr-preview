@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg class="main-svg" style="" viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect width="700" height="420" fill-opacity="0"/>
+<defs>
+<g class="clips">
+<clipPath id="e" class="plotclip">
+<rect width="218.12" height="230"/>
+</clipPath>
+<clipPath id="f" class="plotclip">
+<rect width="218.12" height="230"/>
+</clipPath>
+<clipPath id="a" class="axesclip">
+<rect x="84" y="100" width="218.12" height="230"/>
+</clipPath>
+<clipPath id="b" class="axesclip">
+<rect x="397.88" y="100" width="218.12" height="230"/>
+</clipPath>
+</g>
+<g class="gradients">
+<linearGradient id="d" x2="0" y1="1">
+<stop stop-color="#053061" offset="0"/>
+<stop stop-color="#2166ac" offset=".1"/>
+<stop stop-color="#4393c3" offset=".2"/>
+<stop stop-color="#92c5de" offset=".3"/>
+<stop stop-color="#d1e5f0" offset=".4"/>
+<stop stop-color="#f7f7f7" offset=".5"/>
+<stop stop-color="#fddbc7" offset=".6"/>
+<stop stop-color="#f4a582" offset=".7"/>
+<stop stop-color="#d6604d" offset=".8"/>
+<stop stop-color="#b2182b" offset=".9"/>
+<stop stop-color="#67001f" offset="1"/>
+</linearGradient>
+</g>
+</defs>
+<g class="bglayer" fill="#e5ecf6" stroke-width="0">
+<rect class="bg" x="84" y="100" width="218.12" height="230"/>
+<rect class="bg" x="397.88" y="100" width="218.12" height="230"/>
+</g>
+<g class="layer-below"/>
+<g class="cartesianlayer">
+<g class="subplot xy">
+<g class="layer-subplot"/>
+<g class="minor-gridlayer"/>
+<g class="gridlayer" stroke="#fff" stroke-width="1px">
+<g class="x">
+<path class="xgrid crisp" transform="translate(92.85)" d="m0 100v230"/>
+<path class="xgrid crisp" transform="translate(109.55)" d="m0 100v230"/>
+<path class="xgrid crisp" transform="translate(126.25)" d="m0 100v230"/>
+<path class="xgrid crisp" transform="translate(142.96)" d="m0 100v230"/>
+<path class="xgrid crisp" transform="translate(159.66)" d="m0 100v230"/>
+<path class="xgrid crisp" transform="translate(176.36)" d="m0 100v230"/>
+<path class="xgrid crisp" transform="translate(193.06)" d="m0 100v230"/>
+<path class="xgrid crisp" transform="translate(209.76)" d="m0 100v230"/>
+<path class="xgrid crisp" transform="translate(226.46)" d="m0 100v230"/>
+<path class="xgrid crisp" transform="translate(243.16)" d="m0 100v230"/>
+<path class="xgrid crisp" transform="translate(259.87)" d="m0 100v230"/>
+<path class="xgrid crisp" transform="translate(276.57)" d="m0 100v230"/>
+<path class="xgrid crisp" transform="translate(293.27)" d="m0 100v230"/>
+</g>
+<g class="y">
+<path class="ygrid crisp" transform="translate(0,320.69)" d="m84 0h218.12"/>
+<path class="ygrid crisp" transform="translate(0 303.08)" d="m84 0h218.12"/>
+<path class="ygrid crisp" transform="translate(0 285.46)" d="m84 0h218.12"/>
+<path class="ygrid crisp" transform="translate(0,267.85)" d="m84 0h218.12"/>
+<path class="ygrid crisp" transform="translate(0,250.23)" d="m84 0h218.12"/>
+<path class="ygrid crisp" transform="translate(0,232.62)" d="m84 0h218.12"/>
+<path class="ygrid crisp" transform="translate(0,215)" d="m84 0h218.12"/>
+<path class="ygrid crisp" transform="translate(0,197.38)" d="m84 0h218.12"/>
+<path class="ygrid crisp" transform="translate(0 179.77)" d="m84 0h218.12"/>
+<path class="ygrid crisp" transform="translate(0,162.15)" d="m84 0h218.12"/>
+<path class="ygrid crisp" transform="translate(0,144.54)" d="m84 0h218.12"/>
+<path class="ygrid crisp" transform="translate(0,126.92)" d="m84 0h218.12"/>
+<path class="ygrid crisp" transform="translate(0,109.31)" d="m84 0h218.12"/>
+</g>
+</g>
+<g class="layer-between"/>
+<g class="overplot">
+<g class="xy" transform="translate(84,100)" clip-path="url(#e)">
+<g class="heatmaplayer mlayer">
+<g class="hm">
+<image x=".5" y=".5" width="217" height="229" image-rendering="pixelated" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAABXElEQVQoU01RS1bDMAwcOc4HumgfKx4nYMs5uAwLjsGCA3EJHlcAdqQUGidpYg9PctqS58S2opFmRjJ+fTBdXkEfOfSYfINCBFMi6jSAvgFFICB06Uf6vuf38yM2D08GHGai8QKZB2znEuumsDgJOBAJkkEadKGFdtSL6BsPoCutMsQi+aygYdeS1YVVc12LuLqyf0YvBqMXxaFQTCYH+e0C5wTUPkf97hNxfXOiZFoXQCRNr4TQq85Tkp4lzmDhLZZUixxJ5zzZ7QNrjoA4jChRLTyq91dM17dIvjY1YLIcNUSGn5bbWGFTO8gUkMqV0ZF5hLy9IN3d5+rzAfSVgaUPgTYHrUSCUmSPFKj72IH1auGfu0lYLNfhRcKEHq3NmYv9RXW86pwCEwUuE1/mkTWYIUrJ6I2gr80Yo5ejudC521J4McBSpgEsGwV1THDW6b+x5hKyhrP1qnGPP8gxwIGfmPG7AAAAAElFTkSuQmCC" xmlns="http://www.w3.org/2000/svg"/>
+</g>
+</g>
+</g>
+</g>
+<path class="xlines-above crisp" d="m0 0" fill="none"/>
+<path class="ylines-above crisp" d="m0 0" fill="none"/>
+<g class="xaxislayer-above">
+<g class="xtick" fill="rgb(42, 63, 95)" font-family="'Open Sans', verdana, arial, sans-serif" font-size="12px">
+<text transform="translate(92.85) rotate(90 0 337)" y="343" style="white-space:pre">𝐾(700),1,½</text>
+<text transform="translate(109.55) rotate(90 0 337)" y="343" style="white-space:pre">𝐾(892),0,½</text>
+<text transform="translate(126.25) rotate(90 0 337)" y="343" style="white-space:pre">𝐾(892),2,3⁄2</text>
+<text transform="translate(142.96) rotate(90 0 337)" y="343" style="white-space:pre">𝐾(1430),1,½</text>
+<text transform="translate(159.66) rotate(90 0 337)" y="343" style="white-space:pre">𝛥(1232),2,3⁄2</text>
+<text transform="translate(176.36) rotate(90 0 337)" y="343" style="white-space:pre">𝛥(1600),2,3⁄2</text>
+<text transform="translate(193.06) rotate(90 0 337)" y="343" style="white-space:pre">𝛥(1700),1,3⁄2</text>
+<text transform="translate(209.76) rotate(90 0 337)" y="343" style="white-space:pre">𝛬(1405),1,½</text>
+<text transform="translate(226.46) rotate(90 0 337)" y="343" style="white-space:pre">𝛬(1520),1,3⁄2</text>
+<text transform="translate(243.16) rotate(90 0 337)" y="343" style="white-space:pre">𝛬(1600),0,½</text>
+<text transform="translate(259.87) rotate(90 0 337)" y="343" style="white-space:pre">𝛬(1670),1,½</text>
+<text transform="translate(276.57) rotate(90 0 337)" y="343" style="white-space:pre">𝛬(1690),1,3⁄2</text>
+<text transform="translate(293.27) rotate(90 0 337)" y="343" style="white-space:pre">𝛬(2000),1,½</text>
+</g>
+</g>
+<g class="yaxislayer-above">
+<g class="ytick" fill="rgb(42, 63, 95)" font-family="'Open Sans', verdana, arial, sans-serif" font-size="12px" text-anchor="end">
+<text transform="translate(0,320.69)" x="83" y="4.199999999999999" style="white-space:pre">𝛬(2000),1,½</text>
+<text transform="translate(0 303.08)" x="83" y="4.199999999999999" style="white-space:pre">𝛬(1690),1,3⁄2</text>
+<text transform="translate(0 285.46)" x="83" y="4.199999999999999" style="white-space:pre">𝛬(1670),1,½</text>
+<text transform="translate(0,267.85)" x="83" y="4.199999999999999" style="white-space:pre">𝛬(1600),0,½</text>
+<text transform="translate(0,250.23)" x="83" y="4.199999999999999" style="white-space:pre">𝛬(1520),1,3⁄2</text>
+<text transform="translate(0,232.62)" x="83" y="4.199999999999999" style="white-space:pre">𝛬(1405),1,½</text>
+<text transform="translate(0,215)" x="83" y="4.199999999999999" style="white-space:pre">𝛥(1700),1,3⁄2</text>
+<text transform="translate(0,197.38)" x="83" y="4.199999999999999" style="white-space:pre">𝛥(1600),2,3⁄2</text>
+<text transform="translate(0 179.77)" x="83" y="4.199999999999999" style="white-space:pre">𝛥(1232),2,3⁄2</text>
+<text transform="translate(0,162.15)" x="83" y="4.199999999999999" style="white-space:pre">𝐾(1430),1,½</text>
+<text transform="translate(0,144.54)" x="83" y="4.199999999999999" style="white-space:pre">𝐾(892),2,3⁄2</text>
+<text transform="translate(0,126.92)" x="83" y="4.199999999999999" style="white-space:pre">𝐾(892),0,½</text>
+<text transform="translate(0,109.31)" x="83" y="4.199999999999999" style="white-space:pre">𝐾(700),1,½</text>
+</g>
+</g>
+</g>
+<g class="subplot x2y2">
+<g class="layer-subplot"/>
+<g class="minor-gridlayer"/>
+<g class="gridlayer" stroke="#fff" stroke-width="1px">
+<g class="x2">
+<path class="x2grid crisp" transform="translate(406.73)" d="m0 100v230"/>
+<path class="x2grid crisp" transform="translate(423.43)" d="m0 100v230"/>
+<path class="x2grid crisp" transform="translate(440.13)" d="m0 100v230"/>
+<path class="x2grid crisp" transform="translate(456.84)" d="m0 100v230"/>
+<path class="x2grid crisp" transform="translate(473.54)" d="m0 100v230"/>
+<path class="x2grid crisp" transform="translate(490.24)" d="m0 100v230"/>
+<path class="x2grid crisp" transform="translate(506.94)" d="m0 100v230"/>
+<path class="x2grid crisp" transform="translate(523.64)" d="m0 100v230"/>
+<path class="x2grid crisp" transform="translate(540.34)" d="m0 100v230"/>
+<path class="x2grid crisp" transform="translate(557.04)" d="m0 100v230"/>
+<path class="x2grid crisp" transform="translate(573.75)" d="m0 100v230"/>
+<path class="x2grid crisp" transform="translate(590.45)" d="m0 100v230"/>
+<path class="x2grid crisp" transform="translate(607.15)" d="m0 100v230"/>
+</g>
+<g class="y2">
+<path class="y2grid crisp" transform="translate(0,320.69)" d="m397.88 0h218.12"/>
+<path class="y2grid crisp" transform="translate(0 303.08)" d="m397.88 0h218.12"/>
+<path class="y2grid crisp" transform="translate(0 285.46)" d="m397.88 0h218.12"/>
+<path class="y2grid crisp" transform="translate(0,267.85)" d="m397.88 0h218.12"/>
+<path class="y2grid crisp" transform="translate(0,250.23)" d="m397.88 0h218.12"/>
+<path class="y2grid crisp" transform="translate(0,232.62)" d="m397.88 0h218.12"/>
+<path class="y2grid crisp" transform="translate(0,215)" d="m397.88 0h218.12"/>
+<path class="y2grid crisp" transform="translate(0,197.38)" d="m397.88 0h218.12"/>
+<path class="y2grid crisp" transform="translate(0 179.77)" d="m397.88 0h218.12"/>
+<path class="y2grid crisp" transform="translate(0,162.15)" d="m397.88 0h218.12"/>
+<path class="y2grid crisp" transform="translate(0,144.54)" d="m397.88 0h218.12"/>
+<path class="y2grid crisp" transform="translate(0,126.92)" d="m397.88 0h218.12"/>
+<path class="y2grid crisp" transform="translate(0,109.31)" d="m397.88 0h218.12"/>
+</g>
+</g>
+<g class="layer-between"/>
+<g class="overplot">
+<g class="x2y2" transform="translate(397.88 100)" clip-path="url(#f)">
+<g class="heatmaplayer mlayer">
+<g class="hm">
+<image x=".5" y=".5" width="217" height="229" image-rendering="pixelated" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAABfUlEQVQoU1WSvY7TUBCFv7n2xkl2A2wkqu1A2pKSjpZ9D2reASh5hpWg5EHoaSgQFCBFQkJaKQqW4+vfGXSvfzZcyfLYM+fMnDlXmrud9RePCWfve7YZ1ObIEkH6FkvOYg5TEIerC8R7b67K0eWDmJPWY8kCXDIXmoHIgA3gCApx+eEN61fvqDtjkQqC0SmkTsAMCyiDVg35vS9su0oiyZeblzz/dIuuL9HlBlce6FaXqNkABr7va8QfC5O+oZIl5/mO11c3vC++RU1Rhyk/c+XJo8XcUQ5FaZko5hKSKsefbdj8+Upz9Qy0i+Kl8Vh2PpLYvaY48LCKSfFJPP6aKqoit9ClM2FRHdDVw4HRpbhyj663Q6n2caNSH087gRo4G0aKD0RfNLv4z6u48uhDWLHBLm95umoHDeNJf3ymu34xf4svjxZYg6JJzZwdR4pKuxpLs/iezZ1dD0GgGMebrk8EjtdK6sOd6WJNo8Kvvw3X2ww5ET2NOXXyH9/yD+wD1TlNs+aVAAAAAElFTkSuQmCC" xmlns="http://www.w3.org/2000/svg"/>
+</g>
+</g>
+</g>
+</g>
+<path class="xlines-above crisp" d="m0 0" fill="none"/>
+<path class="ylines-above crisp" d="m0 0" fill="none"/>
+<g class="xaxislayer-above">
+<g class="x2tick" fill="rgb(42, 63, 95)" font-family="'Open Sans', verdana, arial, sans-serif" font-size="12px">
+<text transform="translate(406.73) rotate(90 0 337)" y="343" style="white-space:pre">𝐾(700),0,½</text>
+<text transform="translate(423.43) rotate(90 0 337)" y="343" style="white-space:pre">𝐾(892),1,½</text>
+<text transform="translate(440.13) rotate(90 0 337)" y="343" style="white-space:pre">𝐾(892),1,3⁄2</text>
+<text transform="translate(456.84) rotate(90 0 337)" y="343" style="white-space:pre">𝐾(1430),0,½</text>
+<text transform="translate(473.54) rotate(90 0 337)" y="343" style="white-space:pre">𝛥(1232),1,3⁄2</text>
+<text transform="translate(490.24) rotate(90 0 337)" y="343" style="white-space:pre">𝛥(1600),1,3⁄2</text>
+<text transform="translate(506.94) rotate(90 0 337)" y="343" style="white-space:pre">𝛥(1700),2,3⁄2</text>
+<text transform="translate(523.64) rotate(90 0 337)" y="343" style="white-space:pre">𝛬(1405),0,½</text>
+<text transform="translate(540.34) rotate(90 0 337)" y="343" style="white-space:pre">𝛬(1520),2,3⁄2</text>
+<text transform="translate(557.04) rotate(90 0 337)" y="343" style="white-space:pre">𝛬(1600),1,½</text>
+<text transform="translate(573.75) rotate(90 0 337)" y="343" style="white-space:pre">𝛬(1670),0,½</text>
+<text transform="translate(590.45) rotate(90 0 337)" y="343" style="white-space:pre">𝛬(1690),2,3⁄2</text>
+<text transform="translate(607.15) rotate(90 0 337)" y="343" style="white-space:pre">𝛬(2000),0,½</text>
+</g>
+</g>
+<g class="yaxislayer-above">
+<g class="y2tick" fill="rgb(42, 63, 95)" font-family="'Open Sans', verdana, arial, sans-serif" font-size="12px" text-anchor="end">
+<text transform="translate(0,320.69)" x="396.88000000000005" y="4.199999999999999" style="white-space:pre">𝛬(2000),0,½</text>
+<text transform="translate(0 303.08)" x="396.88000000000005" y="4.199999999999999" style="white-space:pre">𝛬(1690),2,3⁄2</text>
+<text transform="translate(0 285.46)" x="396.88000000000005" y="4.199999999999999" style="white-space:pre">𝛬(1670),0,½</text>
+<text transform="translate(0,267.85)" x="396.88000000000005" y="4.199999999999999" style="white-space:pre">𝛬(1600),1,½</text>
+<text transform="translate(0,250.23)" x="396.88000000000005" y="4.199999999999999" style="white-space:pre">𝛬(1520),2,3⁄2</text>
+<text transform="translate(0,232.62)" x="396.88000000000005" y="4.199999999999999" style="white-space:pre">𝛬(1405),0,½</text>
+<text transform="translate(0,215)" x="396.88000000000005" y="4.199999999999999" style="white-space:pre">𝛥(1700),2,3⁄2</text>
+<text transform="translate(0,197.38)" x="396.88000000000005" y="4.199999999999999" style="white-space:pre">𝛥(1600),1,3⁄2</text>
+<text transform="translate(0 179.77)" x="396.88000000000005" y="4.199999999999999" style="white-space:pre">𝛥(1232),1,3⁄2</text>
+<text transform="translate(0,162.15)" x="396.88000000000005" y="4.199999999999999" style="white-space:pre">𝐾(1430),0,½</text>
+<text transform="translate(0,144.54)" x="396.88000000000005" y="4.199999999999999" style="white-space:pre">𝐾(892),1,3⁄2</text>
+<text transform="translate(0,126.92)" x="396.88000000000005" y="4.199999999999999" style="white-space:pre">𝐾(892),1,½</text>
+<text transform="translate(0,109.31)" x="396.88000000000005" y="4.199999999999999" style="white-space:pre">𝐾(700),0,½</text>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="c">
+<rect width="65" height="82"/>
+</clipPath>
+</defs>
+<g class="layer-above">
+<g class="shapelayer">
+<g class="shape-group" clip-path="url(#a)" data-index="0">
+<path d="m84.5 100.5h66.81v70.46h-66.81z" fill="#f00" fill-opacity=".1" fill-rule="evenodd" opacity=".3" stroke="#f00" stroke-width="1px" data-index="0"/>
+</g>
+<g class="shape-group" clip-path="url(#a)" data-index="1">
+<path d="m151.31 170.96h50.1v52.85h-50.1z" fill="#00f" fill-opacity=".1" fill-rule="evenodd" opacity=".3" stroke="#00f" stroke-width="1px" data-index="1"/>
+</g>
+<g class="shape-group" clip-path="url(#a)" data-index="2">
+<path d="M201.41,223.81H301.62V329.5H201.41Z" fill="#0f0" fill-opacity=".1" fill-rule="evenodd" opacity=".3" stroke="#008000" stroke-width="1px" data-index="2"/>
+</g>
+<g class="shape-group" clip-path="url(#b)" data-index="3">
+<path d="m398.38 100.5h66.81v70.46h-66.81z" fill="#f00" fill-opacity=".1" fill-rule="evenodd" opacity=".3" stroke="#f00" stroke-width="1px" data-index="3"/>
+</g>
+<g class="shape-group" clip-path="url(#b)" data-index="4">
+<path d="m465.19 170.96h50.1v52.85h-50.1z" fill="#00f" fill-opacity=".1" fill-rule="evenodd" opacity=".3" stroke="#00f" stroke-width="1px" data-index="4"/>
+</g>
+<g class="shape-group" clip-path="url(#b)" data-index="5">
+<path d="m515.29 223.81h100.21v105.69h-100.21z" fill="#0f0" fill-opacity=".1" fill-rule="evenodd" opacity=".3" stroke="#008000" stroke-width="1px" data-index="5"/>
+</g>
+</g>
+</g>
+<g class="infolayer">
+<g class="legend" transform="translate(536.2,100)" pointer-events="all">
+<rect class="bg" width="65" height="82" fill-opacity="0" shape-rendering="crispEdges" stroke-width="0px"/>
+<g class="scrollbox" transform="" clip-path="url(#c)">
+<g class="groups">
+<g class="traces" transform="translate(0,16.9)">
+<text class="legendtext" x="40" y="6.24" fill="rgb(42, 63, 95)" font-family="'Open Sans', verdana, arial, sans-serif" font-size="16px" style="white-space:pre">𝐾​<tspan dy="-0.6em" font-size="70%">*</tspan><tspan dy="0.42em">​</tspan></text>
+<g class="layers" opacity=".3">
+<g class="legendsymbols">
+<g class="legendpoints">
+<path class="scatterpts" transform="translate(20)" d="M6,6H-6V-6H6Z" fill="#f00" fill-opacity=".1" stroke="#f00" stroke-width="1px"/>
+</g>
+</g>
+</g>
+<rect class="legendtoggle" y="-11.9" width="60" height="23.8" fill-opacity="0"/>
+</g>
+<g class="traces" transform="translate(0,40.7)">
+<text class="legendtext" x="40" y="6.24" fill="rgb(42, 63, 95)" font-family="'Open Sans', verdana, arial, sans-serif" font-size="16px" style="white-space:pre">𝛥​<tspan dy="-0.6em" font-size="70%">*</tspan><tspan dy="0.42em">​</tspan></text>
+<g class="layers" opacity=".3">
+<g class="legendsymbols">
+<g class="legendpoints">
+<path class="scatterpts" transform="translate(20)" d="M6,6H-6V-6H6Z" fill="#00f" fill-opacity=".1" stroke="#00f" stroke-width="1px"/>
+</g>
+</g>
+</g>
+<rect class="legendtoggle" y="-11.9" width="60" height="23.8" fill-opacity="0"/>
+</g>
+<g class="traces" transform="translate(0,64.5)">
+<text class="legendtext" x="40" y="6.24" fill="rgb(42, 63, 95)" font-family="'Open Sans', verdana, arial, sans-serif" font-size="16px" style="white-space:pre">𝛬*</text>
+<g class="layers" opacity=".3">
+<g class="legendsymbols">
+<g class="legendpoints">
+<path class="scatterpts" transform="translate(20)" d="M6,6H-6V-6H6Z" fill="#0f0" fill-opacity=".1" stroke="#008000" stroke-width="1px"/>
+</g>
+</g>
+</g>
+<rect class="legendtoggle" y="-11.9" width="60" height="23.8" fill-opacity="0"/>
+</g>
+</g>
+</g>
+<rect class="scrollbar" width="0" height="0" rx="20" ry="3" fill="#808ba4"/>
+</g>
+<g class="cbdac006 colorbar" transform="translate(84,100)">
+<rect class="cbbg" x="543" width="61.625" height="230" fill-opacity="0" stroke-width="0"/>
+<g class="cbfills" transform="translate(0,10)">
+<rect class="cbfill gradient_filled" x="544" width="12" height="210" fill="url(#d)"/>
+</g>
+<g class="cbaxis crisp" transform="translate(0,-100)">
+<g class="ycbdac006tick" fill="rgb(42, 63, 95)" font-family="'Open Sans', verdana, arial, sans-serif" font-size="12px">
+<text transform="translate(0,320)" x="558.9" y="4.199999999999999" style="white-space:pre">−20%</text>
+<text transform="translate(0,267.5)" x="558.9" y="4.199999999999999" style="white-space:pre">−10%</text>
+<text transform="translate(0,215)" x="558.9" y="4.199999999999999" style="white-space:pre">+0%</text>
+<text transform="translate(0,162.5)" x="558.9" y="4.199999999999999" style="white-space:pre">+10%</text>
+<text transform="translate(0,110)" x="558.9" y="4.199999999999999" style="white-space:pre">+20%</text>
+</g>
+</g>
+<g class="cbtitleunshift" transform="translate(-84,-100)">
+<g class="cbtitle" transform="translate(19.985)">
+<text class="hycbdac006title" transform="rotate(-90,663.64,215)" x="663.64" y="215" fill="rgb(42, 63, 95)" font-family="'Open Sans', verdana, arial, sans-serif" font-size="14px" text-anchor="middle" style="white-space:pre">Decay rate</text>
+</g>
+</g>
+<rect class="cboutline" x="544" y="10" width="12" height="210" fill="none" stroke-width="0"/>
+</g>
+<g class="g-gtitle">
+<text class="gtitle" x="350" y="54.60000000000002" dy="0.7em" fill="rgb(42, 63, 95)" font-family="'Open Sans', verdana, arial, sans-serif" font-size="17px" text-anchor="middle" style="white-space:pre">Decay rates of default model</text>
+</g>
+<g class="annotation" data-index="0">
+<g class="annotation-text-g" transform="rotate(0,193.06,87)">
+<g class="cursor-pointer" transform="translate(136,74)">
+<rect class="bg" x=".5" y=".5" width="114" height="25" fill-opacity="0" stroke-opacity="0"/>
+<text class="annotation-text" x="57.546875" y="19" fill="rgb(42, 63, 95)" font-family="'Open Sans', verdana, arial, sans-serif" font-size="16px" text-anchor="middle" style="white-space:pre">parity-violating</text>
+</g>
+</g>
+</g>
+<g class="annotation" data-index="1">
+<g class="annotation-text-g" transform="rotate(0,506.94,87)">
+<g class="cursor-pointer" transform="translate(440,74)">
+<rect class="bg" x=".5" y=".5" width="132" height="25" fill-opacity="0" stroke-opacity="0"/>
+<text class="annotation-text" x="66.515625" y="19" fill="rgb(42, 63, 95)" font-family="'Open Sans', verdana, arial, sans-serif" font-size="16px" text-anchor="middle" style="white-space:pre">parity-conserving</text>
+</g>
+</g>
+</g>
+</g>
+</svg>

@@ -1,0 +1,955 @@
+
+<!DOCTYPE html>
+
+<html data-content_root="../" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>7.7. Model serialization — Λc → p K π polarimetry</title>
+<script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+<!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+<noscript>
+<style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+</noscript>
+<!-- Loaded before other Sphinx assets -->
+<link href="../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet"/>
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet"/>
+<link href="../_static/pygments.css?v=03e43079" rel="stylesheet" type="text/css"/>
+<link href="../_static/styles/sphinx-book-theme.css?v=4418a689" rel="stylesheet" type="text/css"/>
+<link href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" rel="stylesheet" type="text/css"/>
+<link href="../_static/sphinx-codeautolink.css?v=b2176991" rel="stylesheet" type="text/css"/>
+<link href="../_static/copybutton.css?v=76b2166b" rel="stylesheet" type="text/css"/>
+<link href="../_static/togglebutton.css?v=9c3e77be" rel="stylesheet" type="text/css"/>
+<link href="../_static/sphinx-design.min.css?v=95c83b7e" rel="stylesheet" type="text/css"/>
+<link href="../_static/custom.css?v=4f87f664" rel="stylesheet" type="text/css"/>
+<!-- So that users can add custom icons -->
+<script defer="" src="../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+<!-- Pre-loaded scripts that we'll load fully later -->
+<link as="script" href="../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" rel="preload"/>
+<link as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" rel="preload"/>
+<script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+<script src="../_static/doctools.js?v=fd6eb6e6"></script>
+<script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+<script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+<script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+<script src="../_static/copybutton.js?v=f281be69"></script>
+<script>let toggleHintShow = 'Click to show';</script>
+<script>let toggleHintHide = 'Click to hide';</script>
+<script>let toggleOpenOnPrint = 'true';</script>
+<script src="../_static/togglebutton.js?v=b8b12719"></script>
+<script src="../_static/design-tabs.js?v=f930bc37"></script>
+<script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+<script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+<script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+<script>DOCUMENTATION_OPTIONS.pagename = 'appendix/model-serialization';</script>
+<script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+<link href="../_static/favicon.ico" rel="icon"/>
+<link href="../genindex.html" rel="index" title="Index"/>
+<link href="../search.html" rel="search" title="Search"/>
+<link href="ls-model.html" rel="next" title="7.8. Amplitude model with LS-couplings"/>
+<link href="serialization.html" rel="prev" title="7.6. Polarimeter field serialization"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="en" name="docsearch:language"/>
+<meta content="0.1.dev1+gdc2e20dc5" name="docsearch:version"/>
+<meta content="9 September 2026" name="docbuild:last-update"/>
+<script src="../_static/searchtools.js"></script>
+<script src="../_static/language_data.js"></script>
+<script src="../searchindex.js"></script>
+</head>
+<body data-default-mode="">
+<div class="skip-link d-print-none" id="pst-skip-link"><a href="#main-content">Skip to main content</a></div>
+<div id="pst-scroll-pixel-helper"></div>
+<button class="btn rounded-pill" id="pst-back-to-top" type="button">
+<i class="fa-solid fa-arrow-up"></i>Back to top</button>
+<dialog id="pst-search-dialog">
+<form action="../search.html" class="bd-search d-flex align-items-center" method="get">
+<i class="fa-solid fa-magnifying-glass"></i>
+<input aria-label="Search..." autocapitalize="off" autocomplete="off" autocorrect="off" class="form-control" name="q" placeholder="Search..." spellcheck="false" type="search"/>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+</dialog>
+<div class="pst-async-banner-revealer d-none">
+<aside aria-label="Version warning" class="d-none d-print-none" id="bd-header-version-warning"></aside>
+</div>
+<header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none" id="pst-header">
+<div class="bd-header__inner bd-page-width">
+<button aria-label="Site navigation" class="pst-navbar-icon sidebar-toggle primary-toggle">
+<span class="fa-solid fa-bars"></span>
+</button>
+<div class="col-lg-9 navbar-header-items">
+<div class="navbar-header-items__end">
+<div class="navbar-item navbar-persistent--container">
+<button aria-label="Search" class="btn search-button-field search-button__button pst-js-only" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Search">
+<i class="fa-solid fa-magnifying-glass"></i>
+<span class="search-button__default-text">Search</span>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+</div>
+</div>
+</div>
+<div class="navbar-persistent--mobile">
+<button aria-label="Search" class="btn search-button-field search-button__button pst-js-only" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Search">
+<i class="fa-solid fa-magnifying-glass"></i>
+<span class="search-button__default-text">Search</span>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+</div>
+<button aria-label="On this page" class="pst-navbar-icon sidebar-toggle secondary-toggle">
+<span class="fa-solid fa-outdent"></span>
+</button>
+</div>
+</header>
+<div class="bd-container">
+<div class="bd-container__inner bd-page-width">
+<dialog id="pst-primary-sidebar-modal"></dialog>
+<div class="bd-sidebar-primary bd-sidebar" id="pst-primary-sidebar">
+<div class="sidebar-header-items sidebar-primary__section">
+</div>
+<div class="sidebar-primary-items__start sidebar-primary__section">
+<div class="sidebar-primary-item">
+<a class="navbar-brand logo" href="../index.html">
+<img alt="" class="logo__image only-light" src="../_static/lhcb-logo.svg"/>
+<img alt="" class="logo__image only-dark pst-js-only" src="../_static/lhcb-logo.svg"/>
+<p class="title logo__title">Λ<sub>c</sub>⁺ → p K⁻ π⁺</p>
+</a></div>
+<div class="sidebar-primary-item"><ul aria-label="Icon Links" class="navbar-icon-links">
+<li class="nav-item">
+<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://compwa.github.io" rel="noopener" target="_blank" title="Common Partial Wave Analysis"><img alt="Common Partial Wave Analysis" class="icon-link-image" src="/favicon.ico"/></a>
+</li>
+<li class="nav-item">
+<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://github.com/ComPWA/polarimetry" rel="noopener" target="_blank" title="GitHub"><i aria-hidden="true" class="fa-brands fa-github fa-lg"></i><span class="visually-hidden">GitHub</span></a>
+</li>
+<li class="nav-item">
+<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://pypi.org/project/polarimetry-lc2pkpi" rel="noopener" target="_blank" title="PyPI"><i aria-hidden="true" class="fa-brands fa-python fa-lg"></i><span class="visually-hidden">PyPI</span></a>
+</li>
+<li class="nav-item">
+<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://mybinder.org/v2/gh/ComPWA/polarimetry/main?urlpath=lab" rel="noopener" target="_blank" title="Launch on Binder"><img alt="Launch on Binder" class="icon-link-image" src="https://mybinder.readthedocs.io/en/latest/_static/favicon.png"/></a>
+</li>
+<li class="nav-item">
+<a class="nav-link pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" href="https://colab.research.google.com/github/ComPWA/polarimetry/blob/main" rel="noopener" target="_blank" title="Launch on Colaboratory"><img alt="Launch on Colaboratory" class="icon-link-image" src="https://avatars.githubusercontent.com/u/33467679?s=100"/></a>
+</li>
+</ul></div>
+<div class="sidebar-primary-item">
+<button aria-label="Search" class="btn search-button-field search-button__button pst-js-only" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Search">
+<i class="fa-solid fa-magnifying-glass"></i>
+<span class="search-button__default-text">Search</span>
+<span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+<div class="sidebar-primary-item"><nav aria-label="Main" class="bd-links bd-docs-nav">
+<div class="bd-toc-item navbar-nav active">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of contents</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../amplitude-model.html">1. Default amplitude model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cross-check.html">2. Cross-check with LHCb data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intensity.html">3. Intensity distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../polarimetry.html">4. Polarimeter vector field</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uncertainties.html">5. Uncertainties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resonance-polarimetry.html">6. Average polarimeter per resonance</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../appendix.html">7. Appendix</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="dynamics.html">7.1. Dynamics lineshapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="angles.html">7.2. DPD angles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="phase-space.html">7.3. Phase space sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alignment.html">7.4. Alignment consistency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="benchmark.html">7.5. Benchmarking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serialization.html">7.6. Polarimeter field serialization</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">7.7. Model serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ls-model.html">7.8. Amplitude model with LS-couplings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pc-pv-currents.html">7.9. PC and PV currents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homomorphism.html">7.10. SU(2) → SO(3) homomorphism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../zz.polarization-fit.html">7.11. Determination of polarization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="widget.html">7.12. Interactive visualization</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">8. Bibliography</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/polarimetry.html">9. API</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../api/polarimetry.lhcb.html">9.1. lhcb</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/polarimetry.lhcb.dynamics.html">9.1.1. dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/polarimetry.lhcb.particle.html">9.1.2. particle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/polarimetry.lhcb.symbol.html">9.1.3. symbol</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/polarimetry.data.html">9.2. data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/polarimetry.function.html">9.3. function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/polarimetry.io.html">9.4. io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/polarimetry.plot.html">9.5. plot</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">External links</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://doi.org/10.1007/JHEP07(2023)228">JHEP</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://arxiv.org/abs/2301.07010">arXiv:2301.07010</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://compwa.github.io">ComPWA Project</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/ComPWA/polarimetry">GitHub repository</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://gitlab.cern.ch/polarimetry/Lc2pKpi">CERN GitLab (archived)</a></li>
+</ul>
+</div>
+</nav></div>
+</div>
+<div class="sidebar-primary-items__end sidebar-primary__section">
+<div class="sidebar-primary-item">
+<div class="flat" data-ea-manual="true" data-ea-publisher="readthedocs" data-ea-type="readthedocs-sidebar" id="ethical-ad-placement">
+</div></div>
+</div>
+</div>
+<main class="bd-main" id="main-content" role="main">
+<div class="sbt-scroll-pixel-helper"></div>
+<div class="bd-content">
+<div class="bd-article-container">
+<div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+<div class="header-article-items__start">
+<div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Toggle primary sidebar">
+<span class="fa-solid fa-bars"></span>
+</button></div>
+</div>
+<div class="header-article-items__end">
+<div class="header-article-item">
+<div class="article-header-buttons">
+<div class="dropdown dropdown-launch-buttons">
+<button aria-expanded="false" aria-label="Launch interactive content" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="fas fa-rocket"></i>
+</button>
+<ul class="dropdown-menu">
+<li><a class="btn btn-sm dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://mybinder.org/v2/gh/ComPWA/polarimetry/main?urlpath=lab/tree/docs/appendix/model-serialization.ipynb" target="_blank" title="Launch on Binder">
+<span class="btn__icon-container">
+<img alt="Binder logo" src="../_static/images/logo_binder.svg"/>
+</span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+<li><a class="btn btn-sm dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://colab.research.google.com/github/ComPWA/polarimetry/blob/main/docs/appendix/model-serialization.ipynb" target="_blank" title="Launch on Colab">
+<span class="btn__icon-container">
+<img alt="Colab logo" src="../_static/images/logo_colab.png"/>
+</span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+<li><a class="btn btn-sm dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FComPWA%2Fpolarimetry%2Fblob%2Fmain%2Fdocs/appendix/model-serialization.ipynb" target="_blank" title="Launch on Deepnote">
+<span class="btn__icon-container">
+<img alt="Deepnote logo" src="../_static/images/logo_deepnote.svg"/>
+</span>
+<span class="btn__text-container">Deepnote</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="dropdown dropdown-source-buttons">
+<button aria-expanded="false" aria-label="Source repositories" class="btn dropdown-toggle" data-bs-toggle="dropdown" type="button">
+<i class="fab fa-github"></i>
+</button>
+<ul class="dropdown-menu">
+<li><a class="btn btn-sm btn-source-repository-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/ComPWA/polarimetry" target="_blank" title="Source repository">
+<span class="btn__icon-container">
+<i class="fab fa-github"></i>
+</span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+<li><a class="btn btn-sm btn-source-file-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/ComPWA/polarimetry/blob/main/docs/appendix/model-serialization.ipynb?plain=1" target="_blank" title="Show source">
+<span class="btn__icon-container">
+<i class="fas fa-code"></i>
+</span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+<li><a class="btn btn-sm btn-source-edit-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/ComPWA/polarimetry/edit/main/docs/appendix/model-serialization.ipynb" target="_blank" title="Suggest edit">
+<span class="btn__icon-container">
+<i class="fas fa-pencil-alt"></i>
+</span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+<li><a class="btn btn-sm btn-source-issues-button dropdown-item" data-bs-placement="left" data-bs-toggle="tooltip" href="https://github.com/ComPWA/polarimetry/issues/new?title=Issue%20on%20page%20%2Fappendix/model-serialization.html&amp;body=Your%20issue%20content%20here." target="_blank" title="Open an issue">
+<span class="btn__icon-container">
+<i class="fas fa-lightbulb"></i>
+</span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+</ul>
+</div>
+<div class="theme-switch-container dropdown pst-js-only" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Color mode">
+<button aria-label="Color mode" class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" data-bs-toggle="dropdown">
+<i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+<i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+<i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+</button>
+<ul class="dropdown-menu dropdown-menu-end">
+<li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+<li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+<li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+</ul>
+</div>
+<button aria-label="Search" class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Search">
+<i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" data-bs-placement="bottom" data-bs-toggle="tooltip" title="Toggle secondary sidebar">
+<span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+</div>
+</div>
+</div>
+<div class="onlyprint" id="jb-print-docs-body">
+<h1>Model serialization</h1>
+<!-- Table of contents -->
+<div id="print-main-content">
+<div id="jb-print-toc">
+<div>
+<h2> Contents </h2>
+</div>
+<nav aria-label="Page">
+<ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#export-model">7.7.1. Export model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-model">7.7.2. Import model</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compilation">7.7.2.1. Compilation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#serialization-with-srepr">7.7.3. Serialization with <code class="docutils literal notranslate"><span class="pre">srepr</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-package">7.7.4. Python package</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div id="searchbox"></div>
+<article class="bd-article">
+<section class="tex2jax_ignore mathjax_ignore" id="model-serialization">
+<h1><span class="section-number">7.7. </span>Model serialization<a class="headerlink" href="#model-serialization" title="Link to this heading">#</a></h1>
+<p>This page demonstrates a strategy for exporting an amplitude model with its suggested parameter defaults to disk and loading it back into memory later on for computations with the computational backend.</p>
+<div class="cell tag_hide-cell tag_scroll-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Import Python libraries</p>
+<p class="expanded admonition-title">Hide code cell content</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/logging.html#module-logging"><span class="nn">logging</span></a>
+<span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/os.html#module-os"><span class="nn">os</span></a>
+<span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/pickle.html#module-pickle"><span class="nn">pickle</span></a>
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/textwrap.html#module-textwrap"><span class="nn">textwrap</span></a><span class="w"> </span><span class="kn">import</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/textwrap.html#textwrap.shorten" title="textwrap.shorten"><span class="n">shorten</span></a>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">cloudpickle</span>
+<span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://docs.jax.dev/en/latest/jax.numpy.html#module-jax.numpy"><span class="nn">jax.numpy</span></a><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">jnp</span>
+<span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/index.html#module-sympy"><span class="nn">sympy</span></a><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://ampform.readthedocs.io/0.16.1/api/ampform.sympy.html#module-ampform.sympy"><span class="nn">ampform.sympy</span></a><span class="w"> </span><span class="kn">import</span> <a class="sphinx-codeautolink-a" href="https://ampform.readthedocs.io/0.16.1/api/ampform.sympy.cached.html#module-ampform.sympy.cached" title="ampform.sympy.cached"><span class="n">cached</span></a>
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://ipython.readthedocs.io/en/9.17.1/api/generated/IPython.display.html#module-IPython.display"><span class="nn">IPython.display</span></a><span class="w"> </span><span class="kn">import</span> <a class="sphinx-codeautolink-a" href="https://ipython.readthedocs.io/en/9.17.1/api/generated/IPython.display.html#IPython.display.Markdown" title="IPython.core.display.Markdown"><span class="n">Markdown</span></a>
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://tensorwaves.readthedocs.io/0.4.17/api/tensorwaves.function.sympy.html#module-tensorwaves.function.sympy"><span class="nn">tensorwaves.function.sympy</span></a><span class="w"> </span><span class="kn">import</span> <a class="sphinx-codeautolink-a" href="https://tensorwaves.readthedocs.io/0.4.17/api/tensorwaves.function.sympy.html#tensorwaves.function.sympy.create_function" title="tensorwaves.function.sympy.create_function"><span class="n">create_function</span></a>
+
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="../api/polarimetry.io.html#module-polarimetry.io"><span class="nn">polarimetry.io</span></a><span class="w"> </span><span class="kn">import</span> <a class="sphinx-codeautolink-a" href="../api/polarimetry.io.html#polarimetry.io.mute_jax_warnings" title="polarimetry.io.mute_jax_warnings"><span class="n">mute_jax_warnings</span></a>
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="../api/polarimetry.lhcb.html#module-polarimetry.lhcb"><span class="nn">polarimetry.lhcb</span></a><span class="w"> </span><span class="kn">import</span> <a class="sphinx-codeautolink-a" href="../api/polarimetry.lhcb.html#polarimetry.lhcb.load_model" title="polarimetry.lhcb.load_model"><span class="n">load_model</span></a>
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="../api/polarimetry.lhcb.particle.html#module-polarimetry.lhcb.particle"><span class="nn">polarimetry.lhcb.particle</span></a><span class="w"> </span><span class="kn">import</span> <a class="sphinx-codeautolink-a" href="../api/polarimetry.lhcb.particle.html#polarimetry.lhcb.particle.load_particles" title="polarimetry.lhcb.particle.load_particles"><span class="n">load_particles</span></a>
+
+<a class="sphinx-codeautolink-a" href="../api/polarimetry.io.html#polarimetry.io.mute_jax_warnings" title="polarimetry.io.mute_jax_warnings"><span class="n">mute_jax_warnings</span></a><span class="p">()</span>
+
+<span class="n">NO_LOG</span> <span class="o">=</span> <span class="s2">"EXECUTE_NB"</span> <span class="ow">in</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/os.html#os.environ"><span class="n">os</span><span class="o">.</span><span class="n">environ</span></a>
+<span class="k">if</span> <span class="n">NO_LOG</span><span class="p">:</span>
+    <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/logging.html#logging.disable"><span class="n">logging</span><span class="o">.</span><span class="n">disable</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/logging.html#logging.CRITICAL"><span class="n">logging</span><span class="o">.</span><span class="n">CRITICAL</span></a><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<section id="export-model">
+<h2><span class="section-number">7.7.1. </span>Export model<a class="headerlink" href="#export-model" title="Link to this heading">#</a></h2>
+<div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Import Python libraries</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data_dir</span> <span class="o">=</span> <span class="s2">"../../data"</span>
+<span class="n">particles</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../api/polarimetry.lhcb.particle.html#polarimetry.lhcb.particle.load_particles" title="polarimetry.lhcb.particle.load_particles"><span class="n">load_particles</span></a><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">data_dir</span><span class="si">}</span><span class="s2">/particle-definitions.yaml"</span><span class="p">)</span>
+<a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.AmplitudeModel" title="ampform_dpd.AmplitudeModel"><span class="n">model</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../api/polarimetry.lhcb.html#polarimetry.lhcb.load_model" title="polarimetry.lhcb.load_model"><span class="n">load_model</span></a><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">data_dir</span><span class="si">}</span><span class="s2">/model-definitions.yaml"</span><span class="p">,</span> <span class="n">particles</span><span class="p">,</span> <span class="n">model_id</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.expr.Expr" title="sympy.core.expr.Expr"><span class="n">unfolded_intensity_expr</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://ampform.readthedocs.io/0.16.1/api/ampform.sympy.cached.html#ampform.sympy.cached.unfold" title="ampform.sympy.cached.unfold"><span class="n">cached</span><span class="o">.</span><span class="n">unfold</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.AmplitudeModel" title="ampform_dpd.AmplitudeModel"><span class="n">model</span></a><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Substitute fixed parameters</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">free_parameters</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">symbol</span><span class="p">:</span> <span class="n">value</span>
+    <span class="k">for</span> <span class="n">symbol</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">parameter_defaults</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+    <span class="k">if</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#isinstance"><span class="nb">isinstance</span></a><span class="p">(</span><span class="n">symbol</span><span class="p">,</span> <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/tensor/indexed.html#sympy.tensor.indexed.Indexed" title="sympy.tensor.indexed.Indexed"><span class="n">sp</span><span class="o">.</span><span class="n">Indexed</span></a><span class="p">)</span>
+    <span class="k">if</span> <span class="s2">"production"</span> <span class="ow">in</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#str"><span class="nb">str</span></a><span class="p">(</span><span class="n">symbol</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="n">fixed_parameters</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">symbol</span><span class="p">:</span> <span class="n">value</span>
+    <span class="k">for</span> <span class="n">symbol</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">parameter_defaults</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">symbol</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">free_parameters</span>
+<span class="p">}</span>
+<a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.expr.Expr" title="sympy.core.expr.Expr"><span class="n">subs_intensity_expr</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://ampform.readthedocs.io/0.16.1/api/ampform.sympy.cached.html#ampform.sympy.cached.xreplace" title="ampform.sympy.cached.xreplace"><span class="n">cached</span><span class="o">.</span><span class="n">xreplace</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.expr.Expr" title="sympy.core.expr.Expr"><span class="n">unfolded_intensity_expr</span></a><span class="p">,</span> <span class="n">fixed_parameters</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">sigma3via12</span><span class="p">()</span> <span class="o">-&gt;</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#dict"><span class="nb">dict</span></a><span class="p">[</span><a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.symbol.Symbol" title="sympy.core.symbol.Symbol"><span class="n">sp</span><span class="o">.</span><span class="n">Symbol</span></a><span class="p">,</span> <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.expr.Expr" title="sympy.core.expr.Expr"><span class="n">sp</span><span class="o">.</span><span class="n">Expr</span></a><span class="p">]:</span>
+    <span class="n">s1</span><span class="p">,</span> <span class="n">s2</span><span class="p">,</span> <span class="n">s3</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.symbol.symbols" title="sympy.core.symbol.symbols"><span class="n">sp</span><span class="o">.</span><span class="n">symbols</span></a><span class="p">(</span><span class="s2">"sigma1:4"</span><span class="p">,</span> <span class="n">nonnegative</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">m0</span><span class="p">,</span> <span class="n">m1</span><span class="p">,</span> <span class="n">m2</span><span class="p">,</span> <span class="n">m3</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.symbol.symbols" title="sympy.core.symbol.symbols"><span class="n">sp</span><span class="o">.</span><span class="n">symbols</span></a><span class="p">(</span><span class="s2">"m:4"</span><span class="p">,</span> <span class="n">nonnegative</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="k">return</span> <span class="p">{</span><span class="n">s3</span><span class="p">:</span> <span class="n">m1</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">m2</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">m3</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">m0</span><span class="o">**</span><span class="mi">2</span> <span class="o">-</span> <span class="n">s1</span> <span class="o">-</span> <span class="n">s2</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">dict_forms</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"intensity_expr"</span><span class="p">:</span> <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.expr.Expr" title="sympy.core.expr.Expr"><span class="n">unfolded_intensity_expr</span></a><span class="p">,</span>
+    <span class="s2">"variables"</span><span class="p">:</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span><span class="o">.</span><span class="n">doit</span><span class="p">()</span> <span class="k">for</span> <span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">v</span><span class="p">)</span> <span class="ow">in</span> <span class="n">model</span><span class="o">.</span><span class="n">variables</span><span class="o">.</span><span class="n">items</span><span class="p">()},</span>
+    <span class="s2">"parameter_defaults"</span><span class="p">:</span> <a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.AmplitudeModel.parameter_defaults" title="ampform_dpd.AmplitudeModel.parameter_defaults"><span class="n">model</span><span class="o">.</span><span class="n">parameter_defaults</span></a><span class="p">,</span>
+    <span class="s2">"sigma3"</span><span class="p">:</span> <span class="n">sigma3via12</span><span class="p">(),</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">filename</span> <span class="o">=</span> <span class="s2">"exported-model.pkl"</span>
+<span class="k">with</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#open"><span class="nb">open</span></a><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">"wb"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">cloudpickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">dict_forms</span><span class="p">,</span> <span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="import-model">
+<h2><span class="section-number">7.7.2. </span>Import model<a class="headerlink" href="#import-model" title="Link to this heading">#</a></h2>
+<p>The model is saved in a Python <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.14)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">dict</span></code></a> and to a <a class="reference external" href="https://docs.python.org/3/library/pickle.html#module-pickle" title="(in Python v3.14)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pickle</span></code></a> file. The dictionary contains a SymPy expressions for the model and suggested parameter default values. These parameter and variable symbols are substituted using the <code class="docutils literal notranslate"><span class="pre">fully_substitute()</span></code> function.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">load_model</span><span class="p">(</span><span class="n">filename</span><span class="p">:</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#str"><span class="nb">str</span></a><span class="p">)</span> <span class="o">-&gt;</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#dict"><span class="nb">dict</span></a><span class="p">:</span>
+    <span class="k">if</span> <span class="ow">not</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/os.path.html#os.path.exists"><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span></a><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"The input file not found at $</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">"</span>
+        <span class="k">raise</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/exceptions.html#ValueError"><span class="ne">ValueError</span></a><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+    <span class="k">with</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#open"><span class="nb">open</span></a><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">"rb"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">return</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/pickle.html#pickle.load"><span class="n">pickle</span><span class="o">.</span><span class="n">load</span></a><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">fully_substitute</span><span class="p">(</span><span class="n">model_description</span><span class="p">:</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#dict"><span class="nb">dict</span></a><span class="p">)</span> <span class="o">-&gt;</span> <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.expr.Expr" title="sympy.core.expr.Expr"><span class="n">sp</span><span class="o">.</span><span class="n">Expr</span></a><span class="p">:</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="n">model_description</span><span class="p">[</span><span class="s2">"intensity_expr"</span><span class="p">]</span>
+        <span class="o">.</span><span class="n">xreplace</span><span class="p">(</span><span class="n">model_description</span><span class="p">[</span><span class="s2">"variables"</span><span class="p">])</span>
+        <span class="o">.</span><span class="n">xreplace</span><span class="p">(</span><span class="n">model_description</span><span class="p">[</span><span class="s2">"sigma3"</span><span class="p">])</span>
+        <span class="o">.</span><span class="n">xreplace</span><span class="p">(</span><span class="n">model_description</span><span class="p">[</span><span class="s2">"parameter_defaults"</span><span class="p">])</span>
+    <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">imported_model</span> <span class="o">=</span> <span class="n">load_model</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+<span class="n">intensity_on_2vars</span> <span class="o">=</span> <span class="n">fully_substitute</span><span class="p">(</span><span class="n">imported_model</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="compilation">
+<h3><span class="section-number">7.7.2.1. </span>Compilation<a class="headerlink" href="#compilation" title="Link to this heading">#</a></h3>
+<p>The resulting symbolic expression depends on two variables:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\sigma_1 = m_{K\pi}^2\)</span>, mass of the <span class="math notranslate nohighlight">\(K^- \pi^+\)</span> system, and</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sigma_2 = m_{pK}^2\)</span>, mass of the <span class="math notranslate nohighlight">\(p K^-\)</span> system.</p></li>
+</ul>
+<p>This expression is turned into a numerical function by either <a class="reference external" href="https://docs.sympy.org/latest/modules/utilities/lambdify.html#sympy.utilities.lambdify.lambdify" title="(in SymPy v1.14.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">lambdify()</span></code></a>, using <a class="reference external" href="https://docs.jax.dev/en/latest/index.html" title="(in JAX)"><span class="xref std std-doc">JAX</span></a> as a computational backend.</p>
+<p>For <a class="reference external" href="https://docs.sympy.org/latest/index.html#module-sympy" title="(in SymPy v1.14.0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">sympy</span></code></a> backend the position argument are used.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/typing.html#typing.Any" title="typing.Any"><span class="n">s12</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.symbol.symbols" title="sympy.core.symbol.symbols"><span class="n">sp</span><span class="o">.</span><span class="n">symbols</span></a><span class="p">(</span><span class="s2">"sigma1:3"</span><span class="p">,</span> <span class="n">nonnegative</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">intensity_on_2vars</span><span class="o">.</span><span class="n">free_symbols</span> <span class="o">==</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/stdtypes.html#set"><span class="nb">set</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/typing.html#typing.Any" title="typing.Any"><span class="n">s12</span></a><span class="p">)</span>
+
+<span class="n">func</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/utilities/lambdify.html#sympy.utilities.lambdify.lambdify" title="sympy.utilities.lambdify.lambdify"><span class="n">sp</span><span class="o">.</span><span class="n">lambdify</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/typing.html#typing.Any" title="typing.Any"><span class="n">s12</span></a><span class="p">,</span> <span class="n">intensity_on_2vars</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">func</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">),</span> <span class="n">func</span><span class="p">(</span><span class="mf">1.1</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(np.float64(1156.5307379423066), np.float64(636.108767053161))
+</pre></div>
+</div>
+</div>
+</div>
+<p>The compilation to JAX is facilitated by <a class="reference external" href="https://tensorwaves.readthedocs.io/0.4.17/api/tensorwaves.html#module-tensorwaves" title="(in TensorWaves v0.4.17)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">tensorwaves</span></code></a>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><a class="sphinx-codeautolink-a" href="https://tensorwaves.readthedocs.io/0.4.17/api/tensorwaves.function.html#tensorwaves.function.PositionalArgumentFunction" title="tensorwaves.function.PositionalArgumentFunction"><span class="n">density</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://tensorwaves.readthedocs.io/0.4.17/api/tensorwaves.function.sympy.html#tensorwaves.function.sympy.create_function" title="tensorwaves.function.sympy.create_function"><span class="n">create_function</span></a><span class="p">(</span><span class="n">intensity_on_2vars</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="s2">"jax"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><a class="sphinx-codeautolink-a" href="https://tensorwaves.readthedocs.io/0.4.17/api/tensorwaves.function.html#tensorwaves.function.PositionalArgumentFunction" title="tensorwaves.function.PositionalArgumentFunction"><span class="n">density</span></a><span class="p">({</span><span class="s2">"sigma1"</span><span class="p">:</span> <a class="sphinx-codeautolink-a" href="https://docs.jax.dev/en/latest/_autosummary/jax.numpy.array.html#jax.numpy.array" title="jax.numpy.array"><span class="n">jnp</span><span class="o">.</span><span class="n">array</span></a><span class="p">([</span><span class="mf">1.0</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">]),</span> <span class="s2">"sigma2"</span><span class="p">:</span> <a class="sphinx-codeautolink-a" href="https://docs.jax.dev/en/latest/_autosummary/jax.numpy.array.html#jax.numpy.array" title="jax.numpy.array"><span class="n">jnp</span><span class="o">.</span><span class="n">array</span></a><span class="p">([</span><span class="mf">3.0</span><span class="p">,</span> <span class="mf">3.2</span><span class="p">])})</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Array([1156.53073794,  636.10876705], dtype=float64)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="serialization-with-srepr">
+<h2><span class="section-number">7.7.3. </span>Serialization with <code class="docutils literal notranslate"><span class="pre">srepr</span></code><a class="headerlink" href="#serialization-with-srepr" title="Link to this heading">#</a></h2>
+<p>SymPy expressions can directly be serialized to Python code as well, with the function <a class="reference external" href="https://docs.sympy.org/latest/modules/printing.html#sympy.printing.repr.srepr"><code class="docutils literal notranslate"><span class="pre">srepr()</span></code></a>. For the full intensity expression, we can do so with:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">eval_str</span> <span class="o">=</span> <span class="n">sp</span><span class="o">.</span><span class="n">srepr</span><span class="p">(</span><span class="n">unfolded_intensity_expr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 630 ms, sys: 997 μs, total: 631 ms
+Wall time: 631 ms
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell source</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_nodes</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.function.count_ops" title="sympy.core.function.count_ops"><span class="n">sp</span><span class="o">.</span><span class="n">count_ops</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.expr.Expr" title="sympy.core.expr.Expr"><span class="n">unfolded_intensity_expr</span></a><span class="p">)</span>
+<span class="n">byt</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#len"><span class="nb">len</span></a><span class="p">(</span><span class="n">eval_str</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">"utf-8"</span><span class="p">))</span>
+<span class="n">mb</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="mf">1e-6</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">byt</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">"</span>
+<span class="n">rendering</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/textwrap.html#textwrap.shorten" title="textwrap.shorten"><span class="n">shorten</span></a><span class="p">(</span><span class="n">eval_str</span><span class="p">,</span> <span class="n">placeholder</span><span class="o">=</span><span class="s2">" ..."</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">85</span><span class="p">)</span>
+<span class="n">src</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""</span>
+<span class="s2">This serializes the intensity expression of </span><span class="si">{</span><span class="n">n_nodes</span><span class="si">:</span><span class="s2">,d</span><span class="si">}</span><span class="s2"> nodes</span>
+<span class="s2">to a string of **</span><span class="si">{</span><span class="n">mb</span><span class="si">}</span><span class="s2"> MB**.</span>
+
+<span class="s2">```</span>
+<span class="si">{</span><span class="n">rendering</span><span class="si">}</span>
+<span class="s2">```</span>
+<span class="s2">"""</span>
+<a class="sphinx-codeautolink-a" href="https://ipython.readthedocs.io/en/9.17.1/api/generated/IPython.display.html#IPython.display.Markdown" title="IPython.core.display.Markdown"><span class="n">Markdown</span></a><span class="p">(</span><span class="n">src</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<p>This serializes the intensity expression of 28,430 nodes
+to a string of <strong>0.92 MB</strong>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Add</span><span class="p">(</span><span class="n">Pow</span><span class="p">(</span><span class="n">Abs</span><span class="p">(</span><span class="n">Add</span><span class="p">(</span><span class="n">Mul</span><span class="p">(</span><span class="n">Add</span><span class="p">(</span><span class="n">Mul</span><span class="p">(</span><span class="n">Integer</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">Pow</span><span class="p">(</span><span class="n">Add</span><span class="p">(</span><span class="n">Mul</span><span class="p">(</span><span class="n">Integer</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">),</span> <span class="n">I</span><span class="p">,</span> <span class="o">...</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>It is up to the user, however, to import the classes of each exported node before the string can be unparsed with <a class="reference external" href="https://docs.python.org/3/library/functions.html#eval"><code class="docutils literal notranslate"><span class="pre">eval()</span></code></a> (see <a class="reference external" href="https://github.com/ComPWA/polarimetry/issues/20#issuecomment-1809840854">this comment</a>).</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#eval"><span class="nb">eval</span></a><span class="p">(</span><span class="n">eval_str</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">16</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">eval</span><span class="p">(</span><span class="n">eval_str</span><span class="p">)</span>
+
+<span class="n">File</span> <span class="o">&lt;</span><span class="n">string</span><span class="o">&gt;</span><span class="p">:</span><span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="s1">'Could not get source, probably due dynamically evaluated source code.'</span>
+
+<span class="ne">NameError</span>: name 'Add' is not defined
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the case of this intensity expression, it is sufficient to import all definition from the main <code class="docutils literal notranslate"><span class="pre">sympy</span></code> module and the <code class="docutils literal notranslate"><span class="pre">Str</span></code> class.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/index.html#module-sympy"><span class="nn">sympy</span></a><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>  <span class="c1"># ruff: ignore[undefined-local-with-import-star]</span>
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#module-sympy.core.symbol"><span class="nn">sympy.core.symbol</span></a><span class="w"> </span><span class="kn">import</span> <span class="n">Str</span>  <span class="c1"># ruff: ignore[unused-import]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">eval_imported_intensity_expr</span> <span class="o">=</span> <span class="nb">eval</span><span class="p">(</span><span class="n">eval_str</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 2.26 s, sys: 23 ms, total: 2.28 s
+Wall time: 2.28 s
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice how the imported expression is <strong>exactly the same</strong> as the serialized one, including assumptions:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">eval_imported_intensity_expr</span> <span class="o">==</span> <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.expr.Expr" title="sympy.core.expr.Expr"><span class="n">unfolded_intensity_expr</span></a>
+<span class="k">assert</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#hash"><span class="nb">hash</span></a><span class="p">(</span><span class="n">eval_imported_intensity_expr</span><span class="p">)</span> <span class="o">==</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#hash"><span class="nb">hash</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.expr.Expr" title="sympy.core.expr.Expr"><span class="n">unfolded_intensity_expr</span></a><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Optionally, the <code class="docutils literal notranslate"><span class="pre">import</span></code> statements can be embedded into the string. The parsing is then done with <a class="reference external" href="https://docs.python.org/3/library/functions.html#exec"><code class="docutils literal notranslate"><span class="pre">exec()</span></code></a> instead:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">exec_str</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"""</span><span class="se">\</span>
+<span class="s2">from sympy import *</span>
+<span class="s2">from sympy.core.symbol import Str</span>
+
+<span class="s2">def get_intensity_function() -&gt; Expr:</span>
+<span class="s2">    return </span><span class="si">{</span><span class="n">eval_str</span><span class="si">}</span>
+<span class="s2">"""</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">exec_filename</span> <span class="o">=</span> <span class="s2">"exported_intensity_model.py"</span>
+<span class="k">with</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#open"><span class="nb">open</span></a><span class="p">(</span><span class="n">exec_filename</span><span class="p">,</span> <span class="s2">"w"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">exec_str</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<p>See <a class="reference download internal" download="" href="../_downloads/2cca4a1c64176fc651573948f6d426e7/exported_intensity_model.py"><code class="xref download docutils literal notranslate"><span class="pre">exported_intensity_model.py</span></code></a> for the exported model.</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">exec</span><span class="p">(</span><span class="n">exec_str</span><span class="p">)</span>
+<span class="n">exec_imported_intensity_expr</span> <span class="o">=</span> <span class="n">get_intensity_function</span><span class="p">()</span>  <span class="c1"># ruff: ignore[undefined-local-with-import-star-usage]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 312 ms, sys: 16 ms, total: 328 ms
+Wall time: 327 ms
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">assert</span> <span class="n">exec_imported_intensity_expr</span> <span class="o">==</span> <a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.expr.Expr" title="sympy.core.expr.Expr"><span class="n">unfolded_intensity_expr</span></a>
+<span class="k">assert</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#hash"><span class="nb">hash</span></a><span class="p">(</span><span class="n">exec_imported_intensity_expr</span><span class="p">)</span> <span class="o">==</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/functions.html#hash"><span class="nb">hash</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.expr.Expr" title="sympy.core.expr.Expr"><span class="n">unfolded_intensity_expr</span></a><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The load time is faster due to caching within SymPy.</p>
+</div>
+</section>
+<section id="python-package">
+<h2><span class="section-number">7.7.4. </span>Python package<a class="headerlink" href="#python-package" title="Link to this heading">#</a></h2>
+<p><a class="reference external" href="https://pypi.org/project/polarimetry-lc2pkpi"><img alt="PyPI package" src="https://badge.fury.io/py/polarimetry-lc2pkpi.svg"/></a>
+<a class="reference external" href="https://pypi.org/project/polarimetry-lc2pkpi"><img alt="Supported Python versions" src="https://img.shields.io/pypi/pyversions/polarimetry-lc2pkpi"/></a></p>
+<p>As noted on the <a class="reference external" href="../index.ipynb">main page</a>, the source code for this analysis is available as a Python package on <a class="reference external" href="https://pypi.org">PyPI</a> and can be installed as follows.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>polarimetry-lc2pkpi
+</pre></div>
+</div>
+<p>Each of the models can then simply be imported as</p>
+<div class="cell tag_remove-input docutils container">
+</div>
+<div class="cell tag_full-width docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="../api/polarimetry.html#module-polarimetry"><span class="nn">polarimetry</span></a>
+
+<a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.AmplitudeModel" title="ampform_dpd.AmplitudeModel"><span class="n">model</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../api/polarimetry.html#polarimetry.published_model"><span class="n">polarimetry</span><span class="o">.</span><span class="n">published_model</span></a><span class="p">(</span><span class="s2">"Default amplitude model"</span><span class="p">)</span>
+<span class="n">model</span><span class="o">.</span><span class="n">intensity</span><span class="o">.</span><span class="n">cleanup</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \sum_{\lambda_{0}=-1/2}^{1/2} \sum_{\lambda_{1}=-1/2}^{1/2}{\left|{\sum_{\lambda_0^{\prime}=-1/2}^{1/2} \sum_{\lambda_1^{\prime}=-1/2}^{1/2}{A^{1}_{\lambda_0^{\prime}, \lambda_1^{\prime}, 0, 0} d^{\frac{1}{2}}_{\lambda_1^{\prime},\lambda_{1}}\left(\zeta^1_{1(1)}\right) d^{\frac{1}{2}}_{\lambda_{0},\lambda_0^{\prime}}\left(\zeta^0_{1(1)}\right) + A^{2}_{\lambda_0^{\prime}, \lambda_1^{\prime}, 0, 0} d^{\frac{1}{2}}_{\lambda_1^{\prime},\lambda_{1}}\left(\zeta^1_{2(1)}\right) d^{\frac{1}{2}}_{\lambda_{0},\lambda_0^{\prime}}\left(\zeta^0_{2(1)}\right) + A^{3}_{\lambda_0^{\prime}, \lambda_1^{\prime}, 0, 0} d^{\frac{1}{2}}_{\lambda_1^{\prime},\lambda_{1}}\left(\zeta^1_{3(1)}\right) d^{\frac{1}{2}}_{\lambda_{0},\lambda_0^{\prime}}\left(\zeta^0_{3(1)}\right)}}\right|^{2}}\]</div>
+</div>
+</div>
+<p>The expressions have to be converted to a numerical function to evaluate them over larger data samples. There are several ways of doing this (such as <a class="reference external" href="https://github.com/ComPWA/polarimetry/issues/336#issuecomment-1905795986">algebraically substituting the parameter values first</a>), but it depends on your application what is best. Here’s a small example where we want to evaluate the model over a set of data points on the Dalitz plane. We first ‘unfold’ the main intensity expression and lambdify it to a numerical function with <a class="reference external" href="https://jax.rtfd.io">JAX</a> as computational backend.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.io.html#module-ampform_dpd.io"><span class="nn">ampform_dpd.io</span></a><span class="w"> </span><span class="kn">import</span> <a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.io.cached.html#module-ampform_dpd.io.cached" title="ampform_dpd.io.cached"><span class="n">cached</span></a>
+
+<a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.expr.Expr" title="sympy.core.expr.Expr"><span class="n">intensity_expr</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.io.cached.html#ampform_dpd.io.cached.unfold" title="ampform_dpd.io.cached.unfold"><span class="n">cached</span><span class="o">.</span><span class="n">unfold</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.AmplitudeModel" title="ampform_dpd.AmplitudeModel"><span class="n">model</span></a><span class="p">)</span>
+<span class="n">intensity_func</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.io.cached.html#ampform_dpd.io.cached.lambdify" title="ampform_dpd.io.cached.lambdify"><span class="n">cached</span><span class="o">.</span><span class="n">lambdify</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.expr.Expr" title="sympy.core.expr.Expr"><span class="n">intensity_expr</span></a><span class="p">,</span> <span class="n">parameters</span><span class="o">=</span><a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.AmplitudeModel.parameter_defaults" title="ampform_dpd.AmplitudeModel.parameter_defaults"><span class="n">model</span><span class="o">.</span><span class="n">parameter_defaults</span></a><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now, let’s say we have <a class="reference external" href="https://github.com/ComPWA/polarimetry/issues/336#issuecomment-1904067511">some data sample</a> containing generated phase space data points in the Dalitz plane.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Download ZIP data</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/urllib.request.html#module-urllib.request"><span class="nn">urllib.request</span></a>
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/io.html#module-io"><span class="nn">io</span></a><span class="w"> </span><span class="kn">import</span> <span class="n">BytesIO</span>
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/zipfile.html#module-zipfile"><span class="nn">zipfile</span></a><span class="w"> </span><span class="kn">import</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile" title="zipfile.ZipFile"><span class="n">ZipFile</span></a>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">"https://github.com/ComPWA/polarimetry/files/14123343/lc2pkpi_phsp.zip"</span>
+<span class="k">with</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/urllib.request.html#urllib.request.urlopen"><span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span></a><span class="p">(</span><span class="n">url</span><span class="p">)</span> <span class="k">as</span> <span class="n">response</span><span class="p">:</span>
+    <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile" title="zipfile.ZipFile"><span class="n">zipfile</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile" title="zipfile.ZipFile"><span class="n">ZipFile</span></a><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">()))</span>
+<a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/zipfile.html#zipfile.ZipFile.extractall" title="zipfile.ZipFile.extractall"><span class="n">zipfile</span><span class="o">.</span><span class="n">extractall</span></a><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</details>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">uproot</span>
+
+<span class="k">with</span> <span class="n">uproot</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">"lc2pkpi_phsp.root"</span><span class="p">)</span> <span class="k">as</span> <span class="n">root_file</span><span class="p">:</span>
+    <span class="n">events</span> <span class="o">=</span> <span class="n">root_file</span><span class="p">[</span><span class="s2">"Lc2ppiK"</span><span class="p">]</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">events</span><span class="o">.</span><span class="n">arrays</span><span class="p">(</span><span class="n">library</span><span class="o">=</span><span class="s2">"pd"</span><span class="p">)</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>msq_piK</th>
+<th>msq_Kp</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>1.303328</td>
+<td>3.505217</td>
+</tr>
+<tr>
+<th>1</th>
+<td>0.424415</td>
+<td>4.382733</td>
+</tr>
+<tr>
+<th>2</th>
+<td>1.694020</td>
+<td>2.827971</td>
+</tr>
+<tr>
+<th>3</th>
+<td>1.260368</td>
+<td>3.106184</td>
+</tr>
+<tr>
+<th>4</th>
+<td>1.171106</td>
+<td>3.424632</td>
+</tr>
+<tr>
+<th>5</th>
+<td>1.556747</td>
+<td>3.210350</td>
+</tr>
+<tr>
+<th>6</th>
+<td>1.615608</td>
+<td>2.484730</td>
+</tr>
+<tr>
+<th>7</th>
+<td>0.649837</td>
+<td>3.523832</td>
+</tr>
+</tbody>
+</table>
+</div></div></div>
+</div>
+<p>Here, we have data points for the two Mandelstam variables <span class="math notranslate nohighlight">\(\sigma_1\)</span> and <span class="math notranslate nohighlight">\(\sigma_2\)</span>. The <a class="reference external" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.AmplitudeModel.invariants" title="(in Symbolic Dalitz-Plot Decomposition v0.1.dev1+g202adacb5)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">invariants</span></code></a> attribute of the amplitude model provides symbolic expressions for how to compute the third Mandelstam. In combination with the <a class="reference external" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.AmplitudeModel.variables" title="(in Symbolic Dalitz-Plot Decomposition v0.1.dev1+g202adacb5)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">variables</span></code></a> and <a class="reference external" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.AmplitudeModel.parameter_defaults" title="(in Symbolic Dalitz-Plot Decomposition v0.1.dev1+g202adacb5)"><code class="xref py py-attr docutils literal notranslate"><span class="pre">parameter_defaults</span></code></a> attributes, we can create a data transformer for computing helicity angles and DPD alignment angles.</p>
+<div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell source</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://ampform.readthedocs.io/0.16.1/api/ampform.io.html#module-ampform.io"><span class="nn">ampform.io</span></a><span class="w"> </span><span class="kn">import</span> <a class="sphinx-codeautolink-a" href="https://ampform.readthedocs.io/0.16.1/api/ampform.io.html#ampform.io.aslatex" title="ampform.io.aslatex"><span class="n">aslatex</span></a>
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://ipython.readthedocs.io/en/9.17.1/api/generated/IPython.display.html#module-IPython.display"><span class="nn">IPython.display</span></a><span class="w"> </span><span class="kn">import</span> <a class="sphinx-codeautolink-a" href="https://ipython.readthedocs.io/en/9.17.1/api/generated/IPython.display.html#IPython.display.Math" title="IPython.core.display.Math"><span class="n">Math</span></a>
+
+<a class="sphinx-codeautolink-a" href="https://ipython.readthedocs.io/en/9.17.1/api/generated/IPython.display.html#IPython.display.Math" title="IPython.core.display.Math"><span class="n">Math</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://ampform.readthedocs.io/0.16.1/api/ampform.io.html#ampform.io.aslatex" title="ampform.io.aslatex"><span class="n">aslatex</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.AmplitudeModel.invariants" title="ampform_dpd.AmplitudeModel.invariants"><span class="n">model</span><span class="o">.</span><span class="n">invariants</span></a><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\begin{split}\displaystyle \begin{aligned}
+  \sigma_{1} \;&amp;=\; m_{0}^{2} + m_{1}^{2} + m_{2}^{2} + m_{3}^{2} - \sigma_{2} - \sigma_{3} \\
+  \sigma_{2} \;&amp;=\; m_{0}^{2} + m_{1}^{2} + m_{2}^{2} + m_{3}^{2} - \sigma_{1} - \sigma_{3} \\
+  \sigma_{3} \;&amp;=\; m_{0}^{2} + m_{1}^{2} + m_{2}^{2} + m_{3}^{2} - \sigma_{1} - \sigma_{2} \\
+\end{aligned}\end{split}\]</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/index.html#module-sympy"><span class="nn">sympy</span></a><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://tensorwaves.readthedocs.io/0.4.17/api/tensorwaves.data.transform.html#module-tensorwaves.data.transform"><span class="nn">tensorwaves.data.transform</span></a><span class="w"> </span><span class="kn">import</span> <a class="sphinx-codeautolink-a" href="https://tensorwaves.readthedocs.io/0.4.17/api/tensorwaves.data.transform.html#tensorwaves.data.transform.SympyDataTransformer" title="tensorwaves.data.transform.SympyDataTransformer"><span class="n">SympyDataTransformer</span></a>
+
+<span class="o">*</span><span class="n">_</span><span class="p">,</span> <span class="p">(</span><span class="n">s3</span><span class="p">,</span> <span class="n">s3_expr</span><span class="p">)</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">invariants</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+<a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.AmplitudeModel.variables" title="ampform_dpd.AmplitudeModel.variables"><span class="n">definitions</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.AmplitudeModel.variables" title="ampform_dpd.AmplitudeModel.variables"><span class="n">model</span><span class="o">.</span><span class="n">variables</span></a>
+<a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.AmplitudeModel.variables" title="ampform_dpd.AmplitudeModel.variables"><span class="n">definitions</span></a><span class="p">[</span><span class="n">s3</span><span class="p">]</span> <span class="o">=</span> <span class="n">s3_expr</span>
+<span class="n">definitions</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">symbol</span><span class="p">:</span> <span class="n">expr</span><span class="o">.</span><span class="n">xreplace</span><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.AmplitudeModel.variables" title="ampform_dpd.AmplitudeModel.variables"><span class="n">definitions</span></a><span class="p">)</span><span class="o">.</span><span class="n">xreplace</span><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.AmplitudeModel.parameter_defaults" title="ampform_dpd.AmplitudeModel.parameter_defaults"><span class="n">model</span><span class="o">.</span><span class="n">parameter_defaults</span></a><span class="p">)</span>
+    <span class="k">for</span> <span class="n">symbol</span><span class="p">,</span> <span class="n">expr</span> <span class="ow">in</span> <span class="n">definitions</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+<span class="p">}</span>
+<a class="sphinx-codeautolink-a" href="https://tensorwaves.readthedocs.io/0.4.17/api/tensorwaves.data.transform.html#tensorwaves.data.transform.SympyDataTransformer" title="tensorwaves.data.transform.SympyDataTransformer"><span class="n">data_transformer</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://tensorwaves.readthedocs.io/0.4.17/api/tensorwaves.data.transform.html#tensorwaves.data.transform.SympyDataTransformer.from_sympy" title="tensorwaves.data.transform.SympyDataTransformer.from_sympy"><span class="n">SympyDataTransformer</span><span class="o">.</span><span class="n">from_sympy</span></a><span class="p">(</span><span class="n">definitions</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="s2">"jax"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally, we can create an input <a class="reference external" href="https://tensorwaves.readthedocs.io/0.4.17/api/tensorwaves.interface.html#tensorwaves.interface.DataSample" title="(in TensorWaves v0.4.17)"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DataSample</span></code></a> that we can feed to the numerical function for the amplitude model.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">"sigma1"</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s2">"msq_piK"</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(),</span>
+    <span class="s2">"sigma2"</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s2">"msq_Kp"</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">(),</span>
+<span class="p">}</span>
+<span class="n">completed_data</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://tensorwaves.readthedocs.io/0.4.17/api/tensorwaves.data.transform.html#tensorwaves.data.transform.SympyDataTransformer" title="tensorwaves.data.transform.SympyDataTransformer"><span class="n">data_transformer</span></a><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">completed_data</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">intensity_func</span><span class="p">(</span><span class="n">completed_data</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Array([2158.16752493, 5447.08091414, 6232.40502307,  681.74714874,
+        902.7663634 , 5626.31808739, 7225.75775956, 2247.93599152],      dtype=float64)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</article>
+<footer class="prev-next-footer d-print-none">
+<div class="prev-next-area">
+<a class="left-prev" href="serialization.html" title="previous page">
+<i class="fa-solid fa-angle-left"></i>
+<div class="prev-next-info">
+<p class="prev-next-subtitle">previous</p>
+<p class="prev-next-title"><span class="section-number">7.6. </span>Polarimeter field serialization</p>
+</div>
+</a>
+<a class="right-next" href="ls-model.html" title="next page">
+<div class="prev-next-info">
+<p class="prev-next-subtitle">next</p>
+<p class="prev-next-title"><span class="section-number">7.8. </span>Amplitude model with LS-couplings</p>
+</div>
+<i class="fa-solid fa-angle-right"></i>
+</a>
+</div>
+</footer>
+</div>
+<dialog id="pst-secondary-sidebar-modal"></dialog>
+<div class="bd-sidebar-secondary bd-toc" id="pst-secondary-sidebar"><div class="sidebar-secondary-items sidebar-secondary__inner">
+<div class="sidebar-secondary-item"><div class="page-toc tocsection onthispage" id="pst-page-navigation-heading-2">
+<i class="fa-solid fa-list"></i> Contents
+  </div>
+<nav aria-labelledby="pst-page-navigation-heading-2" class="page-toc" id="pst-page-toc-nav">
+<ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#export-model">7.7.1. Export model</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#import-model">7.7.2. Import model</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#compilation">7.7.2.1. Compilation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#serialization-with-srepr">7.7.3. Serialization with <code class="docutils literal notranslate"><span class="pre">srepr</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-package">7.7.4. Python package</a></li>
+</ul>
+</nav></div>
+</div></div>
+</div>
+<footer class="bd-footer-content">
+<div class="bd-footer-content__inner container">
+<div class="footer-item">
+<p class="component-author">
+By Mikhail Mikhasenko, Remco de Boer, Miriam Fritsch
+</p>
+</div>
+<div class="footer-item">
+<p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+</p>
+</div>
+<div class="footer-item">
+<p class="last-updated">
+  Last updated on 9 September 2026.
+  <br/>
+</p>
+</div>
+<div class="footer-item">
+</div>
+</div>
+</footer>
+</main>
+</div>
+</div>
+<!-- Scripts loaded after <body> so the DOM is not blocked -->
+<script defer="" src="../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
+<script defer="" src="../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+<footer class="bd-footer">
+</footer>
+</body>
+</html>
