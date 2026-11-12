@@ -1,0 +1,1601 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>7.5. Benchmarking &#8212; Λc → p K π polarimetry</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=90905a2f556bf617f1a9" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=4418a689" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-codeautolink.css?v=b2176991" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=6a604523" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=4f87f664" />
+  
+  <!-- So that users can add custom icons -->
+  <script defer src="../_static/scripts/fontawesome.js?digest=90905a2f556bf617f1a9"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=fab101a9"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=b8b12719"></script>
+    <script data-sd-tabs-storage-prefix="sphinx-design-tab-id-" src="../_static/design-tabs.js?v=fcb327ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script type="application/vnd.jupyter.widget-state+json">{"state": {"018979b4f2d04e558bd44291953b9fe5": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "HTMLStyleModel", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "026c835d32564e31bdc445f9657de26c": {"model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "06938d90f004445a84754744f9cac969": {"model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "10b66440bdee4837a74a0908f8a8ee36": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "HTMLStyleModel", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "background": null, "description_width": "", "font_size": null, "text_color": null}}, "2d716e866716406a87d9d997d96474de": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "HTMLModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_06938d90f004445a84754744f9cac969", "placeholder": "\u200b", "style": "IPY_MODEL_018979b4f2d04e558bd44291953b9fe5", "tabbable": null, "tooltip": null, "value": "Generating\u2007intensity-based\u2007sample:\u2007100%"}}, "47c488a552634ba98112b1eab25bdd4c": {"model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "4a67aabc658442c4b7a7b1364dbd0769": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "ProgressStyleModel", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "ProgressStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "StyleView", "bar_color": null, "description_width": ""}}, "7929a3ccbd3747a5a5d0255b59323ffd": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "HTMLModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HTMLModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HTMLView", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_026c835d32564e31bdc445f9657de26c", "placeholder": "\u200b", "style": "IPY_MODEL_10b66440bdee4837a74a0908f8a8ee36", "tabbable": null, "tooltip": null, "value": "\u2007100000/100000\u2007[00:00&lt;00:00,\u2007156747.88it/s]"}}, "7aa33abd4dfb425cb30d8bf8fac5ff56": {"model_module": "@jupyter-widgets/base", "model_module_version": "2.0.0", "model_name": "LayoutModel", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "2.0.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "2.0.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border_bottom": null, "border_left": null, "border_right": null, "border_top": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "ceba612331a94f259338273409c5f74c": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "HBoxModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "HBoxModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "HBoxView", "box_style": "", "children": ["IPY_MODEL_2d716e866716406a87d9d997d96474de", "IPY_MODEL_f467b9c848624b76b6d11e994d979f7c", "IPY_MODEL_7929a3ccbd3747a5a5d0255b59323ffd"], "layout": "IPY_MODEL_7aa33abd4dfb425cb30d8bf8fac5ff56", "tabbable": null, "tooltip": null}}, "f467b9c848624b76b6d11e994d979f7c": {"model_module": "@jupyter-widgets/controls", "model_module_version": "2.0.0", "model_name": "FloatProgressModel", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "2.0.0", "_model_name": "FloatProgressModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "2.0.0", "_view_name": "ProgressView", "bar_style": "success", "description": "", "description_allow_html": false, "layout": "IPY_MODEL_47c488a552634ba98112b1eab25bdd4c", "max": 100000.0, "min": 0.0, "orientation": "horizontal", "style": "IPY_MODEL_4a67aabc658442c4b7a7b1364dbd0769", "tabbable": null, "tooltip": null, "value": 100000.0}}}, "version_major": 2, "version_minor": 0}</script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script crossorigin="anonymous" data-jupyter-widgets-cdn="https://cdn.jsdelivr.net/npm/" src="https://cdn.jsdelivr.net/npm/@jupyter-widgets/html-manager@1.0.6/dist/embed-amd.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'appendix/benchmark';</script>
+    <script>DOCUMENTATION_OPTIONS.search_as_you_type = false;</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <link rel="icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="7.6. Polarimeter field serialization" href="serialization.html" />
+    <link rel="prev" title="7.4. Alignment consistency" href="alignment.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.1.dev1+g8d0b8866d" />
+    <meta name="docbuild:last-update" content="12 November 2026"/>
+  
+    
+    <script src="../_static/searchtools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <script src="../searchindex.js"></script>
+  
+  </head>
+  <body data-default-mode="">
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+  
+  
+  
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header id="pst-header" class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+<div class="bd-header__inner bd-page-width">
+  <button class="pst-navbar-icon sidebar-toggle primary-toggle" aria-label="Site navigation">
+    <span class="fa-solid fa-bars"></span>
+  </button>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+        </div>
+      
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button>
+    </div>
+  
+
+  
+    <button class="pst-navbar-icon sidebar-toggle secondary-toggle" aria-label="On this page">
+      <span class="fa-solid fa-outdent"></span>
+    </button>
+  
+</div>
+
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/lhcb-logo.svg" class="logo__image only-light" alt=""/>
+    <img src="../_static/lhcb-logo.svg" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">Λ<sub>c</sub>⁺&nbsp;→&nbsp;p&nbsp;K⁻&nbsp;π⁺</p>
+  
+</a></div>
+        <div class="sidebar-primary-item"><ul class="navbar-icon-links"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://compwa.github.io" title="Common Partial Wave Analysis" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="/favicon.ico" class="icon-link-image" alt="Common Partial Wave Analysis"/></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://github.com/ComPWA/polarimetry" title="GitHub" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-github fa-lg" aria-hidden="true"></i><span class="visually-hidden">GitHub</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://pypi.org/project/polarimetry-lc2pkpi" title="PyPI" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="fa-brands fa-python fa-lg" aria-hidden="true"></i><span class="visually-hidden">PyPI</span></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://mybinder.org/v2/gh/ComPWA/polarimetry/main?urlpath=lab" title="Launch on Binder" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="https://mybinder.readthedocs.io/en/latest/_static/favicon.png" class="icon-link-image" alt="Launch on Binder"/></a>
+        </li>
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://colab.research.google.com/github/ComPWA/polarimetry/blob/main" title="Launch on Colaboratory" class="nav-link pst-navbar-icon" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><img src="https://avatars.githubusercontent.com/u/33467679?s=100" class="icon-link-image" alt="Launch on Colaboratory"/></a>
+        </li>
+</ul></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of contents</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../amplitude-model.html">1. Default amplitude model</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cross-check.html">2. Cross-check with LHCb data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../intensity.html">3. Intensity distribution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../polarimetry.html">4. Polarimeter vector field</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../uncertainties.html">5. Uncertainties</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resonance-polarimetry.html">6. Average polarimeter per resonance</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../appendix.html">7. Appendix</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="dynamics.html">7.1. Dynamics lineshapes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="angles.html">7.2. DPD angles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="phase-space.html">7.3. Phase space sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alignment.html">7.4. Alignment consistency</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">7.5. Benchmarking</a></li>
+<li class="toctree-l2"><a class="reference internal" href="serialization.html">7.6. Polarimeter field serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model-serialization.html">7.7. Model serialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ls-model.html">7.8. Amplitude model with LS-couplings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pc-pv-currents.html">7.9. PC and PV currents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="homomorphism.html">7.10. SU(2) → SO(3) homomorphism</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../zz.polarization-fit.html">7.11. Determination of polarization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="widget.html">7.12. Interactive visualization</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">8. Bibliography</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../api/polarimetry.html">9. API</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../api/polarimetry.lhcb.html">9.1. lhcb</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/polarimetry.lhcb.dynamics.html">9.1.1. dynamics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/polarimetry.lhcb.particle.html">9.1.2. particle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../api/polarimetry.lhcb.symbol.html">9.1.3. symbol</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/polarimetry.data.html">9.2. data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/polarimetry.function.html">9.3. function</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/polarimetry.io.html">9.4. io</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/polarimetry.plot.html">9.5. plot</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">External links</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference external" href="https://doi.org/10.1007/JHEP07(2023)228">JHEP</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://arxiv.org/abs/2301.07010">arXiv:2301.07010</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://compwa.github.io">ComPWA Project</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/ComPWA/polarimetry">GitHub repository</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://gitlab.cern.ch/polarimetry/Lc2pKpi">CERN GitLab (archived)</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/ComPWA/polarimetry/main?urlpath=lab/tree/docs/appendix/benchmark.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Binder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/ComPWA/polarimetry/blob/main/docs/appendix/benchmark.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Colab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://deepnote.com/launch?url=https%3A%2F%2Fgithub.com%2FComPWA%2Fpolarimetry%2Fblob%2Fmain%2Fdocs/appendix/benchmark.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch on Deepnote"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img alt="Deepnote logo" src="../_static/images/logo_deepnote.svg">
+  </span>
+<span class="btn__text-container">Deepnote</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ComPWA/polarimetry" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ComPWA/polarimetry/blob/main/docs/appendix/benchmark.ipynb?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ComPWA/polarimetry/edit/main/docs/appendix/benchmark.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ComPWA/polarimetry/issues/new?title=Issue%20on%20page%20%2Fappendix/benchmark.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<div class="theme-switch-container dropdown pst-js-only" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Color mode">
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button dropdown-toggle" aria-label="Color mode" data-bs-toggle="dropdown">
+    <i class="theme-switch fa-solid fa-sun fa-lg fa-fw" data-mode="light" title="Light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg fa-fw" data-mode="dark" title="Dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg fa-fw" data-mode="auto" title="System Settings"></i>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg fa-fw me-1"></i>System Settings</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="light"><i class="fa-solid fa-sun fa-lg fa-fw me-1"></i>Light</button></li>
+    <li><button class="dropdown-item d-flex align-items-center theme-change-button" data-mode="dark"><i class="fa-solid fa-moon fa-lg fa-fw me-1"></i>Dark</button></li>
+  </ul>
+</div>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Benchmarking</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datatransformer-performance">7.5.1. <code class="xref py py-class docutils literal notranslate"><span class="pre">DataTransformer</span></code> performance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parametrized-function">7.5.2. Parametrized function</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-data-point">7.5.2.1. One data point</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jit-compilation">7.5.2.1.1. JIT-compilation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#compiled-performance">7.5.2.1.2. Compiled performance</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#x54-grid-sample">7.5.2.2. 54x54 grid sample</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#compiled-but-uncached">7.5.2.2.1. Compiled but uncached</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#second-run-with-cache">7.5.2.2.2. Second run with cache</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#event-phase-space-sample">7.5.2.3. 100.000 event phase space sample</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">7.5.2.3.1. Compiled but uncached</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">7.5.2.3.2. Second run with cache</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recompilation-after-parameter-modification">7.5.2.4. Recompilation after parameter modification</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">7.5.2.4.1. Compiled but uncached</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">7.5.2.4.2. Second run with cache</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#all-parameters-substituted">7.5.3. All parameters substituted</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">7.5.3.1. One data point</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">7.5.3.1.1. JIT-compilation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">7.5.3.1.2. Compiled performance</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">7.5.3.2. 54x54 grid sample</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">7.5.3.2.1. Compiled but uncached</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">7.5.3.2.2. Second run with cache</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">7.5.3.3. 100.000 event phase space sample</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">7.5.3.3.1. Compiled but uncached</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">7.5.3.3.2. Second run with cache</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">7.5.4. Summary</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="benchmarking">
+<h1><span class="section-number">7.5. </span>Benchmarking<a class="headerlink" href="#benchmarking" title="Link to this heading">#</a></h1>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This notebook benchmarks JAX on a <strong>single CPU core</strong>. Compare with Julia results as reported in <a class="reference external" href="https://github.com/ComPWA/polarimetry/issues/27">ComPWA/polarimetry#27</a>. See also the <a class="reference external" href="https://github.com/ComPWA/polarimetry/discussions/68">Extended benchmark #68</a> discussion.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This notebook uses only one run and one loop for <a class="reference external" href="https://ipython.readthedocs.io/en/stable/interactive/magics.html#magic-timeit"><code class="docutils literal notranslate"><span class="pre">%timeit</span></code></a>, because JAX <a class="reference external" href="https://jax.readthedocs.io/en/latest/notebooks/Common_Gotchas_in_JAX.html#pure-functions">seems to cache its return values</a>.</p>
+</div>
+<div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Import Python libraries</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/logging.html#module-logging"><span class="nn">logging</span></a>
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/collections.html#module-collections"><span class="nn">collections</span></a><span class="w"> </span><span class="kn">import</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/collections.html#collections.defaultdict" title="collections.defaultdict"><span class="n">defaultdict</span></a>
+
+<span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://www.attrs.org/en/26.1.0/api.html#module-attrs"><span class="nn">attrs</span></a>
+<span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://numpy.org/doc/2.5/reference/index.html#module-numpy"><span class="nn">numpy</span></a><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/index.html#module-sympy"><span class="nn">sympy</span></a><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sp</span>
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.io.html#module-ampform_dpd.io"><span class="nn">ampform_dpd.io</span></a><span class="w"> </span><span class="kn">import</span> <a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.io.cached.html#module-ampform_dpd.io.cached" title="ampform_dpd.io.cached"><span class="n">cached</span></a>
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="https://ipython.readthedocs.io/en/9.18.1/api/generated/IPython.display.html#module-IPython.display"><span class="nn">IPython.display</span></a><span class="w"> </span><span class="kn">import</span> <a class="sphinx-codeautolink-a" href="https://ipython.readthedocs.io/en/9.18.1/api/generated/IPython.display.html#IPython.display.Markdown" title="IPython.core.display.Markdown"><span class="n">Markdown</span></a>
+<span class="kn">from</span><span class="w"> </span><span class="nn">psutil</span><span class="w"> </span><span class="kn">import</span> <span class="n">cpu_count</span>
+
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="../api/polarimetry.html#module-polarimetry"><span class="nn">polarimetry</span></a><span class="w"> </span><span class="kn">import</span> <a class="sphinx-codeautolink-a" href="../api/polarimetry.html#polarimetry.formulate_polarimetry" title="polarimetry.formulate_polarimetry"><span class="n">formulate_polarimetry</span></a>
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="../api/polarimetry.data.html#module-polarimetry.data"><span class="nn">polarimetry.data</span></a><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
+    <a class="sphinx-codeautolink-a" href="../api/polarimetry.data.html#polarimetry.data.create_data_transformer" title="polarimetry.data.create_data_transformer"><span class="n">create_data_transformer</span></a><span class="p">,</span>
+    <a class="sphinx-codeautolink-a" href="../api/polarimetry.data.html#polarimetry.data.generate_meshgrid_sample" title="polarimetry.data.generate_meshgrid_sample"><span class="n">generate_meshgrid_sample</span></a><span class="p">,</span>
+    <a class="sphinx-codeautolink-a" href="../api/polarimetry.data.html#polarimetry.data.generate_phasespace_sample" title="polarimetry.data.generate_phasespace_sample"><span class="n">generate_phasespace_sample</span></a><span class="p">,</span>
+<span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="../api/polarimetry.io.html#module-polarimetry.io"><span class="nn">polarimetry.io</span></a><span class="w"> </span><span class="kn">import</span> <a class="sphinx-codeautolink-a" href="../api/polarimetry.io.html#polarimetry.io.mute_jax_warnings" title="polarimetry.io.mute_jax_warnings"><span class="n">mute_jax_warnings</span></a>
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="../api/polarimetry.lhcb.html#module-polarimetry.lhcb"><span class="nn">polarimetry.lhcb</span></a><span class="w"> </span><span class="kn">import</span> <a class="sphinx-codeautolink-a" href="../api/polarimetry.lhcb.html#polarimetry.lhcb.load_model_builder" title="polarimetry.lhcb.load_model_builder"><span class="n">load_model_builder</span></a><span class="p">,</span> <a class="sphinx-codeautolink-a" href="../api/polarimetry.lhcb.html#polarimetry.lhcb.load_model_parameters" title="polarimetry.lhcb.load_model_parameters"><span class="n">load_model_parameters</span></a>
+<span class="kn">from</span><span class="w"> </span><a class="sphinx-codeautolink-a" href="../api/polarimetry.lhcb.particle.html#module-polarimetry.lhcb.particle"><span class="nn">polarimetry.lhcb.particle</span></a><span class="w"> </span><span class="kn">import</span> <a class="sphinx-codeautolink-a" href="../api/polarimetry.lhcb.particle.html#polarimetry.lhcb.particle.load_particles" title="polarimetry.lhcb.particle.load_particles"><span class="n">load_particles</span></a>
+
+<span class="n">LOGGER</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/logging.html#logging.getLogger"><span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span></a><span class="p">()</span>
+<span class="n">LOGGER</span><span class="o">.</span><span class="n">setLevel</span><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/logging.html#logging.ERROR"><span class="n">logging</span><span class="o">.</span><span class="n">ERROR</span></a><span class="p">)</span>
+<a class="sphinx-codeautolink-a" href="../api/polarimetry.io.html#polarimetry.io.mute_jax_warnings" title="polarimetry.io.mute_jax_warnings"><span class="n">mute_jax_warnings</span></a><span class="p">()</span>
+
+<span class="n">model_choice</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">model_file</span> <span class="o">=</span> <span class="s2">"../../data/model-definitions.yaml"</span>
+<a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="dict"><span class="n">particles</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../api/polarimetry.lhcb.particle.html#polarimetry.lhcb.particle.load_particles" title="polarimetry.lhcb.particle.load_particles"><span class="n">load_particles</span></a><span class="p">(</span><span class="s2">"../../data/particle-definitions.yaml"</span><span class="p">)</span>
+<a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.DalitzPlotDecompositionBuilder" title="ampform_dpd.DalitzPlotDecompositionBuilder"><span class="n">amplitude_builder</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../api/polarimetry.lhcb.html#polarimetry.lhcb.load_model_builder" title="polarimetry.lhcb.load_model_builder"><span class="n">load_model_builder</span></a><span class="p">(</span><span class="n">model_file</span><span class="p">,</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="dict"><span class="n">particles</span></a><span class="p">,</span> <span class="n">model_choice</span><span class="p">)</span>
+<a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="dict"><span class="n">imported_parameter_values</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../api/polarimetry.lhcb.html#polarimetry.lhcb.load_model_parameters" title="polarimetry.lhcb.load_model_parameters"><span class="n">load_model_parameters</span></a><span class="p">(</span>
+    <span class="n">model_file</span><span class="p">,</span> <span class="n">amplitude_builder</span><span class="o">.</span><span class="n">decay</span><span class="p">,</span> <span class="n">model_choice</span><span class="p">,</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="dict"><span class="n">particles</span></a>
+<span class="p">)</span>
+<span class="n">reference_subsystem</span> <span class="o">=</span> <span class="mi">1</span>
+<a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.AmplitudeModel" title="ampform_dpd.AmplitudeModel"><span class="n">model</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.DalitzPlotDecompositionBuilder.formulate" title="ampform_dpd.DalitzPlotDecompositionBuilder.formulate"><span class="n">amplitude_builder</span><span class="o">.</span><span class="n">formulate</span></a><span class="p">(</span><span class="n">reference_subsystem</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://www.attrs.org/en/26.1.0/api.html#attrs.evolve"><span class="n">attrs</span><span class="o">.</span><span class="n">evolve</span></a><span class="p">(</span>
+    <a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.AmplitudeModel" title="ampform_dpd.AmplitudeModel"><span class="n">model</span></a><span class="p">,</span>
+    <span class="n">parameter_defaults</span><span class="o">=</span><span class="p">{</span><span class="o">**</span><a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.html#ampform_dpd.AmplitudeModel.parameter_defaults" title="ampform_dpd.AmplitudeModel.parameter_defaults"><span class="n">model</span><span class="o">.</span><span class="n">parameter_defaults</span></a><span class="p">,</span> <span class="o">**</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="dict"><span class="n">imported_parameter_values</span></a><span class="p">},</span>
+<span class="p">)</span>
+
+<a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/collections.html#collections.defaultdict" title="collections.defaultdict"><span class="n">timing_parametrized</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/collections.html#collections.defaultdict" title="collections.defaultdict"><span class="n">defaultdict</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#dict"><span class="nb">dict</span></a><span class="p">)</span>
+<a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/collections.html#collections.defaultdict" title="collections.defaultdict"><span class="n">timing_substituted</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/collections.html#collections.defaultdict" title="collections.defaultdict"><span class="n">defaultdict</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#dict"><span class="nb">dict</span></a><span class="p">)</span>
+
+<a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/functions.html#print"><span class="nb">print</span></a><span class="p">(</span><span class="s2">"Physical cores:"</span><span class="p">,</span> <span class="n">cpu_count</span><span class="p">(</span><span class="n">logical</span><span class="o">=</span><span class="kc">False</span><span class="p">))</span>
+<a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/functions.html#print"><span class="nb">print</span></a><span class="p">(</span><span class="s2">"Total cores:"</span><span class="p">,</span> <span class="n">cpu_count</span><span class="p">(</span><span class="n">logical</span><span class="o">=</span><span class="kc">True</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Physical cores: 2
+Total cores: 4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">polarimetry_exprs</span> <span class="o">=</span> <span class="n">formulate_polarimetry</span><span class="p">(</span><span class="n">amplitude_builder</span><span class="p">,</span> <span class="n">reference_subsystem</span><span class="p">)</span>
+<span class="n">unfolded_polarimetry_exprs</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">cached</span><span class="o">.</span><span class="n">unfold</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">amplitudes</span><span class="p">)</span> <span class="k">for</span> <span class="n">expr</span> <span class="ow">in</span> <span class="n">polarimetry_exprs</span>
+<span class="p">]</span>
+<span class="n">unfolded_intensity_expr</span> <span class="o">=</span> <span class="n">cached</span><span class="o">.</span><span class="n">unfold</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 2.15 s, sys: 2.94 ms, total: 2.15 s
+Wall time: 2.15 s
+</pre></div>
+</div>
+</div>
+</div>
+<section id="datatransformer-performance">
+<h2><span class="section-number">7.5.1. </span><a class="reference external" href="https://tensorwaves.readthedocs.io/0.4.17/api/tensorwaves.interface.html#tensorwaves.interface.DataTransformer" title="(in TensorWaves v0.4.17)"><code class="xref py py-class docutils literal notranslate"><span class="pre">DataTransformer</span></code></a> performance<a class="headerlink" href="#datatransformer-performance" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n_events</span> <span class="o">=</span> <span class="mi">100_000</span>
+<a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="dict"><span class="n">phsp_sample</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../api/polarimetry.data.html#polarimetry.data.generate_phasespace_sample" title="polarimetry.data.generate_phasespace_sample"><span class="n">generate_phasespace_sample</span></a><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">decay</span><span class="p">,</span> <span class="n">n_events</span><span class="p">,</span> <span class="n">seed</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<a class="sphinx-codeautolink-a" href="https://tensorwaves.readthedocs.io/0.4.17/api/tensorwaves.data.transform.html#tensorwaves.data.transform.SympyDataTransformer" title="tensorwaves.data.transform.SympyDataTransformer"><span class="n">transformer</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../api/polarimetry.data.html#polarimetry.data.create_data_transformer" title="polarimetry.data.create_data_transformer"><span class="n">create_data_transformer</span></a><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+<span class="o">%</span><span class="k">timeit</span> -n1 -r1 transformer(phsp_sample)  # first run, so no cache and JIT-compilation
+<span class="o">%</span><span class="k">timeit</span> -n1 -r1 transformer(phsp_sample)  # second run with cache
+<span class="o">%</span><span class="k">timeit</span> -n1 -r1 transformer(phsp_sample)  # third run with cache
+<a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="dict"><span class="n">phsp_sample</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://tensorwaves.readthedocs.io/0.4.17/api/tensorwaves.data.transform.html#tensorwaves.data.transform.SympyDataTransformer" title="tensorwaves.data.transform.SympyDataTransformer"><span class="n">transformer</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="dict"><span class="n">phsp_sample</span></a><span class="p">)</span>
+<span class="n">random_point</span> <span class="o">=</span> <span class="p">{</span><span class="n">k</span><span class="p">:</span> <span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">if</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/functions.html#len"><span class="nb">len</span></a><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="n">v</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#dict.items" title="dict.items"><span class="n">phsp_sample</span><span class="o">.</span><span class="n">items</span></a><span class="p">()}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "ceba612331a94f259338273409c5f74c", "version_major": 2, "version_minor": 0}</script><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>302 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
+5.61 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
+5.87 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="mi">54</span>
+<a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="dict"><span class="n">grid_sample</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="../api/polarimetry.data.html#polarimetry.data.generate_meshgrid_sample" title="polarimetry.data.generate_meshgrid_sample"><span class="n">generate_meshgrid_sample</span></a><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">decay</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+<span class="o">%</span><span class="k">timeit</span> -n1 -r1 transformer(grid_sample)  # first run, without cache, but already compiled
+<span class="o">%</span><span class="k">timeit</span> -n1 -r1 transformer(grid_sample)  # second run with cache
+<span class="o">%</span><span class="k">timeit</span> -n1 -r1 transformer(grid_sample)  # third run with cache
+<a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="dict"><span class="n">grid_sample</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://tensorwaves.readthedocs.io/0.4.17/api/tensorwaves.data.transform.html#tensorwaves.data.transform.SympyDataTransformer" title="tensorwaves.data.transform.SympyDataTransformer"><span class="n">transformer</span></a><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="dict"><span class="n">grid_sample</span></a><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>318 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
+369 μs ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
+243 μs ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="parametrized-function">
+<h2><span class="section-number">7.5.2. </span>Parametrized function<a class="headerlink" href="#parametrized-function" title="Link to this heading">#</a></h2>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Compare <a class="reference internal" href="#all-parameters-substituted"><span class="std std-ref">All parameters substituted</span></a>.</p>
+</aside>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<p>Total number of mathematical operations:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\alpha_x\)</span>: 86,766</p></li>
+<li><p><span class="math notranslate nohighlight">\(\alpha_y\)</span>: 86,770</p></li>
+<li><p><span class="math notranslate nohighlight">\(\alpha_z\)</span>: 86,766</p></li>
+<li><p><span class="math notranslate nohighlight">\(I_\mathrm{tot}\)</span>: 28,430</p></li>
+</ul>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">parametrized_polarimetry_funcs</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">cached</span><span class="o">.</span><span class="n">lambdify</span><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">parameter_defaults</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">expr</span> <span class="ow">in</span> <span class="n">unfolded_polarimetry_exprs</span>
+<span class="p">]</span>
+<span class="n">parametrized_intensity_func</span> <span class="o">=</span> <span class="n">cached</span><span class="o">.</span><span class="n">lambdify</span><span class="p">(</span>
+    <span class="n">unfolded_intensity_expr</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">parameter_defaults</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 106 ms, sys: 1.95 ms, total: 108 ms
+Wall time: 108 ms
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rng</span> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://numpy.org/doc/2.5/reference/random/generator.html#numpy.random.default_rng" title="numpy.random.default_rng"><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">default_rng</span></a><span class="p">(</span><span class="n">seed</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="dict"><span class="n">original_parameters</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#dict"><span class="nb">dict</span></a><span class="p">(</span><span class="n">parametrized_intensity_func</span><span class="o">.</span><span class="n">parameters</span><span class="p">)</span>
+<span class="n">modified_parameters</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">k</span><span class="p">:</span> <span class="n">rng</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mf">0.9</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">)</span> <span class="o">*</span> <span class="n">v</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">parametrized_intensity_func</span><span class="o">.</span><span class="n">parameters</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="one-data-point">
+<h3><span class="section-number">7.5.2.1. </span>One data point<a class="headerlink" href="#one-data-point" title="Link to this heading">#</a></h3>
+<section id="jit-compilation">
+<h4><span class="section-number">7.5.2.1.1. </span>JIT-compilation<a class="headerlink" href="#jit-compilation" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%timeit</span> -n1 -r1 -q -o
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_intensity_func</span><span class="p">(</span><span class="n">random_point</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TimeitResult : 166 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%timeit</span> -n1 -r1 -q -o
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_polarimetry_funcs</span><span class="p">[</span><span class="mi">0</span><span class="p">](</span><span class="n">random_point</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_polarimetry_funcs</span><span class="p">[</span><span class="mi">1</span><span class="p">](</span><span class="n">random_point</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_polarimetry_funcs</span><span class="p">[</span><span class="mi">2</span><span class="p">](</span><span class="n">random_point</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TimeitResult : 643 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="compiled-performance">
+<h4><span class="section-number">7.5.2.1.2. </span>Compiled performance<a class="headerlink" href="#compiled-performance" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%timeit</span> -n1 -r1 -q -o
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_intensity_func</span><span class="p">(</span><span class="n">random_point</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TimeitResult : 796 μs ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%timeit</span> -n1 -r1 -q -o
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_polarimetry_funcs</span><span class="p">[</span><span class="mi">0</span><span class="p">](</span><span class="n">random_point</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_polarimetry_funcs</span><span class="p">[</span><span class="mi">1</span><span class="p">](</span><span class="n">random_point</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_polarimetry_funcs</span><span class="p">[</span><span class="mi">2</span><span class="p">](</span><span class="n">random_point</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TimeitResult : 1.6 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="x54-grid-sample">
+<h3><span class="section-number">7.5.2.2. </span>54x54 grid sample<a class="headerlink" href="#x54-grid-sample" title="Link to this heading">#</a></h3>
+<section id="compiled-but-uncached">
+<h4><span class="section-number">7.5.2.2.1. </span>Compiled but uncached<a class="headerlink" href="#compiled-but-uncached" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%timeit</span> -n1 -r1 -q -o
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_intensity_func</span><span class="p">(</span><span class="n">grid_sample</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TimeitResult : 175 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%timeit</span> -n1 -r1 -q -o
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_polarimetry_funcs</span><span class="p">[</span><span class="mi">0</span><span class="p">](</span><span class="n">grid_sample</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_polarimetry_funcs</span><span class="p">[</span><span class="mi">1</span><span class="p">](</span><span class="n">grid_sample</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_polarimetry_funcs</span><span class="p">[</span><span class="mi">2</span><span class="p">](</span><span class="n">grid_sample</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TimeitResult : 683 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="second-run-with-cache">
+<h4><span class="section-number">7.5.2.2.2. </span>Second run with cache<a class="headerlink" href="#second-run-with-cache" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%timeit</span> -n1 -r1 -q -o
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_intensity_func</span><span class="p">(</span><span class="n">grid_sample</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TimeitResult : 985 μs ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%timeit</span> -n1 -r1 -q -o
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_polarimetry_funcs</span><span class="p">[</span><span class="mi">0</span><span class="p">](</span><span class="n">grid_sample</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_polarimetry_funcs</span><span class="p">[</span><span class="mi">1</span><span class="p">](</span><span class="n">grid_sample</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_polarimetry_funcs</span><span class="p">[</span><span class="mi">2</span><span class="p">](</span><span class="n">grid_sample</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TimeitResult : 1.94 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="event-phase-space-sample">
+<h3><span class="section-number">7.5.2.3. </span>100.000 event phase space sample<a class="headerlink" href="#event-phase-space-sample" title="Link to this heading">#</a></h3>
+<section id="id1">
+<h4><span class="section-number">7.5.2.3.1. </span>Compiled but uncached<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%timeit</span> -n1 -r1 -q -o
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_intensity_func</span><span class="p">(</span><span class="n">phsp_sample</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TimeitResult : 167 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%timeit</span> -n1 -r1 -q -o
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_polarimetry_funcs</span><span class="p">[</span><span class="mi">0</span><span class="p">](</span><span class="n">phsp_sample</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_polarimetry_funcs</span><span class="p">[</span><span class="mi">1</span><span class="p">](</span><span class="n">phsp_sample</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_polarimetry_funcs</span><span class="p">[</span><span class="mi">2</span><span class="p">](</span><span class="n">phsp_sample</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TimeitResult : 702 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h4><span class="section-number">7.5.2.3.2. </span>Second run with cache<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%timeit</span> -n1 -r1 -q -o
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_intensity_func</span><span class="p">(</span><span class="n">phsp_sample</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TimeitResult : 957 μs ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%timeit</span> -n1 -r1 -q -o
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_polarimetry_funcs</span><span class="p">[</span><span class="mi">0</span><span class="p">](</span><span class="n">phsp_sample</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_polarimetry_funcs</span><span class="p">[</span><span class="mi">1</span><span class="p">](</span><span class="n">phsp_sample</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_polarimetry_funcs</span><span class="p">[</span><span class="mi">2</span><span class="p">](</span><span class="n">phsp_sample</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TimeitResult : 2.19 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="recompilation-after-parameter-modification">
+<h3><span class="section-number">7.5.2.4. </span>Recompilation after parameter modification<a class="headerlink" href="#recompilation-after-parameter-modification" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">parametrized_intensity_func</span><span class="o">.</span><span class="n">update_parameters</span><span class="p">(</span><span class="n">modified_parameters</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">func</span> <span class="ow">in</span> <span class="n">parametrized_polarimetry_funcs</span><span class="p">:</span>
+    <span class="n">func</span><span class="o">.</span><span class="n">update_parameters</span><span class="p">(</span><span class="n">modified_parameters</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="id3">
+<h4><span class="section-number">7.5.2.4.1. </span>Compiled but uncached<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%timeit</span> -n1 -r1 -q -o
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_intensity_func</span><span class="p">(</span><span class="n">phsp_sample</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TimeitResult : 199 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%timeit</span> -n1 -r1 -q -o
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_polarimetry_funcs</span><span class="p">[</span><span class="mi">0</span><span class="p">](</span><span class="n">phsp_sample</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_polarimetry_funcs</span><span class="p">[</span><span class="mi">1</span><span class="p">](</span><span class="n">phsp_sample</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_polarimetry_funcs</span><span class="p">[</span><span class="mi">2</span><span class="p">](</span><span class="n">phsp_sample</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TimeitResult : 667 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id4">
+<h4><span class="section-number">7.5.2.4.2. </span>Second run with cache<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%timeit</span> -n1 -r1 -q -o
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_intensity_func</span><span class="p">(</span><span class="n">phsp_sample</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TimeitResult : 732 μs ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%timeit</span> -n1 -r1 -q -o
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_polarimetry_funcs</span><span class="p">[</span><span class="mi">0</span><span class="p">](</span><span class="n">phsp_sample</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_polarimetry_funcs</span><span class="p">[</span><span class="mi">1</span><span class="p">](</span><span class="n">phsp_sample</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">parametrized_polarimetry_funcs</span><span class="p">[</span><span class="mi">2</span><span class="p">](</span><span class="n">phsp_sample</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TimeitResult : 2.88 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">parametrized_intensity_func</span><span class="o">.</span><span class="n">update_parameters</span><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="dict"><span class="n">original_parameters</span></a><span class="p">)</span>
+<span class="k">for</span> <span class="n">func</span> <span class="ow">in</span> <span class="n">parametrized_polarimetry_funcs</span><span class="p">:</span>
+    <span class="n">func</span><span class="o">.</span><span class="n">update_parameters</span><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#dict" title="dict"><span class="n">original_parameters</span></a><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="all-parameters-substituted">
+<h2><span class="section-number">7.5.3. </span>All parameters substituted<a class="headerlink" href="#all-parameters-substituted" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">subs_polarimetry_exprs</span> <span class="o">=</span> <span class="p">[</span>
+    <a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.io.cached.html#ampform_dpd.io.cached.xreplace" title="ampform_dpd.io.cached.xreplace"><span class="n">cached</span><span class="o">.</span><span class="n">xreplace</span></a><span class="p">(</span><span class="n">expr</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">parameter_defaults</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">expr</span> <span class="ow">in</span> <span class="n">unfolded_polarimetry_exprs</span>
+<span class="p">]</span>
+<a class="sphinx-codeautolink-a" href="https://docs.sympy.org/latest/modules/core.html#sympy.core.expr.Expr" title="sympy.core.expr.Expr"><span class="n">subs_intensity_expr</span></a> <span class="o">=</span> <a class="sphinx-codeautolink-a" href="https://compwa.github.io/ampform-dpd/api/ampform_dpd.io.cached.html#ampform_dpd.io.cached.xreplace" title="ampform_dpd.io.cached.xreplace"><span class="n">cached</span><span class="o">.</span><span class="n">xreplace</span></a><span class="p">(</span><span class="n">unfolded_intensity_expr</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">parameter_defaults</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Compare <a class="reference internal" href="#parametrized-function"><span class="std std-ref">Parametrized function</span></a>.</p>
+</aside>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<p>Number of mathematical operations after substituting all parameters:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\alpha_x\)</span>: 31,488</p></li>
+<li><p><span class="math notranslate nohighlight">\(\alpha_y\)</span>: 31,492</p></li>
+<li><p><span class="math notranslate nohighlight">\(\alpha_z\)</span>: 31,488</p></li>
+<li><p><span class="math notranslate nohighlight">\(I_\mathrm{tot}\)</span>: 10,360</p></li>
+</ul>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%time</span>
+<span class="n">polarimetry_funcs</span> <span class="o">=</span> <span class="p">[</span><span class="n">cached</span><span class="o">.</span><span class="n">lambdify</span><span class="p">(</span><span class="n">expr</span><span class="p">)</span> <span class="k">for</span> <span class="n">expr</span> <span class="ow">in</span> <span class="n">subs_polarimetry_exprs</span><span class="p">]</span>
+<span class="n">intensity_func</span> <span class="o">=</span> <span class="n">cached</span><span class="o">.</span><span class="n">lambdify</span><span class="p">(</span><span class="n">subs_intensity_expr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>CPU times: user 74.8 ms, sys: 990 μs, total: 75.8 ms
+Wall time: 75.5 ms
+</pre></div>
+</div>
+</div>
+</div>
+<section id="id5">
+<h3><span class="section-number">7.5.3.1. </span>One data point<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<section id="id6">
+<h4><span class="section-number">7.5.3.1.1. </span>JIT-compilation<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%timeit</span> -n1 -r1 -q -o
+<span class="n">array</span> <span class="o">=</span> <span class="n">intensity_func</span><span class="p">(</span><span class="n">random_point</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TimeitResult : 646 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%timeit</span> -n1 -r1 -q -o
+<span class="n">array</span> <span class="o">=</span> <span class="n">polarimetry_funcs</span><span class="p">[</span><span class="mi">0</span><span class="p">](</span><span class="n">random_point</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">polarimetry_funcs</span><span class="p">[</span><span class="mi">1</span><span class="p">](</span><span class="n">random_point</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">polarimetry_funcs</span><span class="p">[</span><span class="mi">2</span><span class="p">](</span><span class="n">random_point</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TimeitResult : 3.27 s ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id7">
+<h4><span class="section-number">7.5.3.1.2. </span>Compiled performance<a class="headerlink" href="#id7" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%timeit</span> -n1 -r1 -q -o
+<span class="n">array</span> <span class="o">=</span> <span class="n">intensity_func</span><span class="p">(</span><span class="n">random_point</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TimeitResult : 310 μs ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%timeit</span> -n1 -r1 -q -o
+<span class="n">array</span> <span class="o">=</span> <span class="n">polarimetry_funcs</span><span class="p">[</span><span class="mi">0</span><span class="p">](</span><span class="n">random_point</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">polarimetry_funcs</span><span class="p">[</span><span class="mi">1</span><span class="p">](</span><span class="n">random_point</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">polarimetry_funcs</span><span class="p">[</span><span class="mi">2</span><span class="p">](</span><span class="n">random_point</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TimeitResult : 429 μs ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="id8">
+<h3><span class="section-number">7.5.3.2. </span>54x54 grid sample<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<section id="id9">
+<h4><span class="section-number">7.5.3.2.1. </span>Compiled but uncached<a class="headerlink" href="#id9" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%timeit</span> -n1 -r1 -q -o
+<span class="n">array</span> <span class="o">=</span> <span class="n">intensity_func</span><span class="p">(</span><span class="n">grid_sample</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TimeitResult : 114 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%timeit</span> -n1 -r1 -q -o
+<span class="n">array</span> <span class="o">=</span> <span class="n">polarimetry_funcs</span><span class="p">[</span><span class="mi">0</span><span class="p">](</span><span class="n">grid_sample</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">polarimetry_funcs</span><span class="p">[</span><span class="mi">1</span><span class="p">](</span><span class="n">grid_sample</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">polarimetry_funcs</span><span class="p">[</span><span class="mi">2</span><span class="p">](</span><span class="n">grid_sample</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TimeitResult : 446 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id10">
+<h4><span class="section-number">7.5.3.2.2. </span>Second run with cache<a class="headerlink" href="#id10" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%timeit</span> -n1 -r1 -q -o
+<span class="n">array</span> <span class="o">=</span> <span class="n">intensity_func</span><span class="p">(</span><span class="n">grid_sample</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TimeitResult : 129 μs ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%timeit</span> -n1 -r1 -q -o
+<span class="n">array</span> <span class="o">=</span> <span class="n">polarimetry_funcs</span><span class="p">[</span><span class="mi">0</span><span class="p">](</span><span class="n">grid_sample</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">polarimetry_funcs</span><span class="p">[</span><span class="mi">1</span><span class="p">](</span><span class="n">grid_sample</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">polarimetry_funcs</span><span class="p">[</span><span class="mi">2</span><span class="p">](</span><span class="n">grid_sample</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TimeitResult : 226 μs ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="id11">
+<h3><span class="section-number">7.5.3.3. </span>100.000 event phase space sample<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<section id="id12">
+<h4><span class="section-number">7.5.3.3.1. </span>Compiled but uncached<a class="headerlink" href="#id12" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%timeit</span> -n1 -r1 -q -o
+<span class="n">array</span> <span class="o">=</span> <span class="n">intensity_func</span><span class="p">(</span><span class="n">phsp_sample</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TimeitResult : 98.6 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%timeit</span> -n1 -r1 -q -o
+<span class="n">array</span> <span class="o">=</span> <span class="n">polarimetry_funcs</span><span class="p">[</span><span class="mi">0</span><span class="p">](</span><span class="n">phsp_sample</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">polarimetry_funcs</span><span class="p">[</span><span class="mi">1</span><span class="p">](</span><span class="n">phsp_sample</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">polarimetry_funcs</span><span class="p">[</span><span class="mi">2</span><span class="p">](</span><span class="n">phsp_sample</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TimeitResult : 471 ms ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id13">
+<h4><span class="section-number">7.5.3.3.2. </span>Second run with cache<a class="headerlink" href="#id13" title="Link to this heading">#</a></h4>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%timeit</span> -n1 -r1 -q -o
+<span class="n">array</span> <span class="o">=</span> <span class="n">intensity_func</span><span class="p">(</span><span class="n">phsp_sample</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TimeitResult : 231 μs ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%%timeit</span> -n1 -r1 -q -o
+<span class="n">array</span> <span class="o">=</span> <span class="n">polarimetry_funcs</span><span class="p">[</span><span class="mi">0</span><span class="p">](</span><span class="n">phsp_sample</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">polarimetry_funcs</span><span class="p">[</span><span class="mi">1</span><span class="p">](</span><span class="n">phsp_sample</span><span class="p">)</span>
+<span class="n">array</span> <span class="o">=</span> <span class="n">polarimetry_funcs</span><span class="p">[</span><span class="mi">2</span><span class="p">](</span><span class="n">phsp_sample</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;TimeitResult : 251 μs ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+</section>
+<section id="summary">
+<h2><span class="section-number">7.5.4. </span>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<div class="cell tag_hide-input docutils container">
+<details class="admonition hide above-input">
+<summary aria-label="Toggle hidden content">
+<p class="collapsed admonition-title">Show code cell source</p>
+<p class="expanded admonition-title">Hide code cell source</p>
+</summary>
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">collect_sorted_row_title</span><span class="p">()</span> <span class="o">-&gt;</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#list"><span class="nb">list</span></a><span class="p">[</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#str"><span class="nb">str</span></a><span class="p">]:</span>
+    <span class="n">row_titles</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">row_titles</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/collections.html#collections.defaultdict" title="collections.defaultdict"><span class="n">timing_parametrized</span></a><span class="p">[</span><span class="s2">"intensity"</span><span class="p">])</span>
+    <span class="n">row_titles</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/collections.html#collections.defaultdict" title="collections.defaultdict"><span class="n">timing_parametrized</span></a><span class="p">[</span><span class="s2">"polarimetry"</span><span class="p">])</span>
+    <span class="n">row_titles</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/collections.html#collections.defaultdict" title="collections.defaultdict"><span class="n">timing_substituted</span></a><span class="p">[</span><span class="s2">"intensity"</span><span class="p">])</span>
+    <span class="n">row_titles</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/collections.html#collections.defaultdict" title="collections.defaultdict"><span class="n">timing_substituted</span></a><span class="p">[</span><span class="s2">"polarimetry"</span><span class="p">])</span>
+    <span class="k">return</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#list"><span class="nb">list</span></a><span class="p">(</span><span class="n">row_titles</span><span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">remove_loop_info</span><span class="p">(</span><span class="n">timing</span><span class="p">)</span> <span class="o">-&gt;</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#str"><span class="nb">str</span></a><span class="p">:</span>
+    <span class="k">if</span> <span class="n">timing</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s2">""</span>
+    <span class="n">pattern</span> <span class="o">=</span> <span class="s2">" ± 0 ns per loop (mean ± std. dev. of 1 run, 1 loop each)"</span>
+    <span class="k">return</span> <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#str"><span class="nb">str</span></a><span class="p">(</span><span class="n">timing</span><span class="p">)</span><span class="o">.</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#str.replace" title="str.replace"><span class="n">replace</span></a><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s2">""</span><span class="p">)</span>
+
+
+<span class="n">row_titles</span> <span class="o">=</span> <span class="n">collect_sorted_row_title</span><span class="p">()</span>
+<span class="n">values</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">(</span>
+        <span class="n">remove_loop_info</span><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/collections.html#collections.defaultdict" title="collections.defaultdict"><span class="n">timing_parametrized</span></a><span class="p">[</span><span class="s2">"intensity"</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">row</span><span class="p">)),</span>
+        <span class="n">remove_loop_info</span><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/collections.html#collections.defaultdict" title="collections.defaultdict"><span class="n">timing_parametrized</span></a><span class="p">[</span><span class="s2">"polarimetry"</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">row</span><span class="p">)),</span>
+        <span class="n">remove_loop_info</span><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/collections.html#collections.defaultdict" title="collections.defaultdict"><span class="n">timing_substituted</span></a><span class="p">[</span><span class="s2">"intensity"</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">row</span><span class="p">)),</span>
+        <span class="n">remove_loop_info</span><span class="p">(</span><a class="sphinx-codeautolink-a" href="https://docs.python.org/3/library/collections.html#collections.defaultdict" title="collections.defaultdict"><span class="n">timing_substituted</span></a><span class="p">[</span><span class="s2">"polarimetry"</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">row</span><span class="p">)),</span>
+    <span class="p">)</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">row_titles</span>
+<span class="p">]</span>
+<span class="n">columns</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">MultiIndex</span><span class="o">.</span><span class="n">from_tuples</span><span class="p">(</span>
+    <span class="p">[</span>
+        <span class="p">(</span><span class="s2">"parametrized"</span><span class="p">,</span> <span class="s2">"I"</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">"parametrized"</span><span class="p">,</span> <span class="s2">"ɑ"</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">"substituted"</span><span class="p">,</span> <span class="s2">"I"</span><span class="p">),</span>
+        <span class="p">(</span><span class="s2">"substituted"</span><span class="p">,</span> <span class="s2">"ɑ"</span><span class="p">),</span>
+    <span class="p">],</span>
+<span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">row_titles</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">columns</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">set_table_styles</span><span class="p">([</span>
+    <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#dict"><span class="nb">dict</span></a><span class="p">(</span><span class="n">selector</span><span class="o">=</span><span class="s2">"th"</span><span class="p">,</span> <span class="n">props</span><span class="o">=</span><span class="p">[(</span><span class="s2">"text-align"</span><span class="p">,</span> <span class="s2">"left"</span><span class="p">)]),</span>
+    <a class="sphinx-codeautolink-a" href="https://docs.python.org/3/builtins/stdtypes.html#dict"><span class="nb">dict</span></a><span class="p">(</span><span class="n">selector</span><span class="o">=</span><span class="s2">"td"</span><span class="p">,</span> <span class="n">props</span><span class="o">=</span><span class="p">[(</span><span class="s2">"text-align"</span><span class="p">,</span> <span class="s2">"left"</span><span class="p">)]),</span>
+<span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</details>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_a1390 th {
+  text-align: left;
+}
+#T_a1390 td {
+  text-align: left;
+}
+</style>
+<table id="T_a1390">
+<thead>
+<tr>
+<th class="blank level0"> </th>
+<th class="col_heading level0 col0" colspan="2" id="T_a1390_level0_col0">parametrized</th>
+<th class="col_heading level0 col2" colspan="2" id="T_a1390_level0_col2">substituted</th>
+</tr>
+<tr>
+<th class="blank level1"> </th>
+<th class="col_heading level1 col0" id="T_a1390_level1_col0">I</th>
+<th class="col_heading level1 col1" id="T_a1390_level1_col1">ɑ</th>
+<th class="col_heading level1 col2" id="T_a1390_level1_col2">I</th>
+<th class="col_heading level1 col3" id="T_a1390_level1_col3">ɑ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th class="row_heading level0 row0" id="T_a1390_level0_row0">random point (compilation)</th>
+<td class="data row0 col0" id="T_a1390_row0_col0">166 ms</td>
+<td class="data row0 col1" id="T_a1390_row0_col1">643 ms</td>
+<td class="data row0 col2" id="T_a1390_row0_col2">646 ms</td>
+<td class="data row0 col3" id="T_a1390_row0_col3">3.27 s</td>
+</tr>
+<tr>
+<th class="row_heading level0 row1" id="T_a1390_level0_row1">random point (cached)</th>
+<td class="data row1 col0" id="T_a1390_row1_col0">796 μs</td>
+<td class="data row1 col1" id="T_a1390_row1_col1">1.6 ms</td>
+<td class="data row1 col2" id="T_a1390_row1_col2">310 μs</td>
+<td class="data row1 col3" id="T_a1390_row1_col3">429 μs</td>
+</tr>
+<tr>
+<th class="row_heading level0 row2" id="T_a1390_level0_row2">54x54 grid</th>
+<td class="data row2 col0" id="T_a1390_row2_col0">175 ms</td>
+<td class="data row2 col1" id="T_a1390_row2_col1">683 ms</td>
+<td class="data row2 col2" id="T_a1390_row2_col2">114 ms</td>
+<td class="data row2 col3" id="T_a1390_row2_col3">446 ms</td>
+</tr>
+<tr>
+<th class="row_heading level0 row3" id="T_a1390_level0_row3">54x54 grid (cached)</th>
+<td class="data row3 col0" id="T_a1390_row3_col0">985 μs</td>
+<td class="data row3 col1" id="T_a1390_row3_col1">1.94 ms</td>
+<td class="data row3 col2" id="T_a1390_row3_col2">129 μs</td>
+<td class="data row3 col3" id="T_a1390_row3_col3">226 μs</td>
+</tr>
+<tr>
+<th class="row_heading level0 row4" id="T_a1390_level0_row4">100,000 phsp</th>
+<td class="data row4 col0" id="T_a1390_row4_col0">167 ms</td>
+<td class="data row4 col1" id="T_a1390_row4_col1">702 ms</td>
+<td class="data row4 col2" id="T_a1390_row4_col2">98.6 ms</td>
+<td class="data row4 col3" id="T_a1390_row4_col3">471 ms</td>
+</tr>
+<tr>
+<th class="row_heading level0 row5" id="T_a1390_level0_row5">100,000 phsp (cached)</th>
+<td class="data row5 col0" id="T_a1390_row5_col0">957 μs</td>
+<td class="data row5 col1" id="T_a1390_row5_col1">2.19 ms</td>
+<td class="data row5 col2" id="T_a1390_row5_col2">231 μs</td>
+<td class="data row5 col3" id="T_a1390_row5_col3">251 μs</td>
+</tr>
+<tr>
+<th class="row_heading level0 row6" id="T_a1390_level0_row6">modified 100,000 phsp</th>
+<td class="data row6 col0" id="T_a1390_row6_col0">199 ms</td>
+<td class="data row6 col1" id="T_a1390_row6_col1">667 ms</td>
+<td class="data row6 col2" id="T_a1390_row6_col2"></td>
+<td class="data row6 col3" id="T_a1390_row6_col3"></td>
+</tr>
+<tr>
+<th class="row_heading level0 row7" id="T_a1390_level0_row7">modified 100,000 phsp (cached)</th>
+<td class="data row7 col0" id="T_a1390_row7_col0">732 μs</td>
+<td class="data row7 col1" id="T_a1390_row7_col1">2.88 ms</td>
+<td class="data row7 col2" id="T_a1390_row7_col2"></td>
+<td class="data row7 col3" id="T_a1390_row7_col3"></td>
+</tr>
+</tbody>
+</table>
+</div></div>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="alignment.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">7.4. </span>Alignment consistency</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="serialization.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">7.6. </span>Polarimeter field serialization</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datatransformer-performance">7.5.1. <code class="xref py py-class docutils literal notranslate"><span class="pre">DataTransformer</span></code> performance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#parametrized-function">7.5.2. Parametrized function</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#one-data-point">7.5.2.1. One data point</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#jit-compilation">7.5.2.1.1. JIT-compilation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#compiled-performance">7.5.2.1.2. Compiled performance</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#x54-grid-sample">7.5.2.2. 54x54 grid sample</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#compiled-but-uncached">7.5.2.2.1. Compiled but uncached</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#second-run-with-cache">7.5.2.2.2. Second run with cache</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#event-phase-space-sample">7.5.2.3. 100.000 event phase space sample</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">7.5.2.3.1. Compiled but uncached</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">7.5.2.3.2. Second run with cache</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recompilation-after-parameter-modification">7.5.2.4. Recompilation after parameter modification</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">7.5.2.4.1. Compiled but uncached</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">7.5.2.4.2. Second run with cache</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#all-parameters-substituted">7.5.3. All parameters substituted</a><ul class="pst-show_toc_level nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">7.5.3.1. One data point</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">7.5.3.1.1. JIT-compilation</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">7.5.3.1.2. Compiled performance</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">7.5.3.2. 54x54 grid sample</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">7.5.3.2.1. Compiled but uncached</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">7.5.3.2.2. Second run with cache</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">7.5.3.3. 100.000 event phase space sample</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">7.5.3.3.1. Compiled but uncached</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">7.5.3.3.2. Second run with cache</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">7.5.4. Summary</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Mikhail Mikhasenko, Remco de Boer, Miriam Fritsch
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2022, ComPWA.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    <p class="last-updated">
+  Last updated on 12 November 2026.
+  <br/>
+</p>
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=90905a2f556bf617f1a9"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=90905a2f556bf617f1a9"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
